@@ -1,1 +1,1 @@
-C:\Users\Radi\Documents\GitHub\DogBook\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\DogBookApp.WindowsPhone.csproj;x86
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\DogBookApp.WindowsPhone.csproj;x86

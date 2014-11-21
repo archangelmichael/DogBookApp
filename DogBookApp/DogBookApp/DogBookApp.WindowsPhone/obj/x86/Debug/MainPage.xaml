@@ -7,9 +7,63 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200" />
+            <Setter Property="TextAlignment" Value="Left" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="MaxLength" Value="20" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120" />
+            <Setter Property="Background" Value="GreenYellow" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Width" Value="200" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="MaxLength" Value="20" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Page.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1">
 
+            <TextBox Name="UsernameInput"
+                     HorizontalAlignment="Center"  
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top" 
+                     PlaceholderText="Enter Username" />
+            <PasswordBox Name="PasswordInput" 
+                     HorizontalAlignment="Center"  
+                     VerticalAlignment="Top" 
+                     PlaceholderText="Enter Password" />
+            <Button x:ConnectionId='1' Name="LoginButton" 
+                    Content="Login"
+                    HorizontalAlignment="Center"  
+                    VerticalAlignment="Bottom" 
+                                             />
+            <Button x:ConnectionId='2' Name="RegisterButton" 
+                    Content="Register" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                                                />
+        </StackPanel>
     </Grid>
 </Page>
 
