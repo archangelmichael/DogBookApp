@@ -39,6 +39,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\StatusPage.xaml.cs">
+      <DependentUpon>StatusPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
@@ -56,12 +59,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\StatusPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Styles\CommonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\app-icon-2.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\app-icon.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\blank-avatar.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\login-background-1.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\login-background.png" />
   </ItemGroup>
 </Project>

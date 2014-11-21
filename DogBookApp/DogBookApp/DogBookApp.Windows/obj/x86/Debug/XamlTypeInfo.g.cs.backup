@@ -124,7 +124,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "DogBookApp.Pages.LoginPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -138,8 +138,9 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             _typeNameTable[10] = "DogBookApp.Common.NavigationHelper";
             _typeNameTable[11] = "Windows.UI.Xaml.DependencyObject";
             _typeNameTable[12] = "DogBookApp.Pages.ProfilePage";
+            _typeNameTable[13] = "DogBookApp.Pages.StatusPage";
 
-            _typeTable = new global::System.Type[13];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::DogBookApp.Pages.LoginPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -153,6 +154,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             _typeTable[10] = typeof(global::DogBookApp.Common.NavigationHelper);
             _typeTable[11] = typeof(global::Windows.UI.Xaml.DependencyObject);
             _typeTable[12] = typeof(global::DogBookApp.Pages.ProfilePage);
+            _typeTable[13] = typeof(global::DogBookApp.Pages.StatusPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,6 +194,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
         private object Activate_5_User() { return new global::DogBookApp.Models.User(); }
         private object Activate_9_MainPage() { return new global::DogBookApp.Pages.MainPage(); }
         private object Activate_12_ProfilePage() { return new global::DogBookApp.Pages.ProfilePage(); }
+        private object Activate_13_StatusPage() { return new global::DogBookApp.Pages.StatusPage(); }
         private void VectorAdd_3_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DogBookApp.Models.User>)instance;
@@ -282,6 +285,13 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             case 12:   //  DogBookApp.Pages.ProfilePage
                 userType = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_12_ProfilePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  DogBookApp.Pages.StatusPage
+                userType = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_StatusPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

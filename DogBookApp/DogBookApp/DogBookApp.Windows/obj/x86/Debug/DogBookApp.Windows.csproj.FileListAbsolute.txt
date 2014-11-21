@@ -83,4 +83,9 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\ProfilePage.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\ProfilePage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\UniqueStyles.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\StatusPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusPage.g.i.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusPage.g.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusPage.xaml
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusPage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\CommonStyles.xbf

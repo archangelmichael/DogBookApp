@@ -24,6 +24,13 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Margin" Value="10" />
     </Style>
+    <Style TargetType="TextBlock" x:Key="LoginPageGreeting">
+        <Setter Property="Foreground" Value="GreenYellow" />
+        <Setter Property="FontWeight" Value="Black" />
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
     <x:String x:Key="ProfilePageTitle">Profile</x:String>
     <x:String x:Key="FriendsPageTitle">Friends</x:String>
     <x:String x:Key="NotificationsPageTitle">Notifications</x:String>
