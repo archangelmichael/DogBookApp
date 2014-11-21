@@ -7,7 +7,7 @@ namespace DogBookApp.Models
     public class NotificationMessage : Message
     {
         public NotificationMessage(string text, string sender, string receiver, bool hasOptions)
-            : base(text, sender, receiver, MessageType.Notification, false)
+            : base(text, sender, receiver, false)
         {
             this.hasOptions = hasOptions;
         }

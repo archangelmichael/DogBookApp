@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-21T19:12:25.564</Modified>
+      <Modified>2014-11-21T19:25:05.661</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\DogBookApp.Windows.exe">
       <PackagePath>DogBookApp.Windows.exe</PackagePath>
-      <Modified>2014-11-21T19:12:56.686</Modified>
+      <Modified>2014-11-21T19:29:31.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.7.2\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -52,37 +52,41 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T08:55:28.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\blank-avatar.png">
+      <PackagePath>Images\blank-avatar.png</PackagePath>
+      <Modified>2014-11-21T19:18:39.002</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-11-21T19:12:23.767</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-11-21T05:47:45.301</Modified>
+      <Modified>2014-11-21T19:29:31.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\LoginPage.xbf">
       <PackagePath>Pages\LoginPage.xbf</PackagePath>
-      <Modified>2014-11-21T19:12:23.768</Modified>
+      <Modified>2014-11-21T19:29:31.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
-      <Modified>2014-11-21T19:12:23.769</Modified>
+      <Modified>2014-11-21T19:29:31.364</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\ProfilePage.xbf">
+      <PackagePath>Pages\ProfilePage.xbf</PackagePath>
+      <Modified>2014-11-21T19:29:31.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\CommonStyles.xbf">
       <PackagePath>Styles\CommonStyles.xbf</PackagePath>
-      <Modified>2014-11-21T19:12:23.770</Modified>
+      <Modified>2014-11-21T19:27:55.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\UniqueStyles.xbf">
       <PackagePath>Styles\UniqueStyles.xbf</PackagePath>
-      <Modified>2014-11-21T19:12:23.768</Modified>
+      <Modified>2014-11-21T19:27:55.376</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\DogBookApp.Windows.xr.xml">
       <PackagePath>DogBookApp.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-21T19:12:23.692</Modified>
+      <Modified>2014-11-21T19:27:55.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-21T19:12:24.556</Modified>
+      <Modified>2014-11-21T19:25:05.420</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
