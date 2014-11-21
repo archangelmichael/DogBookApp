@@ -7,3 +7,7 @@ Assets\WideLogo.scale-240.png
 App.xbf
 DogBookApp.WindowsPhone.xr.xml
 MainPage.xbf
+Pages\LoginPage.xbf
+Pages\MainPage.xbf
+Styles\CommonStyles.xbf
+Styles\UniqueStyles.xbf

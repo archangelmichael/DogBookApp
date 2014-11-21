@@ -5,3 +5,7 @@ Assets\StoreLogo.scale-100.png
 App.xbf
 DogBookApp.Windows.xr.xml
 MainPage.xbf
+Pages\LoginPage.xbf
+Pages\MainPage.xbf
+Styles\CommonStyles.xbf
+Styles\UniqueStyles.xbf

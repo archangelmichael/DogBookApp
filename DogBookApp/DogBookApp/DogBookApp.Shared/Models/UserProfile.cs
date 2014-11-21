@@ -6,7 +6,7 @@ namespace DogBookApp.Models
 {
     public class UserProfile
     {
-        public UserProfile(string username, string nickname, string password, GenderType gender, string breed)
+        public UserProfile(string username, string nickname, string password, GenderType gender, string breed = "DOG")
         {
             
         }

@@ -19,32 +19,40 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace DogBookApp
+namespace DogBookApp.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LoginPage : Page
     {
         private const string dbName = "SQLiteUsers";
 
         public List<User> Users { get; set; }
         public User currentUser { get; set; }
 
-        public MainPage()
+        public LoginPage()
         {
             this.InitializeComponent();
-
-            this.NavigationCacheMode = NavigationCacheMode.Required;
-
-            int b = 6;
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Check login data
+            this.GotoMainPage();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Check register data
+            this.GotoMainPage();
+        }
+
+        private void GotoMainPage()
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
 
@@ -62,7 +70,7 @@ namespace DogBookApp
             // UNCOMMENT IF YOU RUN FOR FIRST TIME
             //await conn.CreateTableAsync<User>();
             //await AddUserAsync();
-            Users =  await query.ToListAsync();
+            Users = await query.ToListAsync();
             foreach (var user in Users)
             {
                 if (user.IsLoggedIn)
@@ -71,15 +79,6 @@ namespace DogBookApp
                     break;
                 }
             }
-        }
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         #region SQLite Methods
@@ -204,7 +203,5 @@ namespace DogBookApp
             await conn.DropTableAsync<User>();
         }
         #endregion
-
-        
     }
 }
