@@ -24,7 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\GenderType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Location.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\MessageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MessageManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\NotificationMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PrivateMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusMessage.cs" />

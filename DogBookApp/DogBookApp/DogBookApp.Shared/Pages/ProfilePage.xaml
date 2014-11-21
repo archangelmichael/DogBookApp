@@ -14,6 +14,8 @@
         </Style>
         <Style TargetType="TextBox" x:Key="ProfileEditBoxField">
             <Setter Property="FontSize" Value="34" />
+            <Setter Property="IsEnabled" Value="False" />
+            <Setter Property="BorderThickness" Value="0" />
         </Style>
     </Page.Resources>
 
@@ -30,7 +32,8 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Image Grid.Row="1"  
+        <Image Name="ProfileAvatar"
+               Grid.Row="1"  
                Grid.Column="1" 
                HorizontalAlignment="Stretch" 
                VerticalAlignment="Stretch" 
@@ -40,36 +43,80 @@
                     Grid.Column="2"
                     Grid.RowSpan="2"
                     HorizontalAlignment="Stretch" >
-            <TextBlock Text="Username:"
-                       Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox PlaceholderText="Username" 
-                     Style="{StaticResource ProfileEditBoxField}"/>
 
             <TextBlock Text="Nickname:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox PlaceholderText="Nickname" 
+            <TextBox Name="ProfileNicknameInput"
+                     PlaceholderText="Nickname" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
+            <TextBlock Text="Gender:" 
+                       Style="{StaticResource ProfileTextBlockField}"/>
+            <ListView Name="ProfileGenderSelector"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      Visibility="Collapsed">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" 
+                                   FontSize="30" 
+                                   Foreground="LightBlue" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </ListView.Items>
+            </ListView>
+            <TextBox Name="ProfileGenderInput"
+                     PlaceholderText="Gender" 
+                     Style="{StaticResource ProfileEditBoxField}"   />
+            
             <TextBlock Text="Age:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox PlaceholderText="Age" 
+            <TextBox Name="ProfileAgeInput"
+                     PlaceholderText="No Age" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
             <TextBlock Text="Breed:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox PlaceholderText="Breed" 
+            <TextBox Name="ProfileBreedInput"
+                     PlaceholderText="No Breed" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
             <TextBlock Text="Address:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox PlaceholderText="Address" 
+            <TextBox Name="ProfileAddressInput"
+                     PlaceholderText="No Address" 
                      Style="{StaticResource ProfileEditBoxField}"/>
         </StackPanel>
-        <Button Grid.Row="2"
-                Grid.Column="1" Content="Change Profile Picture"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                FontSize="30"
-                Click="ChangeAvatarButton_Click"/>
+        <StackPanel Grid.Row="2" 
+                    Orientation="Vertical"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center" >
+            <Button Content="Change Profile Picture"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="30"
+                    Click="ChangeAvatarButton_Click"
+                    Margin="20, 20, 20, 0"/>
+            <Button Name="EditProfileButton"
+                    Content="Edit Profile"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="30"
+                    Click="EditProfileButton_Click"
+                    Margin="20, 20, 20, 0"
+                    Visibility="Visible"/>
+            <Button Name="SaveProfileChangesButton"
+                    Content="Save Profile"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="30"
+                    Click="SaveProfileChangesButton_Click"
+                    Margin="20, 20, 20, 0"
+                    Visibility="Collapsed"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

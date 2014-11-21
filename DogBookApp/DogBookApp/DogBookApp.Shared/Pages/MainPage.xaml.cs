@@ -31,10 +31,15 @@ namespace DogBookApp.Pages
             this.NavigationHelper = new Common.NavigationHelper(this);
         }
 
-        private void backButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO: Implement sign out
             this.NavigationHelper.GoBack();
+        }
+
+        private void OnButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

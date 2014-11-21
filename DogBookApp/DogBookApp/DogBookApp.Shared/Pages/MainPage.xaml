@@ -7,6 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <CommandBar Background="#FF397D80">
+            <AppBarButton Icon="Like"
+                          Label="Like" />
+            <AppBarButton Icon="Upload"
+                          Label="Navigate" />
+        </CommandBar>
+    </Page.TopAppBar>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -14,7 +23,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="backButton"
                      Grid.Row="0"
-                Click="backButton_Click"
+                Click="BackButton_Click"
                 Style="{StaticResource NavigationBackButtonNormalStyle}"
                 VerticalAlignment="Center"
                      HorizontalAlignment="Left"
@@ -27,7 +36,40 @@
                    VerticalAlignment="Center" 
                    FontSize="34"
                    Grid.Row="0"/>
-
+        <TextBlock Grid.Row="1"
+                   Name="ButtonClickedName" 
+                   Text="Original" 
+                   FontSize="34" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
 
     </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar>
+            <Grid>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <Button Name="EditButton" 
+                            Content="Edit"
+                            Click="OnButtonClick"/>
+                    <Button Name="RemoveButton"
+                            Content="Remove"
+                            Click="OnButtonClick"/>
+                    <Button Name="AddButton" 
+                            Content="Add"
+                            Click="OnButtonClick"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" 
+                           HorizontalAlignment="Right">
+                    <Button Name="RefreshButton" 
+                            Content="Refresh"
+                            Click="OnButtonClick"/>
+                    <Button Name="HelpButton"
+                            Content="Help"
+                            Click="OnButtonClick"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>
