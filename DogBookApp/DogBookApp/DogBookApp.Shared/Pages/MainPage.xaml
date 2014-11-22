@@ -68,6 +68,7 @@
             <AppBarButton Icon="AttachCamera" 
                           Label="Take Picture" 
                           Click="TakePictureAppBarButton_Click"/>
+            
         </CommandBar>
     </Page.BottomAppBar>
 </Page>

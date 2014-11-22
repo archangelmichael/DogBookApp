@@ -35,10 +35,14 @@
                         <TextBlock Text="{Binding Content}"
                            FontSize="34" />
                     </StackPanel>
-                    <Image Grid.Column="0" 
-                           Source="{Binding Image}" 
+                    <StackPanel Orientation="Vertical"
+                                Grid.Column="0"
                            HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"/>
+                           VerticalAlignment="Stretch" >
+                        <Image 
+                           Source="{Binding Image}" />
+                        <!--<Image Source="{Binding LocationImage}" />-->
+                    </StackPanel>
                 </Grid>
                 
             </DataTemplate>

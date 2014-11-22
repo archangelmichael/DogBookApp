@@ -114,9 +114,19 @@ namespace DogBookApp.Views
             }
         }
 
+        private void AddLocationImage()
+        {
+            var position = this.StatusMessage.Location.Coordinate;
+            var latlon = position.Latitude + "," + position.Longitude;
+            var googleApi = "http://maps.googleapis.com/maps/api/staticmap?center=";
+            var options = "&zoom=15&size=400x300&sensor=false";
+            var marker = "&markers=icon:http://thumb18.shutterstock.com/photos/thumb_large/347836/347836,1327514947,4.jpg|" + latlon;
+            var locationOnMapUri = googleApi + latlon + options + marker;
+            this.StatusMessage.LocationImage = new BitmapImage(new Uri(locationOnMapUri, UriKind.RelativeOrAbsolute));
+        }
+
         private void AddVideoButton_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void SendStatusButton_Click(object sender, RoutedEventArgs e)
@@ -127,6 +137,11 @@ namespace DogBookApp.Views
             {
                 this.Messanger.ShowMessage("Invalid Input", "Cannot post empty message!");
                 return;
+            }
+
+            if (this.StatusMessage.Location != null)
+            {
+                this.AddLocationImage();
             }
 
             this.StatusMessage.CreatedAt = DateTime.Now;

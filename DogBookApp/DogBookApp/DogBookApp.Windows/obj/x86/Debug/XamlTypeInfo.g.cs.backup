@@ -385,6 +385,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
                 userType.Activator = Activate_19_StatusMessage;
                 userType.AddMemberName("Image");
                 userType.AddMemberName("Location");
+                userType.AddMemberName("LocationImage");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -567,92 +568,102 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             that.Location = (global::Windows.Devices.Geolocation.Geoposition)Value;
         }
-        private object get_11_Message_Id(object instance)
+        private object get_11_StatusMessage_LocationImage(object instance)
+        {
+            var that = (global::DogBookApp.Models.StatusMessage)instance;
+            return that.LocationImage;
+        }
+        private void set_11_StatusMessage_LocationImage(object instance, object Value)
+        {
+            var that = (global::DogBookApp.Models.StatusMessage)instance;
+            that.LocationImage = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
+        }
+        private object get_12_Message_Id(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.Id;
         }
-        private void set_11_Message_Id(object instance, object Value)
+        private void set_12_Message_Id(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.Id = (global::System.String)Value;
         }
-        private object get_12_Message_Content(object instance)
+        private object get_13_Message_Content(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.Content;
         }
-        private void set_12_Message_Content(object instance, object Value)
+        private void set_13_Message_Content(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.Content = (global::System.String)Value;
         }
-        private object get_13_Message_CreatedAt(object instance)
+        private object get_14_Message_CreatedAt(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.CreatedAt;
         }
-        private void set_13_Message_CreatedAt(object instance, object Value)
+        private void set_14_Message_CreatedAt(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.CreatedAt = (global::System.DateTime)Value;
         }
-        private object get_14_Message_SenderId(object instance)
+        private object get_15_Message_SenderId(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.SenderId;
         }
-        private void set_14_Message_SenderId(object instance, object Value)
+        private void set_15_Message_SenderId(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.SenderId = (global::System.String)Value;
         }
-        private object get_15_Message_SenderNickName(object instance)
+        private object get_16_Message_SenderNickName(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.SenderNickName;
         }
-        private void set_15_Message_SenderNickName(object instance, object Value)
+        private void set_16_Message_SenderNickName(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.SenderNickName = (global::System.String)Value;
         }
-        private object get_16_Message_ReceiverId(object instance)
+        private object get_17_Message_ReceiverId(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.ReceiverId;
         }
-        private void set_16_Message_ReceiverId(object instance, object Value)
+        private void set_17_Message_ReceiverId(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.ReceiverId = (global::System.String)Value;
         }
-        private object get_17_Message_IsRead(object instance)
+        private object get_18_Message_IsRead(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.IsRead;
         }
-        private void set_17_Message_IsRead(object instance, object Value)
+        private void set_18_Message_IsRead(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.IsRead = (global::System.Boolean)Value;
         }
-        private object get_18_ListStatusMessagesView_StatsManager(object instance)
+        private object get_19_ListStatusMessagesView_StatsManager(object instance)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             return that.StatsManager;
         }
-        private void set_18_ListStatusMessagesView_StatsManager(object instance, object Value)
+        private void set_19_ListStatusMessagesView_StatsManager(object instance, object Value)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             that.StatsManager = (global::DogBookApp.Models.MessagesContainer)Value;
         }
-        private object get_19_MainPage_NavigationHelper(object instance)
+        private object get_20_MainPage_NavigationHelper(object instance)
         {
             var that = (global::DogBookApp.Pages.MainPage)instance;
             return that.NavigationHelper;
         }
-        private void set_19_MainPage_NavigationHelper(object instance, object Value)
+        private void set_20_MainPage_NavigationHelper(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.MainPage)instance;
             that.NavigationHelper = (global::DogBookApp.Common.NavigationHelper)Value;
@@ -731,59 +742,65 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
                 xamlMember.Getter = get_10_StatusMessage_Location;
                 xamlMember.Setter = set_10_StatusMessage_Location;
                 break;
+            case "DogBookApp.Models.StatusMessage.LocationImage":
+                userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.StatusMessage");
+                xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "LocationImage", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
+                xamlMember.Getter = get_11_StatusMessage_LocationImage;
+                xamlMember.Setter = set_11_StatusMessage_LocationImage;
+                break;
             case "DogBookApp.Models.Message.Id":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "Id", "String");
-                xamlMember.Getter = get_11_Message_Id;
-                xamlMember.Setter = set_11_Message_Id;
+                xamlMember.Getter = get_12_Message_Id;
+                xamlMember.Setter = set_12_Message_Id;
                 break;
             case "DogBookApp.Models.Message.Content":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "Content", "String");
-                xamlMember.Getter = get_12_Message_Content;
-                xamlMember.Setter = set_12_Message_Content;
+                xamlMember.Getter = get_13_Message_Content;
+                xamlMember.Setter = set_13_Message_Content;
                 break;
             case "DogBookApp.Models.Message.CreatedAt":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "CreatedAt", "System.DateTime");
-                xamlMember.Getter = get_13_Message_CreatedAt;
-                xamlMember.Setter = set_13_Message_CreatedAt;
+                xamlMember.Getter = get_14_Message_CreatedAt;
+                xamlMember.Setter = set_14_Message_CreatedAt;
                 break;
             case "DogBookApp.Models.Message.SenderId":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "SenderId", "String");
-                xamlMember.Getter = get_14_Message_SenderId;
-                xamlMember.Setter = set_14_Message_SenderId;
+                xamlMember.Getter = get_15_Message_SenderId;
+                xamlMember.Setter = set_15_Message_SenderId;
                 break;
             case "DogBookApp.Models.Message.SenderNickName":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "SenderNickName", "String");
-                xamlMember.Getter = get_15_Message_SenderNickName;
-                xamlMember.Setter = set_15_Message_SenderNickName;
+                xamlMember.Getter = get_16_Message_SenderNickName;
+                xamlMember.Setter = set_16_Message_SenderNickName;
                 break;
             case "DogBookApp.Models.Message.ReceiverId":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "ReceiverId", "String");
-                xamlMember.Getter = get_16_Message_ReceiverId;
-                xamlMember.Setter = set_16_Message_ReceiverId;
+                xamlMember.Getter = get_17_Message_ReceiverId;
+                xamlMember.Setter = set_17_Message_ReceiverId;
                 break;
             case "DogBookApp.Models.Message.IsRead":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "IsRead", "Boolean");
-                xamlMember.Getter = get_17_Message_IsRead;
-                xamlMember.Setter = set_17_Message_IsRead;
+                xamlMember.Getter = get_18_Message_IsRead;
+                xamlMember.Setter = set_18_Message_IsRead;
                 break;
             case "DogBookApp.Views.ListStatusMessagesView.StatsManager":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Views.ListStatusMessagesView");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "StatsManager", "DogBookApp.Models.MessagesContainer");
-                xamlMember.Getter = get_18_ListStatusMessagesView_StatsManager;
-                xamlMember.Setter = set_18_ListStatusMessagesView_StatsManager;
+                xamlMember.Getter = get_19_ListStatusMessagesView_StatsManager;
+                xamlMember.Setter = set_19_ListStatusMessagesView_StatsManager;
                 break;
             case "DogBookApp.Pages.MainPage.NavigationHelper":
                 userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.MainPage");
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "DogBookApp.Common.NavigationHelper");
-                xamlMember.Getter = get_19_MainPage_NavigationHelper;
-                xamlMember.Setter = set_19_MainPage_NavigationHelper;
+                xamlMember.Getter = get_20_MainPage_NavigationHelper;
+                xamlMember.Setter = set_20_MainPage_NavigationHelper;
                 break;
             }
             return xamlMember;

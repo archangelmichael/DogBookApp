@@ -68,6 +68,7 @@
             <AppBarButton x:ConnectionId='5' Icon="AttachCamera" 
                           Label="Take Picture" 
                                                                />
+            
         </CommandBar>
     </Page.BottomAppBar>
 </Page>

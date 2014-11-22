@@ -17,5 +17,7 @@ namespace DogBookApp.Models
         public BitmapImage Image { get; set; }
 
         public Geoposition Location { get; set; }
+
+        public BitmapImage LocationImage { get; set; }
     }
 }
