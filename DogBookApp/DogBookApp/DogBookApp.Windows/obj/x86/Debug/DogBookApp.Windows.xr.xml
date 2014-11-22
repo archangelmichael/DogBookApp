@@ -23,13 +23,10 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="TopAppBar" />
       <RootProperty Name="BottomAppBar" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
-      <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
@@ -45,6 +42,11 @@
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="DogBookApp.Pages.FriendsPage" />
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -58,7 +60,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
     </RootType>
@@ -76,6 +77,7 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="MaxLength" />
+      <RootProperty Name="AcceptsReturn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -92,7 +94,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
@@ -105,7 +106,6 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
       <RootMethod Name="GetName" />
       <RootMethod Name="SetName" />
@@ -114,7 +114,13 @@
       <RootMethod Name="GetItemType" />
       <RootMethod Name="SetItemType" />
     </RootType>
+    <RootType FullName="DogBookApp.Views.NewStatusMessageView">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="Loaded" />
+    </RootType>
     <RootType FullName="DogBookApp.Pages.MainPage" />
+    <RootType FullName="DogBookApp.Pages.MessagesPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
@@ -135,12 +141,15 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="System.String" />
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
-    <RootType FullName="DogBookApp.Pages.StatusPage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
-      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="DogBookApp.Views.ListStatusMessagesView" />
   </Roots.RootTypes>
 </Roots>

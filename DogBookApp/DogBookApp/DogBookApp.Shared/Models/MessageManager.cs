@@ -23,7 +23,7 @@ namespace DogBookApp.Models
             }
         }
 
-        public void ShowMessage(string messageTitle, string messageContent)
+        public async void ShowMessage(string messageTitle, string messageContent)
         {
             MessageDialog msgDialog = new MessageDialog(messageContent, messageTitle);
 
@@ -39,7 +39,8 @@ namespace DogBookApp.Models
             msgDialog.Commands.Add(cancelBtn);
             */
             //Show message
-            msgDialog.ShowAsync();
+
+            await msgDialog.ShowAsync();
         }
     }
 }

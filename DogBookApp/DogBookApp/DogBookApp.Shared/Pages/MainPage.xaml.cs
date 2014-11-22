@@ -41,5 +41,10 @@ namespace DogBookApp.Pages
         {
 
         }
+
+        private void NewStatusMessageView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

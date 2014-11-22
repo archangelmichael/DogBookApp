@@ -1,3 +1,8 @@
+Images\app-icon.jpg
+Images\app-icon-2.jpg
+Images\blank-avatar.png
+Images\login-background.png
+Images\login-background-1.jpg
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.scale-240.png
@@ -6,8 +11,15 @@ Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
 DogBookApp.WindowsPhone.xr.xml
-MainPage.xbf
+Pages\FriendsPage.xbf
 Pages\LoginPage.xbf
 Pages\MainPage.xbf
+Pages\MessagesPage.xbf
+Pages\ProfilePage.xbf
+Styles\ButtonStyles.xbf
 Styles\CommonStyles.xbf
+Styles\TextBlocksStyles.xbf
+Styles\TextBoxesStyles.xbf
 Styles\UniqueStyles.xbf
+Views\ListStatusMessagesView.xbf
+Views\NewStatusMessageView.xbf

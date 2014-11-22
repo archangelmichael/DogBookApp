@@ -5,6 +5,7 @@
     xmlns:local="using:DogBookApp.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:newStatusVM="using:DogBookApp.Views"
     mc:Ignorable="d">
 
     <Page.TopAppBar>
@@ -19,29 +20,34 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="9*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
         <Button x:ConnectionId='1' x:Name="backButton"
-                     Grid.Row="0"
+                Grid.Row="0"
+                Grid.Column="1"
                                         
                 Style="{StaticResource NavigationBackButtonNormalStyle}"
                 VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
+                HorizontalAlignment="Left"
                 AutomationProperties.Name="Back"
                 AutomationProperties.AutomationId="BackButton"
                 AutomationProperties.ItemType="Navigation Button"
-                     Margin="10"/>
+                Margin="10"/>
         <TextBlock Text="{StaticResource MainPageTitle}" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" 
                    FontSize="34"
-                   Grid.Row="0"/>
-        <TextBlock Grid.Row="1"
-                   Name="ButtonClickedName" 
-                   Text="Original" 
-                   FontSize="34" 
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+        <newStatusVM:NewStatusMessageView x:ConnectionId='2' Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                      />
 
     </Grid>
 
@@ -50,22 +56,22 @@
             <Grid>
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Left">
-                    <Button x:ConnectionId='4' Name="EditButton" 
+                    <Button x:ConnectionId='5' Name="EditButton" 
                             Content="Edit"
                                                  />
-                    <Button x:ConnectionId='5' Name="RemoveButton"
+                    <Button x:ConnectionId='6' Name="RemoveButton"
                             Content="Remove"
                                                  />
-                    <Button x:ConnectionId='6' Name="AddButton" 
+                    <Button x:ConnectionId='7' Name="AddButton" 
                             Content="Add"
                                                  />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" 
                            HorizontalAlignment="Right">
-                    <Button x:ConnectionId='2' Name="RefreshButton" 
+                    <Button x:ConnectionId='3' Name="RefreshButton" 
                             Content="Refresh"
                                                  />
-                    <Button x:ConnectionId='3' Name="HelpButton"
+                    <Button x:ConnectionId='4' Name="HelpButton"
                             Content="Help"
                                                  />
                 </StackPanel>

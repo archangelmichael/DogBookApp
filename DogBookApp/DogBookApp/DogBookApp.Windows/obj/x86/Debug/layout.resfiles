@@ -9,9 +9,15 @@ Assets\SplashScreen.scale-100.png
 Assets\StoreLogo.scale-100.png
 App.xbf
 DogBookApp.Windows.xr.xml
+Pages\FriendsPage.xbf
 Pages\LoginPage.xbf
 Pages\MainPage.xbf
+Pages\MessagesPage.xbf
 Pages\ProfilePage.xbf
-Pages\StatusPage.xbf
+Styles\ButtonStyles.xbf
 Styles\CommonStyles.xbf
+Styles\TextBlocksStyles.xbf
+Styles\TextBoxesStyles.xbf
 Styles\UniqueStyles.xbf
+Views\ListStatusMessagesView.xbf
+Views\NewStatusMessageView.xbf

@@ -6,6 +6,10 @@ namespace DogBookApp.Models
 {
     public class Message
     {
+        public Message()
+        {
+        }
+
         public Message(string text, string sender, string receiver, bool isRead = false)
         {
             this.Content = text;

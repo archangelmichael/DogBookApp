@@ -87,6 +87,7 @@
             <TextBlock Text="Address:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
             <TextBox Name="ProfileAddressInput"
+                     TextWrapping="Wrap"
                      PlaceholderText="No Address" 
                      Style="{StaticResource ProfileEditBoxField}"/>
         </StackPanel>
@@ -95,27 +96,27 @@
                     Grid.Column="1"
                     HorizontalAlignment="Center" >
             <Button Content="Change Picture"
-                    HorizontalAlignment="Center"
+                    Style="{StaticResource MainButton}"
                     VerticalAlignment="Top"
-                    FontSize="30"
-                    Click="ChangeAvatarButton_Click"
-                    Margin="20, 20, 20, 0"/>
+                    Click="ChangeAvatarButton_Click"/>
             <Button x:Name="EditProfileButton"
+                    Style="{StaticResource MainButton}"
                     Content="Edit Profile"
-                    HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    FontSize="30"
                     Click="EditProfileButton_Click"
-                    Margin="20, 20, 20, 0"
                     Visibility="Visible"/>
             <Button x:Name="SaveProfileChangesButton"
+                    Style="{StaticResource MainButton}"
                     Content="Save Profile"
-                    HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    FontSize="30"
                     Click="SaveProfileChangesButton_Click"
-                    Margin="20, 20, 20, 0"
                     Visibility="Collapsed"/>
+            <Button x:Name="GetLocationButton"
+                    Style="{StaticResource MainButton}"
+                    Content="Get Location"
+                    VerticalAlignment="Top"
+                    Click="GetLocationButton_Click"
+                    Visibility="Visible"/>
         </StackPanel>
 
     </Grid>

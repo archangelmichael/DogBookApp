@@ -7,9 +7,13 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/CommonStyles.xaml" />
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml" />
                 <ResourceDictionary Source="Styles/UniqueStyles.xaml" />
+                <ResourceDictionary Source="Styles/TextBoxesStyles.xaml" />
+                <ResourceDictionary Source="Styles/TextBlocksStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
 

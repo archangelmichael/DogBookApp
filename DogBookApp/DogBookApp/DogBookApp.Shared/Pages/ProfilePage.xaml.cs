@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,6 +26,9 @@ namespace DogBookApp.Pages
     /// </summary>
     public sealed partial class ProfilePage : Page
     {
+        private const string LocationMessageTitle = "Location Info";
+        private const string LocationErrorText = "Location Services Error";
+
         private MessageManager Messanger { get; set; }
 
         public ProfilePage()
@@ -129,6 +134,39 @@ namespace DogBookApp.Pages
             this.ProfileAddressInput.IsEnabled = false;
             this.EditProfileButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
             this.SaveProfileChangesButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
+        private async void GetLocationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Geolocator locator = new Geolocator();
+            locator.DesiredAccuracy = PositionAccuracy.High;
+            locator.MovementThreshold = 200.2;
+            locator.PositionChanged += async (snd, arg) =>
+            {
+                await this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    var position = arg.Position;
+                    this.ProfileAddressInput.Text = string.Format(
+                        "Lives in {0} {1} \n Latitude:{2} \n Longitude:{3}", 
+                        position.CivicAddress.Country, 
+                        position.CivicAddress.City,
+                        position.Coordinate.Latitude, 
+                        position.Coordinate.Longitude);
+                    // TODO: Change Location in Used Data
+                });
+
+            };
+
+            try
+            {
+                await locator.GetGeopositionAsync();
+            }
+            catch (Exception)
+            {
+                this.Messanger.ShowMessage(
+                       LocationMessageTitle,
+                       LocationErrorText);
+            }
         }
     }
 }

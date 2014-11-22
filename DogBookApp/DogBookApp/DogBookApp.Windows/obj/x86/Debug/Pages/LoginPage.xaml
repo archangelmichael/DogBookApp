@@ -11,8 +11,8 @@
     </Page.Resources>
     <Grid Background="{StaticResource bgImg}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -25,19 +25,19 @@
                    Grid.Row="0"
                    Grid.Column="0" 
                    Grid.ColumnSpan="3" />
-        <StackPanel Grid.Row="1" Grid.Column="1">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
 
             <TextBox Name="UsernameInput"
                      Style="{StaticResource CommonTextBox}"
                      HorizontalAlignment="Center"  
                      TextWrapping="Wrap" 
                      VerticalAlignment="Top" 
-                     PlaceholderText="Enter Username" />
+                     PlaceholderText="Username" />
             <PasswordBox Name="PasswordInput" 
                          Style="{StaticResource CommonPasswordBox}"
                          HorizontalAlignment="Center"  
                          VerticalAlignment="Top" 
-                         PlaceholderText="Enter Password" />
+                         PlaceholderText="Password" />
             <Button x:ConnectionId='1' Name="LoginButton" 
                     Style="{StaticResource CommonButton}"
                     Content="Login"

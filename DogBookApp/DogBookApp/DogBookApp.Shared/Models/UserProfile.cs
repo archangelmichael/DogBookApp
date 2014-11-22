@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Windows.Devices.Geolocation;
 
 namespace DogBookApp.Models
 {
@@ -27,6 +28,6 @@ namespace DogBookApp.Models
 
         public string Avatar { get; set; }
 
-        public Location location { get; set; }
+        public Geoposition location { get; set; }
     }
 }
