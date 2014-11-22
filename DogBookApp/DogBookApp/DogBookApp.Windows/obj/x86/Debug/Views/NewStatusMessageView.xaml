@@ -19,11 +19,21 @@
                  Grid.Row="0"/>
         <StackPanel Orientation="Horizontal"
                     Grid.Row="1" >
-            <Button x:ConnectionId='1' Content="Add Location" Style="{StaticResource SmallButton}"                                />
-            <Button x:ConnectionId='2' Content="Add Picture" Style="{StaticResource SmallButton}"                               />
-            <Button x:ConnectionId='3' Content="Add Video" Style="{StaticResource SmallButton}"                              />
+            <Button x:ConnectionId='2' Content="Add Location" 
+                    Style="{StaticResource SmallButton}" 
+                                                   />
+            <Button x:ConnectionId='3' Content="Add Picture" 
+                    Style="{StaticResource SmallButton}" 
+                                                  />
+            <Button x:ConnectionId='4' Content="Add Video" 
+                    Style="{StaticResource SmallButton}" 
+                                                 />
         </StackPanel>
-        <Button Content="Send" Style="{StaticResource SendButton}" HorizontalAlignment="Right" Grid.Row="1"/>
+        <Button x:ConnectionId='1' Content="Send" 
+                Style="{StaticResource SendButton}" 
+                HorizontalAlignment="Right" 
+                Grid.Row="1"
+                                              />
     </Grid>
 </UserControl>
 

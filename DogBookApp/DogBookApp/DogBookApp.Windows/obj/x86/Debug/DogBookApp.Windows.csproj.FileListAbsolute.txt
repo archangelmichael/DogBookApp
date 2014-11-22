@@ -115,6 +115,11 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Views\ListStatusMessagesView.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\TextBlocksStyles.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\TextBoxesStyles.xaml
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\CaptureImagePage.g.i.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\CaptureImagePage.g.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\CaptureImagePage.xaml
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\CaptureImagePage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\CaptureImagePage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\ButtonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\CommonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\TextBlocksStyles.xbf

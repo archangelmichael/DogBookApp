@@ -29,6 +29,7 @@ namespace DogBookApp.Pages
         {
             this.InitializeComponent();
             this.NavigationHelper = new Common.NavigationHelper(this);
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -43,8 +44,11 @@ namespace DogBookApp.Pages
         }
 
         private void NewStatusMessageView_Loaded(object sender, RoutedEventArgs e)
-        {
-
+        { 
+        }
+        
+        private void StatusMessagesView_Loaded(object sender, RoutedEventArgs e)
+        { 
         }
     }
 }

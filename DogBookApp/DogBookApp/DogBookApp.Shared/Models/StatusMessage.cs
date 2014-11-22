@@ -7,12 +7,13 @@ namespace DogBookApp.Models
 {
     public class StatusMessage : Message
     {
-        public StatusMessage()
-        {
-        }
+        public StatusMessage() : base() { }
 
-        public StatusMessage(string text, string sender, string receiver, Geoposition location)
-            : base(text, sender, receiver, false)
+        public StatusMessage(string content, string senderId, string senderNick, DateTime date)
+            : this(content, senderId, senderNick, date, null) { }
+
+        public StatusMessage(string content, string senderId, string senderNick, DateTime date, Geoposition location)
+            : base(content, senderId, senderNick, date, false)
         {
             this.Location = location;
         }

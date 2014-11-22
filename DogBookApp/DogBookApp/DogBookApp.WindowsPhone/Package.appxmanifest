@@ -25,6 +25,9 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClientServer" />
+    <Capability Name="videosLibrary" />
+    <Capability Name="picturesLibrary" />
     <DeviceCapability Name="location" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>

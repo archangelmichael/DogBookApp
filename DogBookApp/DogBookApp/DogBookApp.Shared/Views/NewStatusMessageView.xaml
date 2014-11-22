@@ -19,10 +19,20 @@
                  Grid.Row="0"/>
         <StackPanel Orientation="Horizontal"
                     Grid.Row="1" >
-            <Button Content="Add Location" Style="{StaticResource SmallButton}" Click="AddLocationButton_Click"/>
-            <Button Content="Add Picture" Style="{StaticResource SmallButton}" Click="AddPictureButton_Click"/>
-            <Button Content="Add Video" Style="{StaticResource SmallButton}" Click="AddVideoButton_Click" />
+            <Button Content="Add Location" 
+                    Style="{StaticResource SmallButton}" 
+                    Click="AddLocationButton_Click"/>
+            <Button Content="Add Picture" 
+                    Style="{StaticResource SmallButton}" 
+                    Click="AddPictureButton_Click"/>
+            <Button Content="Add Video" 
+                    Style="{StaticResource SmallButton}" 
+                    Click="AddVideoButton_Click" />
         </StackPanel>
-        <Button Content="Send" Style="{StaticResource SendButton}" HorizontalAlignment="Right" Grid.Row="1"/>
+        <Button Content="Send" 
+                Style="{StaticResource SendButton}" 
+                HorizontalAlignment="Right" 
+                Grid.Row="1"
+                Click="SendStatusButton_Click"/>
     </Grid>
 </UserControl>

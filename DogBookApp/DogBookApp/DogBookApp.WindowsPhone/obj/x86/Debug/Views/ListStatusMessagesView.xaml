@@ -9,8 +9,23 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
     
-    <Grid>
 
-    </Grid>
+    <ListBox Name="StatusMessagesCustomList" 
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  ItemsSource="{Binding StatusMessages}">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Vertical" >
+                    <TextBlock Text="{Binding CreatedAt}"
+                           FontSize="34" />
+                    <TextBlock Text="{Binding SenderNickName}"
+                           FontSize="34" />
+                    <TextBlock Text="{Binding Content}"
+                           FontSize="34" />
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
 </UserControl>
 

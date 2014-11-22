@@ -5,12 +5,30 @@
     xmlns:local="using:DogBookApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:DogBookApp.Converters"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    
-    <Grid>
+    <UserControl.Resources>
+        <converters:DateToStringConverter x:Key="DateConverter" />
+    </UserControl.Resources>
 
-    </Grid>
+    <ListBox Name="StatusMessagesCustomList" 
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  ItemsSource="{Binding StatusMessages}">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Vertical" >
+                    <TextBlock Text="{Binding CreatedAt, Converter={Binding DateConverter}}"
+                           FontSize="34" />
+                    <TextBlock Text="{Binding SenderNickName}"
+                           FontSize="34" />
+                    <TextBlock Text="{Binding Content}"
+                           FontSize="34" />
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
 </UserControl>
 

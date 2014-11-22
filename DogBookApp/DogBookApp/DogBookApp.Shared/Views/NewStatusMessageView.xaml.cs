@@ -1,4 +1,5 @@
 ﻿using DogBookApp.Models;
+using DogBookApp.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +28,7 @@ namespace DogBookApp.Views
         private const string LocationMessageTitle = "Location Info";
         private const string LocationErrorText = "Location Services Error";
 
+        public MessagesContainer StatsManager { get; set; }
         private MessageManager Messanger { get; set; }
         private StatusMessage StatusMessage { get; set; }
 
@@ -34,6 +36,7 @@ namespace DogBookApp.Views
         {
             this.InitializeComponent();
             this.Messanger = MessageManager.Instance;
+            this.StatsManager = MessagesContainer.Instance;
             this.StatusMessage = new StatusMessage();
         }
 
@@ -78,12 +81,28 @@ namespace DogBookApp.Views
 
         private void AddPictureButton_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void AddVideoButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SendStatusButton_Click(object sender, RoutedEventArgs e)
+        {
+            string statusContent = this.StatusMessageContent.Text;
+            if (statusContent == null || statusContent == string.Empty)
+            {
+                this.Messanger.ShowMessage("Invalid Input", "Cannot post empty message!");
+                return;
+            }
+
+            this.StatusMessage.CreatedAt = DateTime.Now;
+            this.StatusMessage.SenderId = "CurrentId";
+            this.StatusMessage.SenderNickName = "CurrentUser";
+            this.StatusMessage.Content = statusContent;
+            this.StatsManager.StatusMessages.Insert(0, this.StatusMessage);
+            this.StatusMessage = new StatusMessage();
         }
     }
 }

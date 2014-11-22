@@ -6,15 +6,37 @@ namespace DogBookApp.Models
 {
     public class Message
     {
-        public Message()
-        {
-        }
+        public Message() 
+            : this("No Text", DateTime.Now, "No ID", "Anonymous", "No Receiver", false) { }
 
-        public Message(string text, string sender, string receiver, bool isRead = false)
+        /// <summary>
+        /// Notification Message With No Options Constructor
+        /// </summary>
+        public Message(string content, string receiverId, bool isRead = false)
+            : this(content, DateTime.Now, "No ID", "Anonymous", receiverId, false) { }
+
+        /// <summary>
+        /// Status Message Constructor
+        /// </summary>
+        public Message(string content, string senderId, string sender, DateTime date, bool isRead = false)
+            : this(content, date, "No ID", sender, "No Receiver", false) { }
+
+        /// <summary>
+        /// Private Message And Notification Message With Options Constructor
+        /// </summary>
+        public Message(string content, string senderId, string senderNick, string receiverId, bool isRead = false)
+            : this(content, DateTime.Now, senderId, senderNick, receiverId, false) { }
+
+        /// <summary>
+        /// Full Constructor
+        /// </summary>
+        public Message(string content, DateTime date, string senderId, string senderNick, string receiverId, bool isRead = false)
         {
-            this.Content = text;
-            this.SenderId = sender;
-            this.ReceiverId = receiver;
+            this.Content = content;
+            this.CreatedAt = date;
+            this.SenderId = senderId;
+            this.SenderNickName = senderNick;
+            this.ReceiverId = receiverId;
             this.IsRead = isRead;
         }
 
@@ -22,7 +44,11 @@ namespace DogBookApp.Models
 
         public string Content { get; set; }
 
+        public DateTime CreatedAt { get; set; }
+
         public string SenderId { get; set; }
+
+        public string SenderNickName { get; set; }
 
         public string ReceiverId { get; set; }
 

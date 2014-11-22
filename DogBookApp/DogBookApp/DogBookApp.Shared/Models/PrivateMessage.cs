@@ -6,9 +6,9 @@ namespace DogBookApp.Models
 {
     public class PrivateMessage : Message
     {
-        public PrivateMessage(string text, string sender, string receiver)
-            : base(text, sender, receiver, false)
-        {
-        }
+        public PrivateMessage() : base() { }
+
+        public PrivateMessage(string content, string senderId, string senderNick, string receiverId)
+            : base(content, senderId, senderNick, receiverId, false) { }
     }
 }

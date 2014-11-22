@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,9 +20,16 @@ namespace DogBookApp.Views
 {
     public sealed partial class ListStatusMessagesView : UserControl
     {
+        public List<StatusMessage> StatusMessages { get; set; }
+
+        public MessagesContainer StatsManager { get; set; }
+
         public ListStatusMessagesView()
         {
             this.InitializeComponent();
+            this.StatsManager = MessagesContainer.Instance;
+            this.StatusMessages = StatsManager.StatusMessages;
+            this.DataContext = this;
         }
     }
 }

@@ -5,9 +5,14 @@
     xmlns:local="using:DogBookApp.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:newStatusVM="using:DogBookApp.Views"
+    xmlns:converters="using:DogBookApp.Converters"
+    xmlns:statusVM="using:DogBookApp.Views"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <converters:DateToStringConverter x:Key="DateConverter" />
+    </Page.Resources>
+    
     <Page.TopAppBar>
         <CommandBar Background="#FF397D80">
             <AppBarButton Icon="Like"
@@ -47,8 +52,17 @@
                    Grid.Row="0"
                    Grid.Column="1"
                    Grid.ColumnSpan="2"/>
-        <newStatusVM:NewStatusMessageView x:ConnectionId='2' Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                      />
-
+        <statusVM:NewStatusMessageView x:ConnectionId='2' Grid.Row="1" 
+                                       Grid.Column="1"
+                                       HorizontalAlignment="Stretch" 
+                                       VerticalAlignment="Stretch" 
+                                                                            />
+        <statusVM:ListStatusMessagesView Name="StatusMessagesList" 
+                  Grid.Row="2" 
+                  Grid.Column="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+        </statusVM:ListStatusMessagesView>
     </Grid>
 
     <Page.BottomAppBar>
