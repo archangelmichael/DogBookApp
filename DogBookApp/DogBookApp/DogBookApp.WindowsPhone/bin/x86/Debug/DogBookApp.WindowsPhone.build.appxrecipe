@@ -52,14 +52,23 @@
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\login-background.png">
       <PackagePath>Images\login-background.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\app-icon-2.jpg">
-      <PackagePath>Images\app-icon-2.jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\doglove.jpg">
+      <PackagePath>Images\doglove.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\app-icon.jpg">
       <PackagePath>Images\app-icon.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\fartdog.jpg">
+      <PackagePath>Images\fartdog.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\login-background-1.jpg">
       <PackagePath>Images\login-background-1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\newhair.jpg">
+      <PackagePath>Images\newhair.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Shared\Images\threesome.jpg">
+      <PackagePath>Images\threesome.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -78,6 +87,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\Pages\MessagesPage.xbf">
       <PackagePath>Pages\MessagesPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\Pages\NotificationsPage.xbf">
+      <PackagePath>Pages\NotificationsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\Pages\ProfilePage.xbf">
       <PackagePath>Pages\ProfilePage.xbf</PackagePath>
