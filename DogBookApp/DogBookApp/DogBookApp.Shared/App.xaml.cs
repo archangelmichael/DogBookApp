@@ -41,9 +41,6 @@ namespace DogBookApp
             this.Suspending += this.OnSuspending;
 
             ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
-            var testObject = new ParseObject("TestObject");
-            testObject["foo"] = "bar";
-            testObject.SaveAsync();
         }
 
         /// <summary>

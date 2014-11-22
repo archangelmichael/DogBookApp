@@ -1,12 +1,16 @@
 ﻿using DogBookApp.Models;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -31,18 +35,94 @@ namespace DogBookApp.Pages
 
         private MessageManager Messanger { get; set; }
 
+        
+
         public ProfilePage()
         {
             this.InitializeComponent();
+
+            this.PopulateDataFields();
             this.Messanger = MessageManager.Instance;
         }
 
-        private void ChangeAvatarButton_Click(object sender, RoutedEventArgs e)
+        private void PopulateDataFields()
         {
-            // TODO: Implement avatar changing
-            this.ProfileAvatar.Source = new BitmapImage(new Uri(@"http://images.soulpancake.s3.amazonaws.com/4345269135_ff83289372_z.jpg", UriKind.RelativeOrAbsolute));
+            ParseFile userAvatar = (ParseFile)ParseUser.CurrentUser["avatar"];
+            if (userAvatar != null)
+            {
+                BitmapImage avatar = new BitmapImage(new Uri(userAvatar.Url.ToString(), UriKind.RelativeOrAbsolute));
+                this.ProfileAvatar.Source = avatar;
+            }
+
         }
 
+        
+        // AVATAR CHANGING
+        private void ChangeAvatarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.SelectPictureFromGallery();
+           // this.ProfileAvatar.Source = new BitmapImage(new Uri(@"http://images.soulpancake.s3.amazonaws.com/4345269135_ff83289372_z.jpg", UriKind.RelativeOrAbsolute));
+        }
+
+        private async void SelectPictureFromGallery()
+        {
+            Windows.Storage.Pickers.FileOpenPicker openPicker = new Windows.Storage.Pickers.FileOpenPicker();
+            openPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            openPicker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+
+            // Filter to include a sample subset of file types.
+            openPicker.FileTypeFilter.Clear();
+            openPicker.FileTypeFilter.Add(".bmp");
+            openPicker.FileTypeFilter.Add(".png");
+            openPicker.FileTypeFilter.Add(".jpeg");
+            openPicker.FileTypeFilter.Add(".jpg");
+
+            // Open the file picker.
+            StorageFile file = await openPicker.PickSingleFileAsync();
+
+            // file is null if user cancels the file picker.
+            if (file != null)
+            {
+                // Open a stream for the selected file.
+                Windows.Storage.Streams.IRandomAccessStream fileStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+
+                // Set the image source to the selected bitmap.
+                BitmapImage bitmapImage = new BitmapImage();
+
+                bitmapImage.SetSource(fileStream);
+
+                RandomAccessStreamReference rasr = RandomAccessStreamReference.CreateFromFile(file);
+                //RandomAccessStreamReference rasr = RandomAccessStreamReference.CreateFromUri(bitmapImage.UriSource);
+                var streamWithContent = await rasr.OpenReadAsync();
+                byte[] buffer = new byte[streamWithContent.Size];
+                try
+                {
+                    await streamWithContent.ReadAsync(buffer.AsBuffer(), (uint)streamWithContent.Size, InputStreamOptions.None);
+                    var data = buffer;
+                    if (data != null)
+                    {
+                        var user = ParseUser.CurrentUser;
+                        ParseFile img = new ParseFile("picture.png", data);
+                        user["avatar"] = img;
+                        await user.SaveAsync();
+                        this.ProfileAvatar.Source = bitmapImage;
+                        // set new avatar to database
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        // INPUT VALIDATION
         private bool isValidString(string input, string fieldName)
         {
             if (input == null || input.Length < 4)
@@ -54,6 +134,7 @@ namespace DogBookApp.Pages
             return true;
         }
 
+        // ENABLE TEXT BOXES FOR EDITING 
         private void EditProfileButton_Click(object sender, RoutedEventArgs e)
         {
             this.ProfileNicknameInput.IsEnabled = true;
@@ -67,6 +148,8 @@ namespace DogBookApp.Pages
             this.SaveProfileChangesButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
         }
 
+
+        // SAVE CHANGES TO ACCOUNT
         private void SaveProfileChangesButton_Click(object sender, RoutedEventArgs e)
         {
             string nickname = this.ProfileNicknameInput.Text;
@@ -135,6 +218,8 @@ namespace DogBookApp.Pages
             this.EditProfileButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
             this.SaveProfileChangesButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
         }
+
+
 
         private async void GetLocationButton_Click(object sender, RoutedEventArgs e)
         {
