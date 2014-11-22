@@ -1,4 +1,5 @@
-﻿using Parse;
+﻿using DogBookApp.ViewModels;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -101,7 +102,7 @@ namespace DogBookApp
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(Pages.LoginPage), e.Arguments))
+                if (!rootFrame.Navigate(typeof(Pages.LoginPage), new LoginPageViewModel()))
                 {
                     throw new Exception("Failed to create initial page");
                 }

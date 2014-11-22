@@ -28,12 +28,14 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
 
             <TextBox Name="UsernameInput"
+                     Text="{Binding User.Username, Mode=TwoWay}"
                      Style="{StaticResource CommonTextBox}"
                      HorizontalAlignment="Center"  
                      TextWrapping="Wrap" 
                      VerticalAlignment="Top" 
                      PlaceholderText="Username" />
             <PasswordBox Name="PasswordInput" 
+                         Password="{Binding User.Password, Mode=TwoWay}"
                          Style="{StaticResource CommonPasswordBox}"
                          HorizontalAlignment="Center"  
                          VerticalAlignment="Top" 

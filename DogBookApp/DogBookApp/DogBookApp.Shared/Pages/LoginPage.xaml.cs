@@ -1,4 +1,6 @@
-﻿using DogBookApp.Models;
+﻿using DogBookApp.Common;
+using DogBookApp.Models;
+using DogBookApp.ViewModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -31,30 +33,56 @@ namespace DogBookApp.Pages
         public List<User> Users { get; set; }
         public User currentUser { get; set; }
 
+        public LoginPageViewModel ViewModel
+        {
+            get
+            {
+                return this.DataContext as LoginPageViewModel;
+            }
+            set
+            {
+                this.DataContext = value;
+            }
+        }
+
         public LoginPage()
         {
             this.InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Check login data
-            this.GotoMainPage();
+            if (this.DataContext == null)
+            {
+                return;
+            }
+
+            bool canLogin = await this.ViewModel.Login();
+
+            if (canLogin)
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
 
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        private async void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Check register data
-            this.GotoMainPage();
-        }
+            if (this.DataContext == null)
+            {
+                return;
+            }
 
-        private void GotoMainPage()
-        {
-            this.Frame.Navigate(typeof(MainPage));
+            bool canLogin = await this.ViewModel.Register();
+
+            if (canLogin)
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+            this.ViewModel = e.Parameter as LoginPageViewModel;
 
             // GET USER FROM SQLite
             bool dbExists = await CheckDbAsync(dbName);
