@@ -45,9 +45,14 @@ namespace DogBookApp.Pages
             }
         }
 
-        public LoginPage()
+        public LoginPage(): this(new LoginPageViewModel())
+        {
+        }
+
+        public LoginPage(LoginPageViewModel viewModel)
         {
             this.InitializeComponent();
+            this.ViewModel = viewModel;
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -82,7 +87,7 @@ namespace DogBookApp.Pages
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.ViewModel = e.Parameter as LoginPageViewModel;
+            //this.ViewModel = e.Parameter as LoginPageViewModel;
 
             // GET USER FROM SQLite
             bool dbExists = await CheckDbAsync(dbName);

@@ -1,4 +1,6 @@
 ﻿using DogBookApp.Models;
+using DogBookApp.ViewModels;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,10 +34,10 @@ namespace DogBookApp.Pages
 
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void SignOutButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Implement sign out
-            this.NavigationHelper.GoBack();
+            ParseUser.LogOut();
+            this.Frame.Navigate(typeof(Pages.LoginPage));
         }
 
         private void TakePictureAppBarButton_Click(object sender, RoutedEventArgs e)
