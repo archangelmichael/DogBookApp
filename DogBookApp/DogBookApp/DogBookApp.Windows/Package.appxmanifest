@@ -24,7 +24,15 @@
     <Capability Name="internetClient" />
     <Capability Name="picturesLibrary" />
     <Capability Name="videosLibrary" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="enterpriseAuthentication" />
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="removableStorage" />
+    <Capability Name="sharedUserCertificates" />
     <DeviceCapability Name="location" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="proximity" />
   </Capabilities>
 </Package>

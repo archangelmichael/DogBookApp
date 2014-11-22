@@ -32,6 +32,18 @@
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
+        <Button x:ConnectionId='1' x:Name="backButton"
+                Grid.Row="0"
+                Grid.Column="1"
+                                        
+                Style="{StaticResource NavigationBackButtonNormalStyle}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="10"/>
+        <TextBlock Style="{StaticResource LoginPageGreeting}" 
+                   Text="{StaticResource ProfilePageTitle}" 
+                   Grid.Row="0" Grid.Column="1" 
+                   Grid.ColumnSpan="2" />
         <Image Name="ProfileAvatar"
                Grid.Row="1"  
                Grid.Column="1" 
@@ -95,23 +107,23 @@
                     Orientation="Vertical"
                     Grid.Column="1"
                     HorizontalAlignment="Center" >
-            <Button x:ConnectionId='1' Content="Change Picture"
+            <Button x:ConnectionId='2' Content="Change Picture"
                     Style="{StaticResource MainButton}"
                     VerticalAlignment="Top"
                                                     />
-            <Button x:ConnectionId='2' x:Name="EditProfileButton"
+            <Button x:ConnectionId='3' x:Name="EditProfileButton"
                     Style="{StaticResource MainButton}"
                     Content="Edit Profile"
                     VerticalAlignment="Top"
                                                    
                     Visibility="Visible"/>
-            <Button x:ConnectionId='3' x:Name="SaveProfileChangesButton"
+            <Button x:ConnectionId='4' x:Name="SaveProfileChangesButton"
                     Style="{StaticResource MainButton}"
                     Content="Save Profile"
                     VerticalAlignment="Top"
                                                           
                     Visibility="Collapsed"/>
-            <Button x:ConnectionId='4' x:Name="GetLocationButton"
+            <Button x:ConnectionId='5' x:Name="GetLocationButton"
                     Style="{StaticResource MainButton}"
                     Content="Get Location"
                     VerticalAlignment="Top"

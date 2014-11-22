@@ -1,8 +1,11 @@
 Images\app-icon.jpg
-Images\app-icon-2.jpg
 Images\blank-avatar.png
+Images\doglove.jpg
+Images\fartdog.jpg
 Images\login-background.png
 Images\login-background-1.jpg
+Images\newhair.jpg
+Images\threesome.jpg
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
 Assets\SplashScreen.scale-100.png
@@ -14,6 +17,7 @@ Pages\FriendsPage.xbf
 Pages\LoginPage.xbf
 Pages\MainPage.xbf
 Pages\MessagesPage.xbf
+Pages\NotificationsPage.xbf
 Pages\ProfilePage.xbf
 Styles\ButtonStyles.xbf
 Styles\CommonStyles.xbf

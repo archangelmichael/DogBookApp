@@ -13,15 +13,6 @@
         <converters:DateToStringConverter x:Key="DateConverter" />
     </Page.Resources>
     
-    <Page.TopAppBar>
-        <CommandBar Background="#FF397D80">
-            <AppBarButton Icon="Like"
-                          Label="Like" />
-            <AppBarButton Icon="Upload"
-                          Label="Navigate" />
-        </CommandBar>
-    </Page.TopAppBar>
-    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -41,9 +32,6 @@
                 Style="{StaticResource NavigationBackButtonNormalStyle}"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Left"
-                AutomationProperties.Name="Back"
-                AutomationProperties.AutomationId="BackButton"
-                AutomationProperties.ItemType="Navigation Button"
                 Margin="10"/>
         <TextBlock Text="{StaticResource MainPageTitle}" 
                    HorizontalAlignment="Center" 
@@ -55,41 +43,31 @@
         <statusVM:NewStatusMessageView Grid.Row="1" 
                                        Grid.Column="1"
                                        HorizontalAlignment="Stretch" 
-                                       VerticalAlignment="Stretch" 
-                                       Loaded="NewStatusMessageView_Loaded" />
+                                       VerticalAlignment="Stretch" />
         <statusVM:ListStatusMessagesView Name="StatusMessagesList" 
-                  Grid.Row="2" 
-                  Grid.Column="1"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch">
-        </statusVM:ListStatusMessagesView>
+                                         Grid.Row="2" 
+                                         Grid.Column="1"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Stretch" />
     </Grid>
 
     <Page.BottomAppBar>
-        <AppBar>
-            <Grid>
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Left">
-                    <Button Name="EditButton" 
-                            Content="Edit"
-                            Click="OnButtonClick"/>
-                    <Button Name="RemoveButton"
-                            Content="Remove"
-                            Click="OnButtonClick"/>
-                    <Button Name="AddButton" 
-                            Content="Add"
-                            Click="OnButtonClick"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" 
-                           HorizontalAlignment="Right">
-                    <Button Name="RefreshButton" 
-                            Content="Refresh"
-                            Click="OnButtonClick"/>
-                    <Button Name="HelpButton"
-                            Content="Help"
-                            Click="OnButtonClick"/>
-                </StackPanel>
-            </Grid>
-        </AppBar>
+        <CommandBar Background="#FF36C53C"
+                    IsSticky="True"
+                    Height="100" 
+                    Foreground="White">
+            <AppBarButton Icon="Important" 
+                          Label="Notifications"
+                          Click="NotificationsAppBarButton_Click"/>
+            <AppBarButton Icon="People" 
+                          Label="Friends"
+                          Click="FriendsAppBarButton_Click"/>
+            <AppBarButton Icon="ContactInfo" 
+                          Label="Profile"
+                          Click="ProfileAppBarButton_Click"/>
+            <AppBarButton Icon="AttachCamera" 
+                          Label="Take Picture" 
+                          Click="TakePictureAppBarButton_Click"/>
+        </CommandBar>
     </Page.BottomAppBar>
 </Page>

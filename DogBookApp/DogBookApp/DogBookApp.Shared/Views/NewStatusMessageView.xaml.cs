@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -16,6 +17,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
@@ -79,8 +81,37 @@ namespace DogBookApp.Views
             
         }
 
-        private void AddPictureButton_Click(object sender, RoutedEventArgs e)
+        private async void AddPictureButton_Click(object sender, RoutedEventArgs e)
         {
+            Windows.Storage.Pickers.FileOpenPicker openPicker = new Windows.Storage.Pickers.FileOpenPicker();
+            openPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            openPicker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+
+            // Filter to include a sample subset of file types.
+            openPicker.FileTypeFilter.Clear();
+            openPicker.FileTypeFilter.Add(".bmp");
+            openPicker.FileTypeFilter.Add(".png");
+            openPicker.FileTypeFilter.Add(".jpeg");
+            openPicker.FileTypeFilter.Add(".jpg");
+
+            // Open the file picker.
+            StorageFile file = await openPicker.PickSingleFileAsync();
+
+            // file is null if user cancels the file picker.
+            if (file != null)
+            {
+                // Open a stream for the selected file.
+                Windows.Storage.Streams.IRandomAccessStream fileStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+
+                // Set the image source to the selected bitmap.
+                BitmapImage bitmapImage = new BitmapImage();
+
+                bitmapImage.SetSource(fileStream);
+                this.StatusMessage.Image = bitmapImage;
+                this.Messanger.ShowMessage("Image Upload", "Image added Successfully!");
+                this.DataContext = file;
+            }
         }
 
         private void AddVideoButton_Click(object sender, RoutedEventArgs e)
@@ -91,6 +122,7 @@ namespace DogBookApp.Views
         private void SendStatusButton_Click(object sender, RoutedEventArgs e)
         {
             string statusContent = this.StatusMessageContent.Text;
+            this.StatusMessageContent.Text = "";
             if (statusContent == null || statusContent == string.Empty)
             {
                 this.Messanger.ShowMessage("Invalid Input", "Cannot post empty message!");

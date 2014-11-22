@@ -31,8 +31,16 @@
     <Capability Name="internetClient" />
     <Capability Name="picturesLibrary" />
     <Capability Name="videosLibrary" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="enterpriseAuthentication" />
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="removableStorage" />
+    <Capability Name="sharedUserCertificates" />
     <DeviceCapability Name="location" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="proximity" />
   </Capabilities>
   <Dependencies>
     <PackageDependency Name="Microsoft.VCLibs.120.00.Debug" MinVersion="12.0.21005.1" />

@@ -5,6 +5,7 @@
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="StatusMessages" />
+    <RootPropertyPathName Name="Image" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="SenderNickName" />
     <RootPropertyPathName Name="CreatedAt" />
@@ -18,9 +19,7 @@
       <RootProperty Name="MergedDictionaries" />
       <RootProperty Name="Source" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
-      <RootProperty Name="Content" />
-    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBar" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Background" />
       <RootProperty Name="FontSize" />
@@ -34,9 +33,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootProperty Name="Resources" />
-      <RootProperty Name="TopAppBar" />
       <RootProperty Name="BottomAppBar" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
@@ -92,11 +90,12 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsPanel" />
-      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Items" />
+      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -118,9 +117,22 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="DogBookApp.Pages.CaptureImagePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="IsSticky" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="DogBookApp.Pages.FriendsPage" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -146,18 +158,9 @@
     </RootType>
     <RootType FullName="DogBookApp.Pages.LoginPage" />
     <RootType FullName="DogBookApp.Converters.DateToStringConverter" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="Background" />
-      <RootProperty Name="PrimaryCommands" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-    </RootType>
     <RootType FullName="DogBookApp.Views.NewStatusMessageView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="DogBookApp.Views.ListStatusMessagesView">
       <RootProperty Name="Name" />
@@ -166,6 +169,7 @@
     </RootType>
     <RootType FullName="DogBookApp.Pages.MainPage" />
     <RootType FullName="DogBookApp.Pages.MessagesPage" />
+    <RootType FullName="DogBookApp.Pages.NotificationsPage" />
     <RootType FullName="System.String" />
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">

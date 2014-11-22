@@ -38,17 +38,24 @@ namespace DogBookApp.Pages
             this.NavigationHelper.GoBack();
         }
 
-        private void OnButtonClick(object sender, RoutedEventArgs e)
+        private void TakePictureAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Pages.CaptureImagePage));
         }
 
-        private void NewStatusMessageView_Loaded(object sender, RoutedEventArgs e)
-        { 
+        private void NotificationsAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.NotificationsPage));
         }
-        
-        private void StatusMessagesView_Loaded(object sender, RoutedEventArgs e)
-        { 
+
+        private void FriendsAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.FriendsPage));
+        }
+
+        private void ProfileAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.ProfilePage));
         }
     }
 }

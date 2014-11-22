@@ -47,6 +47,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MessagesPage.xaml.cs">
       <DependentUpon>MessagesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\NotificationsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Pages\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,10 +118,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Images\app-icon-2.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\doglove.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\app-icon.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\blank-avatar.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\fartdog.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\login-background-1.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\login-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\newhair.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\threesome.jpg" />
   </ItemGroup>
 </Project>

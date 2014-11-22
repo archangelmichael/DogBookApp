@@ -26,5 +26,20 @@ namespace DogBookApp.Pages
         {
             this.InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            // TODO: Implement going to messages screen
+        }
+
+        private void AddFriendAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Implement adding new friend
+        }
     }
 }

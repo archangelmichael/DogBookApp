@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using Windows.Devices.Geolocation;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace DogBookApp.Models
 {
@@ -10,13 +12,9 @@ namespace DogBookApp.Models
         public StatusMessage() : base() { }
 
         public StatusMessage(string content, string senderId, string senderNick, DateTime date)
-            : this(content, senderId, senderNick, date, null) { }
+            : base(content, senderId, senderNick, date, false) { }
 
-        public StatusMessage(string content, string senderId, string senderNick, DateTime date, Geoposition location)
-            : base(content, senderId, senderNick, date, false)
-        {
-            this.Location = location;
-        }
+        public BitmapImage Image { get; set; }
 
         public Geoposition Location { get; set; }
     }

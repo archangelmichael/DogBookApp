@@ -8,6 +8,55 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="backButton"
+            Grid.Row="0"
+            Grid.Column="1"
+            Click="BackButton_Click"
+            Style="{StaticResource NavigationBackButtonNormalStyle}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="10"/>
+        <TextBlock
+            Style="{StaticResource LoginPageGreeting}"
+            Text="{StaticResource FriendsPageTitle}" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                FontSize="34"
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+        <ListView Grid.Row="1" 
+                  Grid.Column="1"
+                  HorizontalAlignment="Stretch" 
+                  VerticalAlignment="Stretch"
+                  ItemClick="ListView_ItemClick" />
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF36C53C"
+                    IsSticky="True"
+                    Height="100" 
+                    Foreground="White">
+            <AppBarButton Icon="Comment" 
+                          Label="Change Status" />
+            <AppBarButton Icon="Important" 
+                          Label="Notifications" />
+            <AppBarButton Icon="ContactInfo" 
+                          Label="Profile"/>
+            <AppBarButton Icon="AddFriend" 
+                          Label="Add Friend"
+                          Click="AddFriendAppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
