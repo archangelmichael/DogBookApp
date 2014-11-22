@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogBookApp.Windows", "DogBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogBookApp.WindowsPhone", "DogBookApp\DogBookApp.WindowsPhone\DogBookApp.WindowsPhone.csproj", "{EED30C40-A5E0-4976-A761-C2368B71CC7F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9E73159-7632-47CA-B320-68F9D00FA10D}"
+	ProjectSection(SolutionItems) = preProject
+		DogBookApp\Libs\Parse.dll = DogBookApp\Libs\Parse.dll
+		DogBookApp\Libs\Parse.WinRT.dll = DogBookApp\Libs\Parse.WinRT.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DogBookApp\DogBookApp.Shared\DogBookApp.Shared.projitems*{eed30c40-a5e0-4976-a761-c2368b71cc7f}*SharedItemsImports = 4

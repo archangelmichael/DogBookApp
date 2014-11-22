@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parse;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +38,11 @@ namespace DogBookApp
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
+            var testObject = new ParseObject("TestObject");
+            testObject["foo"] = "bar";
+            testObject.SaveAsync();
         }
 
         /// <summary>
