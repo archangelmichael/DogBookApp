@@ -12,18 +12,36 @@ namespace DogBookApp.ViewModels
         private string content;
         private string createdAt;
         private string senderName;
-        private string senderUsername;
+        private string senderId;
+        private string messageId;
+        private string receiverId;
+
         public static Expression<Func<MessageModel, MessageViewModel>> FromModel
         {
             get
             {
                 return model => new MessageViewModel()
                 {
+                    MessageId = model.ObjectId,
                     Content = model.Content,
                     CreatedAt = ((DateTime)model.CreatedAt).ToString("dd MM yyyy hh:mm:ss"),
                     SenderName = model.SenderNickname,
-                    SenderUsername = model.Sender.Username
+                    SenderId = model.Sender.ObjectId,
+                    ReceiverId = UserModel.CurrentUser.ObjectId
                 };
+            }
+        }
+
+        public string MessageId
+        {
+            get
+            {
+                return this.messageId;
+            }
+            set
+            {
+                this.messageId = value;
+                this.RaisePropertyChanged(() => this.MessageId);
             }
         }
 
@@ -66,16 +84,29 @@ namespace DogBookApp.ViewModels
             }
         }
 
-        public string SenderUsername
+        public string SenderId
         {
             get
             {
-                return this.senderUsername;
+                return this.senderId;
             }
             set
             {
-                this.senderUsername = value;
-                this.RaisePropertyChanged(() => this.SenderUsername);
+                this.senderId = value;
+                this.RaisePropertyChanged(() => this.SenderId);
+            }
+        }
+
+        public string ReceiverId
+        {
+            get
+            {
+                return this.receiverId;
+            }
+            set
+            {
+                this.receiverId = value;
+                this.RaisePropertyChanged(() => this.ReceiverId);
             }
         }
     }

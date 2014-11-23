@@ -62,7 +62,7 @@ namespace DogBookApp.ViewModels
                 Age = "Not Specified",
                 Breed = "Not Specified",
                 Address = "No Address",
-                Friends = new List<UserModel>(),
+                Friends = new List<string>(),
                 Location = new ParseGeoPoint(0, 0),
                 Picture = new ParseFile("blank-avatar.png", data)
             };

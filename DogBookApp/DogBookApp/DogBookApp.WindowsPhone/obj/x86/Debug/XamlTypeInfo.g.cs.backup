@@ -124,75 +124,87 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[33];
+            _typeNameTable = new string[39];
             _typeNameTable[0] = "DogBookApp.Pages.CaptureImagePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "DogBookApp.Common.NavigationHelper";
             _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[5] = "DogBookApp.Pages.FriendsPage";
-            _typeNameTable[6] = "DogBookApp.Pages.LoginPage";
-            _typeNameTable[7] = "System.Collections.Generic.List`1<DogBookApp.Models.SQLiteUserModel>";
-            _typeNameTable[8] = "Object";
-            _typeNameTable[9] = "DogBookApp.Models.SQLiteUserModel";
-            _typeNameTable[10] = "Int32";
-            _typeNameTable[11] = "String";
-            _typeNameTable[12] = "Boolean";
-            _typeNameTable[13] = "DogBookApp.ViewModels.LoginPageViewModel";
-            _typeNameTable[14] = "GalaSoft.MvvmLight.ViewModelBase";
-            _typeNameTable[15] = "GalaSoft.MvvmLight.ObservableObject";
-            _typeNameTable[16] = "DogBookApp.Converters.DateToStringConverter";
-            _typeNameTable[17] = "DogBookApp.Views.NewStatusMessageView";
-            _typeNameTable[18] = "DogBookApp.Models.MessagesContainer";
-            _typeNameTable[19] = "DogBookApp.ViewModels.BaseViewModel";
-            _typeNameTable[20] = "DogBookApp.Views.ListStatusMessagesView";
-            _typeNameTable[21] = "System.Collections.Generic.List`1<DogBookApp.Models.StatusMessage>";
-            _typeNameTable[22] = "DogBookApp.Models.StatusMessage";
-            _typeNameTable[23] = "DogBookApp.Models.Message";
-            _typeNameTable[24] = "Windows.UI.Xaml.Media.Imaging.BitmapImage";
-            _typeNameTable[25] = "Windows.Devices.Geolocation.Geoposition";
-            _typeNameTable[26] = "System.DateTime";
-            _typeNameTable[27] = "System.ValueType";
-            _typeNameTable[28] = "DogBookApp.Pages.MainPage";
-            _typeNameTable[29] = "DogBookApp.Pages.MessagesPage";
-            _typeNameTable[30] = "DogBookApp.Pages.NotificationsPage";
-            _typeNameTable[31] = "DogBookApp.Pages.ProfilePage";
-            _typeNameTable[32] = "DogBookApp.ViewModels.ProfilePageViewModel";
+            _typeNameTable[5] = "DogBookApp.Pages.FriendDetailsPage";
+            _typeNameTable[6] = "DogBookApp.ViewModels.FriendDetailsPageViewModel";
+            _typeNameTable[7] = "GalaSoft.MvvmLight.ViewModelBase";
+            _typeNameTable[8] = "GalaSoft.MvvmLight.ObservableObject";
+            _typeNameTable[9] = "Object";
+            _typeNameTable[10] = "DogBookApp.Pages.FriendsPage";
+            _typeNameTable[11] = "DogBookApp.Pages.LoginPage";
+            _typeNameTable[12] = "System.Collections.Generic.List`1<DogBookApp.Models.SQLiteUserModel>";
+            _typeNameTable[13] = "DogBookApp.Models.SQLiteUserModel";
+            _typeNameTable[14] = "Int32";
+            _typeNameTable[15] = "String";
+            _typeNameTable[16] = "Boolean";
+            _typeNameTable[17] = "DogBookApp.ViewModels.LoginPageViewModel";
+            _typeNameTable[18] = "DogBookApp.Converters.DateToStringConverter";
+            _typeNameTable[19] = "DogBookApp.Views.NewStatusMessageView";
+            _typeNameTable[20] = "DogBookApp.Models.MessagesContainer";
+            _typeNameTable[21] = "DogBookApp.ViewModels.BaseViewModel";
+            _typeNameTable[22] = "DogBookApp.Views.ListStatusMessagesView";
+            _typeNameTable[23] = "System.Collections.Generic.List`1<DogBookApp.Models.StatusMessage>";
+            _typeNameTable[24] = "DogBookApp.Models.StatusMessage";
+            _typeNameTable[25] = "DogBookApp.Models.Message";
+            _typeNameTable[26] = "Windows.UI.Xaml.Media.Imaging.BitmapImage";
+            _typeNameTable[27] = "Windows.Devices.Geolocation.Geoposition";
+            _typeNameTable[28] = "System.DateTime";
+            _typeNameTable[29] = "System.ValueType";
+            _typeNameTable[30] = "DogBookApp.Pages.MainPage";
+            _typeNameTable[31] = "DogBookApp.Pages.MessageDetailsPage";
+            _typeNameTable[32] = "DogBookApp.ViewModels.MessageDetailsPageViewModel";
+            _typeNameTable[33] = "DogBookApp.Pages.MessagesPage";
+            _typeNameTable[34] = "DogBookApp.Pages.NewMessagePage";
+            _typeNameTable[35] = "DogBookApp.Pages.NotificationsPage";
+            _typeNameTable[36] = "DogBookApp.Pages.ProfilePage";
+            _typeNameTable[37] = "DogBookApp.ViewModels.ProfilePageViewModel";
+            _typeNameTable[38] = "DogBookApp.Pages.StatusDetailsPage";
 
-            _typeTable = new global::System.Type[33];
+            _typeTable = new global::System.Type[39];
             _typeTable[0] = typeof(global::DogBookApp.Pages.CaptureImagePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::DogBookApp.Common.NavigationHelper);
             _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[5] = typeof(global::DogBookApp.Pages.FriendsPage);
-            _typeTable[6] = typeof(global::DogBookApp.Pages.LoginPage);
-            _typeTable[7] = typeof(global::System.Collections.Generic.List<global::DogBookApp.Models.SQLiteUserModel>);
-            _typeTable[8] = typeof(global::System.Object);
-            _typeTable[9] = typeof(global::DogBookApp.Models.SQLiteUserModel);
-            _typeTable[10] = typeof(global::System.Int32);
-            _typeTable[11] = typeof(global::System.String);
-            _typeTable[12] = typeof(global::System.Boolean);
-            _typeTable[13] = typeof(global::DogBookApp.ViewModels.LoginPageViewModel);
-            _typeTable[14] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
-            _typeTable[15] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
-            _typeTable[16] = typeof(global::DogBookApp.Converters.DateToStringConverter);
-            _typeTable[17] = typeof(global::DogBookApp.Views.NewStatusMessageView);
-            _typeTable[18] = typeof(global::DogBookApp.Models.MessagesContainer);
-            _typeTable[19] = typeof(global::DogBookApp.ViewModels.BaseViewModel);
-            _typeTable[20] = typeof(global::DogBookApp.Views.ListStatusMessagesView);
-            _typeTable[21] = typeof(global::System.Collections.Generic.List<global::DogBookApp.Models.StatusMessage>);
-            _typeTable[22] = typeof(global::DogBookApp.Models.StatusMessage);
-            _typeTable[23] = typeof(global::DogBookApp.Models.Message);
-            _typeTable[24] = typeof(global::Windows.UI.Xaml.Media.Imaging.BitmapImage);
-            _typeTable[25] = typeof(global::Windows.Devices.Geolocation.Geoposition);
-            _typeTable[26] = typeof(global::System.DateTime);
-            _typeTable[27] = typeof(global::System.ValueType);
-            _typeTable[28] = typeof(global::DogBookApp.Pages.MainPage);
-            _typeTable[29] = typeof(global::DogBookApp.Pages.MessagesPage);
-            _typeTable[30] = typeof(global::DogBookApp.Pages.NotificationsPage);
-            _typeTable[31] = typeof(global::DogBookApp.Pages.ProfilePage);
-            _typeTable[32] = typeof(global::DogBookApp.ViewModels.ProfilePageViewModel);
+            _typeTable[5] = typeof(global::DogBookApp.Pages.FriendDetailsPage);
+            _typeTable[6] = typeof(global::DogBookApp.ViewModels.FriendDetailsPageViewModel);
+            _typeTable[7] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
+            _typeTable[8] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
+            _typeTable[9] = typeof(global::System.Object);
+            _typeTable[10] = typeof(global::DogBookApp.Pages.FriendsPage);
+            _typeTable[11] = typeof(global::DogBookApp.Pages.LoginPage);
+            _typeTable[12] = typeof(global::System.Collections.Generic.List<global::DogBookApp.Models.SQLiteUserModel>);
+            _typeTable[13] = typeof(global::DogBookApp.Models.SQLiteUserModel);
+            _typeTable[14] = typeof(global::System.Int32);
+            _typeTable[15] = typeof(global::System.String);
+            _typeTable[16] = typeof(global::System.Boolean);
+            _typeTable[17] = typeof(global::DogBookApp.ViewModels.LoginPageViewModel);
+            _typeTable[18] = typeof(global::DogBookApp.Converters.DateToStringConverter);
+            _typeTable[19] = typeof(global::DogBookApp.Views.NewStatusMessageView);
+            _typeTable[20] = typeof(global::DogBookApp.Models.MessagesContainer);
+            _typeTable[21] = typeof(global::DogBookApp.ViewModels.BaseViewModel);
+            _typeTable[22] = typeof(global::DogBookApp.Views.ListStatusMessagesView);
+            _typeTable[23] = typeof(global::System.Collections.Generic.List<global::DogBookApp.Models.StatusMessage>);
+            _typeTable[24] = typeof(global::DogBookApp.Models.StatusMessage);
+            _typeTable[25] = typeof(global::DogBookApp.Models.Message);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Media.Imaging.BitmapImage);
+            _typeTable[27] = typeof(global::Windows.Devices.Geolocation.Geoposition);
+            _typeTable[28] = typeof(global::System.DateTime);
+            _typeTable[29] = typeof(global::System.ValueType);
+            _typeTable[30] = typeof(global::DogBookApp.Pages.MainPage);
+            _typeTable[31] = typeof(global::DogBookApp.Pages.MessageDetailsPage);
+            _typeTable[32] = typeof(global::DogBookApp.ViewModels.MessageDetailsPageViewModel);
+            _typeTable[33] = typeof(global::DogBookApp.Pages.MessagesPage);
+            _typeTable[34] = typeof(global::DogBookApp.Pages.NewMessagePage);
+            _typeTable[35] = typeof(global::DogBookApp.Pages.NotificationsPage);
+            _typeTable[36] = typeof(global::DogBookApp.Pages.ProfilePage);
+            _typeTable[37] = typeof(global::DogBookApp.ViewModels.ProfilePageViewModel);
+            _typeTable[38] = typeof(global::DogBookApp.Pages.StatusDetailsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -228,31 +240,37 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
         }
 
         private object Activate_0_CaptureImagePage() { return new global::DogBookApp.Pages.CaptureImagePage(); }
-        private object Activate_5_FriendsPage() { return new global::DogBookApp.Pages.FriendsPage(); }
-        private object Activate_6_LoginPage() { return new global::DogBookApp.Pages.LoginPage(); }
-        private object Activate_7_List() { return new global::System.Collections.Generic.List<global::DogBookApp.Models.SQLiteUserModel>(); }
-        private object Activate_9_SQLiteUserModel() { return new global::DogBookApp.Models.SQLiteUserModel(); }
-        private object Activate_13_LoginPageViewModel() { return new global::DogBookApp.ViewModels.LoginPageViewModel(); }
-        private object Activate_15_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_16_DateToStringConverter() { return new global::DogBookApp.Converters.DateToStringConverter(); }
-        private object Activate_17_NewStatusMessageView() { return new global::DogBookApp.Views.NewStatusMessageView(); }
-        private object Activate_19_BaseViewModel() { return new global::DogBookApp.ViewModels.BaseViewModel(); }
-        private object Activate_20_ListStatusMessagesView() { return new global::DogBookApp.Views.ListStatusMessagesView(); }
-        private object Activate_21_List() { return new global::System.Collections.Generic.List<global::DogBookApp.Models.StatusMessage>(); }
-        private object Activate_22_StatusMessage() { return new global::DogBookApp.Models.StatusMessage(); }
-        private object Activate_23_Message() { return new global::DogBookApp.Models.Message(); }
-        private object Activate_28_MainPage() { return new global::DogBookApp.Pages.MainPage(); }
-        private object Activate_29_MessagesPage() { return new global::DogBookApp.Pages.MessagesPage(); }
-        private object Activate_30_NotificationsPage() { return new global::DogBookApp.Pages.NotificationsPage(); }
-        private object Activate_31_ProfilePage() { return new global::DogBookApp.Pages.ProfilePage(); }
-        private object Activate_32_ProfilePageViewModel() { return new global::DogBookApp.ViewModels.ProfilePageViewModel(); }
-        private void VectorAdd_7_List(object instance, object item)
+        private object Activate_5_FriendDetailsPage() { return new global::DogBookApp.Pages.FriendDetailsPage(); }
+        private object Activate_6_FriendDetailsPageViewModel() { return new global::DogBookApp.ViewModels.FriendDetailsPageViewModel(); }
+        private object Activate_8_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
+        private object Activate_10_FriendsPage() { return new global::DogBookApp.Pages.FriendsPage(); }
+        private object Activate_11_LoginPage() { return new global::DogBookApp.Pages.LoginPage(); }
+        private object Activate_12_List() { return new global::System.Collections.Generic.List<global::DogBookApp.Models.SQLiteUserModel>(); }
+        private object Activate_13_SQLiteUserModel() { return new global::DogBookApp.Models.SQLiteUserModel(); }
+        private object Activate_17_LoginPageViewModel() { return new global::DogBookApp.ViewModels.LoginPageViewModel(); }
+        private object Activate_18_DateToStringConverter() { return new global::DogBookApp.Converters.DateToStringConverter(); }
+        private object Activate_19_NewStatusMessageView() { return new global::DogBookApp.Views.NewStatusMessageView(); }
+        private object Activate_21_BaseViewModel() { return new global::DogBookApp.ViewModels.BaseViewModel(); }
+        private object Activate_22_ListStatusMessagesView() { return new global::DogBookApp.Views.ListStatusMessagesView(); }
+        private object Activate_23_List() { return new global::System.Collections.Generic.List<global::DogBookApp.Models.StatusMessage>(); }
+        private object Activate_24_StatusMessage() { return new global::DogBookApp.Models.StatusMessage(); }
+        private object Activate_25_Message() { return new global::DogBookApp.Models.Message(); }
+        private object Activate_30_MainPage() { return new global::DogBookApp.Pages.MainPage(); }
+        private object Activate_31_MessageDetailsPage() { return new global::DogBookApp.Pages.MessageDetailsPage(); }
+        private object Activate_32_MessageDetailsPageViewModel() { return new global::DogBookApp.ViewModels.MessageDetailsPageViewModel(); }
+        private object Activate_33_MessagesPage() { return new global::DogBookApp.Pages.MessagesPage(); }
+        private object Activate_34_NewMessagePage() { return new global::DogBookApp.Pages.NewMessagePage(); }
+        private object Activate_35_NotificationsPage() { return new global::DogBookApp.Pages.NotificationsPage(); }
+        private object Activate_36_ProfilePage() { return new global::DogBookApp.Pages.ProfilePage(); }
+        private object Activate_37_ProfilePageViewModel() { return new global::DogBookApp.ViewModels.ProfilePageViewModel(); }
+        private object Activate_38_StatusDetailsPage() { return new global::DogBookApp.Pages.StatusDetailsPage(); }
+        private void VectorAdd_12_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DogBookApp.Models.SQLiteUserModel>)instance;
             var newItem = (global::DogBookApp.Models.SQLiteUserModel)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_21_List(object instance, object item)
+        private void VectorAdd_23_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DogBookApp.Models.StatusMessage>)instance;
             var newItem = (global::DogBookApp.Models.StatusMessage)item;
@@ -296,16 +314,46 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  DogBookApp.Pages.FriendsPage
+            case 5:   //  DogBookApp.Pages.FriendDetailsPage
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_FriendsPage;
+                userType.Activator = Activate_5_FriendDetailsPage;
+                userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  DogBookApp.Pages.LoginPage
+            case 6:   //  DogBookApp.ViewModels.FriendDetailsPageViewModel
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  GalaSoft.MvvmLight.ViewModelBase
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ObservableObject"));
+                xamlType = userType;
+                break;
+
+            case 8:   //  GalaSoft.MvvmLight.ObservableObject
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_8_ObservableObject;
+                xamlType = userType;
+                break;
+
+            case 9:   //  Object
+                xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  DogBookApp.Pages.FriendsPage
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_LoginPage;
+                userType.Activator = Activate_10_FriendsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  DogBookApp.Pages.LoginPage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_LoginPage;
                 userType.AddMemberName("Users");
                 userType.AddMemberName("currentUser");
                 userType.AddMemberName("ViewModel");
@@ -313,20 +361,16 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  System.Collections.Generic.List`1<DogBookApp.Models.SQLiteUserModel>
+            case 12:   //  System.Collections.Generic.List`1<DogBookApp.Models.SQLiteUserModel>
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_7_List;
+                userType.CollectionAdd = VectorAdd_12_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Object
-                xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  DogBookApp.Models.SQLiteUserModel
+            case 13:   //  DogBookApp.Models.SQLiteUserModel
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_9_SQLiteUserModel;
+                userType.Activator = Activate_13_SQLiteUserModel;
                 userType.AddMemberName("UserID");
                 userType.AddMemberName("Username");
                 userType.AddMemberName("Password");
@@ -335,84 +379,73 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Int32
+            case 14:   //  Int32
                 xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  String
+            case 15:   //  String
                 xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Boolean
+            case 16:   //  Boolean
                 xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  DogBookApp.ViewModels.LoginPageViewModel
+            case 17:   //  DogBookApp.ViewModels.LoginPageViewModel
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  GalaSoft.MvvmLight.ViewModelBase
-                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ObservableObject"));
-                xamlType = userType;
-                break;
-
-            case 15:   //  GalaSoft.MvvmLight.ObservableObject
+            case 18:   //  DogBookApp.Converters.DateToStringConverter
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_15_ObservableObject;
-                xamlType = userType;
-                break;
-
-            case 16:   //  DogBookApp.Converters.DateToStringConverter
-                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_16_DateToStringConverter;
+                userType.Activator = Activate_18_DateToStringConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  DogBookApp.Views.NewStatusMessageView
+            case 19:   //  DogBookApp.Views.NewStatusMessageView
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_17_NewStatusMessageView;
+                userType.Activator = Activate_19_NewStatusMessageView;
                 userType.AddMemberName("StatsManager");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  DogBookApp.Models.MessagesContainer
+            case 20:   //  DogBookApp.Models.MessagesContainer
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DogBookApp.ViewModels.BaseViewModel"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  DogBookApp.ViewModels.BaseViewModel
+            case 21:   //  DogBookApp.ViewModels.BaseViewModel
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_19_BaseViewModel;
+                userType.Activator = Activate_21_BaseViewModel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  DogBookApp.Views.ListStatusMessagesView
+            case 22:   //  DogBookApp.Views.ListStatusMessagesView
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_20_ListStatusMessagesView;
+                userType.Activator = Activate_22_ListStatusMessagesView;
                 userType.AddMemberName("StatusMessages");
                 userType.AddMemberName("StatsManager");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  System.Collections.Generic.List`1<DogBookApp.Models.StatusMessage>
+            case 23:   //  System.Collections.Generic.List`1<DogBookApp.Models.StatusMessage>
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_21_List;
+                userType.CollectionAdd = VectorAdd_23_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 22:   //  DogBookApp.Models.StatusMessage
+            case 24:   //  DogBookApp.Models.StatusMessage
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DogBookApp.Models.Message"));
-                userType.Activator = Activate_22_StatusMessage;
+                userType.Activator = Activate_24_StatusMessage;
                 userType.AddMemberName("Image");
                 userType.AddMemberName("Location");
                 userType.AddMemberName("LocationImage");
@@ -420,9 +453,9 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 23:   //  DogBookApp.Models.Message
+            case 25:   //  DogBookApp.Models.Message
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_23_Message;
+                userType.Activator = Activate_25_Message;
                 userType.AddMemberName("Id");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("CreatedAt");
@@ -434,60 +467,90 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  Windows.UI.Xaml.Media.Imaging.BitmapImage
+            case 26:   //  Windows.UI.Xaml.Media.Imaging.BitmapImage
                 xamlType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Windows.Devices.Geolocation.Geoposition
+            case 27:   //  Windows.Devices.Geolocation.Geoposition
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 26:   //  System.DateTime
+            case 28:   //  System.DateTime
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 27:   //  System.ValueType
+            case 29:   //  System.ValueType
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 28:   //  DogBookApp.Pages.MainPage
+            case 30:   //  DogBookApp.Pages.MainPage
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_MainPage;
+                userType.Activator = Activate_30_MainPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  DogBookApp.Pages.MessagesPage
+            case 31:   //  DogBookApp.Pages.MessageDetailsPage
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_29_MessagesPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 30:   //  DogBookApp.Pages.NotificationsPage
-                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_NotificationsPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 31:   //  DogBookApp.Pages.ProfilePage
-                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_ProfilePage;
+                userType.Activator = Activate_31_MessageDetailsPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  DogBookApp.ViewModels.ProfilePageViewModel
+            case 32:   //  DogBookApp.ViewModels.MessageDetailsPageViewModel
                 userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 33:   //  DogBookApp.Pages.MessagesPage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_33_MessagesPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 34:   //  DogBookApp.Pages.NewMessagePage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_34_NewMessagePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  DogBookApp.Pages.NotificationsPage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_35_NotificationsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  DogBookApp.Pages.ProfilePage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_36_ProfilePage;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  DogBookApp.ViewModels.ProfilePageViewModel
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 38:   //  DogBookApp.Pages.StatusDetailsPage
+                userType = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_38_StatusDetailsPage;
+                userType.AddMemberName("CurrentStatusMessage");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -506,225 +569,255 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
             var that = (global::DogBookApp.Pages.CaptureImagePage)instance;
             that.NavigationHelper = (global::DogBookApp.Common.NavigationHelper)Value;
         }
-        private object get_1_LoginPage_Users(object instance)
+        private object get_1_FriendDetailsPage_ViewModel(object instance)
+        {
+            var that = (global::DogBookApp.Pages.FriendDetailsPage)instance;
+            return that.ViewModel;
+        }
+        private void set_1_FriendDetailsPage_ViewModel(object instance, object Value)
+        {
+            var that = (global::DogBookApp.Pages.FriendDetailsPage)instance;
+            that.ViewModel = (global::DogBookApp.ViewModels.FriendDetailsPageViewModel)Value;
+        }
+        private object get_2_LoginPage_Users(object instance)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             return that.Users;
         }
-        private void set_1_LoginPage_Users(object instance, object Value)
+        private void set_2_LoginPage_Users(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             that.Users = (global::System.Collections.Generic.List<global::DogBookApp.Models.SQLiteUserModel>)Value;
         }
-        private object get_2_SQLiteUserModel_UserID(object instance)
+        private object get_3_SQLiteUserModel_UserID(object instance)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             return that.UserID;
         }
-        private void set_2_SQLiteUserModel_UserID(object instance, object Value)
+        private void set_3_SQLiteUserModel_UserID(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             that.UserID = (global::System.Int32)Value;
         }
-        private object get_3_SQLiteUserModel_Username(object instance)
+        private object get_4_SQLiteUserModel_Username(object instance)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             return that.Username;
         }
-        private void set_3_SQLiteUserModel_Username(object instance, object Value)
+        private void set_4_SQLiteUserModel_Username(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             that.Username = (global::System.String)Value;
         }
-        private object get_4_SQLiteUserModel_Password(object instance)
+        private object get_5_SQLiteUserModel_Password(object instance)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             return that.Password;
         }
-        private void set_4_SQLiteUserModel_Password(object instance, object Value)
+        private void set_5_SQLiteUserModel_Password(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             that.Password = (global::System.String)Value;
         }
-        private object get_5_SQLiteUserModel_IsLoggedIn(object instance)
+        private object get_6_SQLiteUserModel_IsLoggedIn(object instance)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             return that.IsLoggedIn;
         }
-        private void set_5_SQLiteUserModel_IsLoggedIn(object instance, object Value)
+        private void set_6_SQLiteUserModel_IsLoggedIn(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.SQLiteUserModel)instance;
             that.IsLoggedIn = (global::System.Boolean)Value;
         }
-        private object get_6_LoginPage_currentUser(object instance)
+        private object get_7_LoginPage_currentUser(object instance)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             return that.currentUser;
         }
-        private void set_6_LoginPage_currentUser(object instance, object Value)
+        private void set_7_LoginPage_currentUser(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             that.currentUser = (global::DogBookApp.Models.SQLiteUserModel)Value;
         }
-        private object get_7_LoginPage_ViewModel(object instance)
+        private object get_8_LoginPage_ViewModel(object instance)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             return that.ViewModel;
         }
-        private void set_7_LoginPage_ViewModel(object instance, object Value)
+        private void set_8_LoginPage_ViewModel(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.LoginPage)instance;
             that.ViewModel = (global::DogBookApp.ViewModels.LoginPageViewModel)Value;
         }
-        private object get_8_NewStatusMessageView_StatsManager(object instance)
+        private object get_9_NewStatusMessageView_StatsManager(object instance)
         {
             var that = (global::DogBookApp.Views.NewStatusMessageView)instance;
             return that.StatsManager;
         }
-        private void set_8_NewStatusMessageView_StatsManager(object instance, object Value)
+        private void set_9_NewStatusMessageView_StatsManager(object instance, object Value)
         {
             var that = (global::DogBookApp.Views.NewStatusMessageView)instance;
             that.StatsManager = (global::DogBookApp.Models.MessagesContainer)Value;
         }
-        private object get_9_ListStatusMessagesView_StatusMessages(object instance)
+        private object get_10_ListStatusMessagesView_StatusMessages(object instance)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             return that.StatusMessages;
         }
-        private void set_9_ListStatusMessagesView_StatusMessages(object instance, object Value)
+        private void set_10_ListStatusMessagesView_StatusMessages(object instance, object Value)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             that.StatusMessages = (global::System.Collections.Generic.List<global::DogBookApp.Models.StatusMessage>)Value;
         }
-        private object get_10_StatusMessage_Image(object instance)
+        private object get_11_StatusMessage_Image(object instance)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             return that.Image;
         }
-        private void set_10_StatusMessage_Image(object instance, object Value)
+        private void set_11_StatusMessage_Image(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             that.Image = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
         }
-        private object get_11_StatusMessage_Location(object instance)
+        private object get_12_StatusMessage_Location(object instance)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             return that.Location;
         }
-        private void set_11_StatusMessage_Location(object instance, object Value)
+        private void set_12_StatusMessage_Location(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             that.Location = (global::Windows.Devices.Geolocation.Geoposition)Value;
         }
-        private object get_12_StatusMessage_LocationImage(object instance)
+        private object get_13_StatusMessage_LocationImage(object instance)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             return that.LocationImage;
         }
-        private void set_12_StatusMessage_LocationImage(object instance, object Value)
+        private void set_13_StatusMessage_LocationImage(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.StatusMessage)instance;
             that.LocationImage = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
         }
-        private object get_13_Message_Id(object instance)
+        private object get_14_Message_Id(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.Id;
         }
-        private void set_13_Message_Id(object instance, object Value)
+        private void set_14_Message_Id(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.Id = (global::System.String)Value;
         }
-        private object get_14_Message_Content(object instance)
+        private object get_15_Message_Content(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.Content;
         }
-        private void set_14_Message_Content(object instance, object Value)
+        private void set_15_Message_Content(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.Content = (global::System.String)Value;
         }
-        private object get_15_Message_CreatedAt(object instance)
+        private object get_16_Message_CreatedAt(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.CreatedAt;
         }
-        private void set_15_Message_CreatedAt(object instance, object Value)
+        private void set_16_Message_CreatedAt(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.CreatedAt = (global::System.DateTime)Value;
         }
-        private object get_16_Message_SenderId(object instance)
+        private object get_17_Message_SenderId(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.SenderId;
         }
-        private void set_16_Message_SenderId(object instance, object Value)
+        private void set_17_Message_SenderId(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.SenderId = (global::System.String)Value;
         }
-        private object get_17_Message_SenderNickName(object instance)
+        private object get_18_Message_SenderNickName(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.SenderNickName;
         }
-        private void set_17_Message_SenderNickName(object instance, object Value)
+        private void set_18_Message_SenderNickName(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.SenderNickName = (global::System.String)Value;
         }
-        private object get_18_Message_ReceiverId(object instance)
+        private object get_19_Message_ReceiverId(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.ReceiverId;
         }
-        private void set_18_Message_ReceiverId(object instance, object Value)
+        private void set_19_Message_ReceiverId(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.ReceiverId = (global::System.String)Value;
         }
-        private object get_19_Message_IsRead(object instance)
+        private object get_20_Message_IsRead(object instance)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             return that.IsRead;
         }
-        private void set_19_Message_IsRead(object instance, object Value)
+        private void set_20_Message_IsRead(object instance, object Value)
         {
             var that = (global::DogBookApp.Models.Message)instance;
             that.IsRead = (global::System.Boolean)Value;
         }
-        private object get_20_ListStatusMessagesView_StatsManager(object instance)
+        private object get_21_ListStatusMessagesView_StatsManager(object instance)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             return that.StatsManager;
         }
-        private void set_20_ListStatusMessagesView_StatsManager(object instance, object Value)
+        private void set_21_ListStatusMessagesView_StatsManager(object instance, object Value)
         {
             var that = (global::DogBookApp.Views.ListStatusMessagesView)instance;
             that.StatsManager = (global::DogBookApp.Models.MessagesContainer)Value;
         }
-        private object get_21_MainPage_NavigationHelper(object instance)
+        private object get_22_MainPage_NavigationHelper(object instance)
         {
             var that = (global::DogBookApp.Pages.MainPage)instance;
             return that.NavigationHelper;
         }
-        private void set_21_MainPage_NavigationHelper(object instance, object Value)
+        private void set_22_MainPage_NavigationHelper(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.MainPage)instance;
             that.NavigationHelper = (global::DogBookApp.Common.NavigationHelper)Value;
         }
-        private object get_22_ProfilePage_ViewModel(object instance)
+        private object get_23_MessageDetailsPage_ViewModel(object instance)
+        {
+            var that = (global::DogBookApp.Pages.MessageDetailsPage)instance;
+            return that.ViewModel;
+        }
+        private void set_23_MessageDetailsPage_ViewModel(object instance, object Value)
+        {
+            var that = (global::DogBookApp.Pages.MessageDetailsPage)instance;
+            that.ViewModel = (global::DogBookApp.ViewModels.MessageDetailsPageViewModel)Value;
+        }
+        private object get_24_ProfilePage_ViewModel(object instance)
         {
             var that = (global::DogBookApp.Pages.ProfilePage)instance;
             return that.ViewModel;
         }
-        private void set_22_ProfilePage_ViewModel(object instance, object Value)
+        private void set_24_ProfilePage_ViewModel(object instance, object Value)
         {
             var that = (global::DogBookApp.Pages.ProfilePage)instance;
             that.ViewModel = (global::DogBookApp.ViewModels.ProfilePageViewModel)Value;
+        }
+        private object get_25_StatusDetailsPage_CurrentStatusMessage(object instance)
+        {
+            var that = (global::DogBookApp.Pages.StatusDetailsPage)instance;
+            return that.CurrentStatusMessage;
+        }
+        private void set_25_StatusDetailsPage_CurrentStatusMessage(object instance, object Value)
+        {
+            var that = (global::DogBookApp.Pages.StatusDetailsPage)instance;
+            that.CurrentStatusMessage = (global::DogBookApp.Models.StatusMessage)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -740,137 +833,155 @@ namespace DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_0_CaptureImagePage_NavigationHelper;
                 xamlMember.Setter = set_0_CaptureImagePage_NavigationHelper;
                 break;
+            case "DogBookApp.Pages.FriendDetailsPage.ViewModel":
+                userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.FriendDetailsPage");
+                xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "DogBookApp.ViewModels.FriendDetailsPageViewModel");
+                xamlMember.Getter = get_1_FriendDetailsPage_ViewModel;
+                xamlMember.Setter = set_1_FriendDetailsPage_ViewModel;
+                break;
             case "DogBookApp.Pages.LoginPage.Users":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.LoginPage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Users", "System.Collections.Generic.List`1<DogBookApp.Models.SQLiteUserModel>");
-                xamlMember.Getter = get_1_LoginPage_Users;
-                xamlMember.Setter = set_1_LoginPage_Users;
+                xamlMember.Getter = get_2_LoginPage_Users;
+                xamlMember.Setter = set_2_LoginPage_Users;
                 break;
             case "DogBookApp.Models.SQLiteUserModel.UserID":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.SQLiteUserModel");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "UserID", "Int32");
-                xamlMember.Getter = get_2_SQLiteUserModel_UserID;
-                xamlMember.Setter = set_2_SQLiteUserModel_UserID;
+                xamlMember.Getter = get_3_SQLiteUserModel_UserID;
+                xamlMember.Setter = set_3_SQLiteUserModel_UserID;
                 break;
             case "DogBookApp.Models.SQLiteUserModel.Username":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.SQLiteUserModel");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Username", "String");
-                xamlMember.Getter = get_3_SQLiteUserModel_Username;
-                xamlMember.Setter = set_3_SQLiteUserModel_Username;
+                xamlMember.Getter = get_4_SQLiteUserModel_Username;
+                xamlMember.Setter = set_4_SQLiteUserModel_Username;
                 break;
             case "DogBookApp.Models.SQLiteUserModel.Password":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.SQLiteUserModel");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Password", "String");
-                xamlMember.Getter = get_4_SQLiteUserModel_Password;
-                xamlMember.Setter = set_4_SQLiteUserModel_Password;
+                xamlMember.Getter = get_5_SQLiteUserModel_Password;
+                xamlMember.Setter = set_5_SQLiteUserModel_Password;
                 break;
             case "DogBookApp.Models.SQLiteUserModel.IsLoggedIn":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.SQLiteUserModel");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "IsLoggedIn", "Boolean");
-                xamlMember.Getter = get_5_SQLiteUserModel_IsLoggedIn;
-                xamlMember.Setter = set_5_SQLiteUserModel_IsLoggedIn;
+                xamlMember.Getter = get_6_SQLiteUserModel_IsLoggedIn;
+                xamlMember.Setter = set_6_SQLiteUserModel_IsLoggedIn;
                 break;
             case "DogBookApp.Pages.LoginPage.currentUser":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.LoginPage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "currentUser", "DogBookApp.Models.SQLiteUserModel");
-                xamlMember.Getter = get_6_LoginPage_currentUser;
-                xamlMember.Setter = set_6_LoginPage_currentUser;
+                xamlMember.Getter = get_7_LoginPage_currentUser;
+                xamlMember.Setter = set_7_LoginPage_currentUser;
                 break;
             case "DogBookApp.Pages.LoginPage.ViewModel":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.LoginPage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "DogBookApp.ViewModels.LoginPageViewModel");
-                xamlMember.Getter = get_7_LoginPage_ViewModel;
-                xamlMember.Setter = set_7_LoginPage_ViewModel;
+                xamlMember.Getter = get_8_LoginPage_ViewModel;
+                xamlMember.Setter = set_8_LoginPage_ViewModel;
                 break;
             case "DogBookApp.Views.NewStatusMessageView.StatsManager":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Views.NewStatusMessageView");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "StatsManager", "DogBookApp.Models.MessagesContainer");
-                xamlMember.Getter = get_8_NewStatusMessageView_StatsManager;
-                xamlMember.Setter = set_8_NewStatusMessageView_StatsManager;
+                xamlMember.Getter = get_9_NewStatusMessageView_StatsManager;
+                xamlMember.Setter = set_9_NewStatusMessageView_StatsManager;
                 break;
             case "DogBookApp.Views.ListStatusMessagesView.StatusMessages":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Views.ListStatusMessagesView");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "StatusMessages", "System.Collections.Generic.List`1<DogBookApp.Models.StatusMessage>");
-                xamlMember.Getter = get_9_ListStatusMessagesView_StatusMessages;
-                xamlMember.Setter = set_9_ListStatusMessagesView_StatusMessages;
+                xamlMember.Getter = get_10_ListStatusMessagesView_StatusMessages;
+                xamlMember.Setter = set_10_ListStatusMessagesView_StatusMessages;
                 break;
             case "DogBookApp.Models.StatusMessage.Image":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.StatusMessage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Image", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
-                xamlMember.Getter = get_10_StatusMessage_Image;
-                xamlMember.Setter = set_10_StatusMessage_Image;
+                xamlMember.Getter = get_11_StatusMessage_Image;
+                xamlMember.Setter = set_11_StatusMessage_Image;
                 break;
             case "DogBookApp.Models.StatusMessage.Location":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.StatusMessage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Location", "Windows.Devices.Geolocation.Geoposition");
-                xamlMember.Getter = get_11_StatusMessage_Location;
-                xamlMember.Setter = set_11_StatusMessage_Location;
+                xamlMember.Getter = get_12_StatusMessage_Location;
+                xamlMember.Setter = set_12_StatusMessage_Location;
                 break;
             case "DogBookApp.Models.StatusMessage.LocationImage":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.StatusMessage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "LocationImage", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
-                xamlMember.Getter = get_12_StatusMessage_LocationImage;
-                xamlMember.Setter = set_12_StatusMessage_LocationImage;
+                xamlMember.Getter = get_13_StatusMessage_LocationImage;
+                xamlMember.Setter = set_13_StatusMessage_LocationImage;
                 break;
             case "DogBookApp.Models.Message.Id":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Id", "String");
-                xamlMember.Getter = get_13_Message_Id;
-                xamlMember.Setter = set_13_Message_Id;
+                xamlMember.Getter = get_14_Message_Id;
+                xamlMember.Setter = set_14_Message_Id;
                 break;
             case "DogBookApp.Models.Message.Content":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Content", "String");
-                xamlMember.Getter = get_14_Message_Content;
-                xamlMember.Setter = set_14_Message_Content;
+                xamlMember.Getter = get_15_Message_Content;
+                xamlMember.Setter = set_15_Message_Content;
                 break;
             case "DogBookApp.Models.Message.CreatedAt":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "CreatedAt", "System.DateTime");
-                xamlMember.Getter = get_15_Message_CreatedAt;
-                xamlMember.Setter = set_15_Message_CreatedAt;
+                xamlMember.Getter = get_16_Message_CreatedAt;
+                xamlMember.Setter = set_16_Message_CreatedAt;
                 break;
             case "DogBookApp.Models.Message.SenderId":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "SenderId", "String");
-                xamlMember.Getter = get_16_Message_SenderId;
-                xamlMember.Setter = set_16_Message_SenderId;
+                xamlMember.Getter = get_17_Message_SenderId;
+                xamlMember.Setter = set_17_Message_SenderId;
                 break;
             case "DogBookApp.Models.Message.SenderNickName":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "SenderNickName", "String");
-                xamlMember.Getter = get_17_Message_SenderNickName;
-                xamlMember.Setter = set_17_Message_SenderNickName;
+                xamlMember.Getter = get_18_Message_SenderNickName;
+                xamlMember.Setter = set_18_Message_SenderNickName;
                 break;
             case "DogBookApp.Models.Message.ReceiverId":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ReceiverId", "String");
-                xamlMember.Getter = get_18_Message_ReceiverId;
-                xamlMember.Setter = set_18_Message_ReceiverId;
+                xamlMember.Getter = get_19_Message_ReceiverId;
+                xamlMember.Setter = set_19_Message_ReceiverId;
                 break;
             case "DogBookApp.Models.Message.IsRead":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Models.Message");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "IsRead", "Boolean");
-                xamlMember.Getter = get_19_Message_IsRead;
-                xamlMember.Setter = set_19_Message_IsRead;
+                xamlMember.Getter = get_20_Message_IsRead;
+                xamlMember.Setter = set_20_Message_IsRead;
                 break;
             case "DogBookApp.Views.ListStatusMessagesView.StatsManager":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Views.ListStatusMessagesView");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "StatsManager", "DogBookApp.Models.MessagesContainer");
-                xamlMember.Getter = get_20_ListStatusMessagesView_StatsManager;
-                xamlMember.Setter = set_20_ListStatusMessagesView_StatsManager;
+                xamlMember.Getter = get_21_ListStatusMessagesView_StatsManager;
+                xamlMember.Setter = set_21_ListStatusMessagesView_StatsManager;
                 break;
             case "DogBookApp.Pages.MainPage.NavigationHelper":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.MainPage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "DogBookApp.Common.NavigationHelper");
-                xamlMember.Getter = get_21_MainPage_NavigationHelper;
-                xamlMember.Setter = set_21_MainPage_NavigationHelper;
+                xamlMember.Getter = get_22_MainPage_NavigationHelper;
+                xamlMember.Setter = set_22_MainPage_NavigationHelper;
+                break;
+            case "DogBookApp.Pages.MessageDetailsPage.ViewModel":
+                userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.MessageDetailsPage");
+                xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "DogBookApp.ViewModels.MessageDetailsPageViewModel");
+                xamlMember.Getter = get_23_MessageDetailsPage_ViewModel;
+                xamlMember.Setter = set_23_MessageDetailsPage_ViewModel;
                 break;
             case "DogBookApp.Pages.ProfilePage.ViewModel":
                 userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.ProfilePage");
                 xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "DogBookApp.ViewModels.ProfilePageViewModel");
-                xamlMember.Getter = get_22_ProfilePage_ViewModel;
-                xamlMember.Setter = set_22_ProfilePage_ViewModel;
+                xamlMember.Getter = get_24_ProfilePage_ViewModel;
+                xamlMember.Setter = set_24_ProfilePage_ViewModel;
+                break;
+            case "DogBookApp.Pages.StatusDetailsPage.CurrentStatusMessage":
+                userType = (global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.StatusDetailsPage");
+                xamlMember = new global::DogBookApp.DogBookApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "CurrentStatusMessage", "DogBookApp.Models.StatusMessage");
+                xamlMember.Getter = get_25_StatusDetailsPage_CurrentStatusMessage;
+                xamlMember.Setter = set_25_StatusDetailsPage_CurrentStatusMessage;
                 break;
             }
             return xamlMember;

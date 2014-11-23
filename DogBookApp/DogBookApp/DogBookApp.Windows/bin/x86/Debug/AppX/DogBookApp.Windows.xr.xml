@@ -4,21 +4,23 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Message" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="Breed" />
+    <RootPropertyPathName Name="Age" />
+    <RootPropertyPathName Name="Gender" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Avatar" />
+    <RootPropertyPathName Name="Friends" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
-    <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="SenderName" />
     <RootPropertyPathName Name="CreatedAt" />
     <RootPropertyPathName Name="Messages" />
     <RootPropertyPathName Name="Initializing" />
-    <RootPropertyPathName Name="Address" />
-    <RootPropertyPathName Name="Breed" />
-    <RootPropertyPathName Name="Age" />
-    <RootPropertyPathName Name="Gender" />
     <RootPropertyPathName Name="Nickname" />
-    <RootPropertyPathName Name="Avatar" />
     <RootPropertyPathName Name="SenderNickname" />
     <RootPropertyPathName Name="StatusMessages" />
     <RootPropertyPathName Name="Image" />
@@ -120,7 +122,6 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Items" />
-      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -141,20 +142,30 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="DogBookApp.Pages.CaptureImagePage" />
+    <RootType FullName="DogBookApp.Pages.FriendDetailsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Name" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Background" />
       <RootProperty Name="IsSticky" />
       <RootProperty Name="Height" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="PrimaryCommands" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
@@ -200,16 +211,6 @@
     </RootType>
     <RootType FullName="DogBookApp.Pages.MainPage" />
     <RootType FullName="DogBookApp.Pages.MessageDetailsPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Name" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
     <RootType FullName="DogBookApp.Pages.MessagesPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />

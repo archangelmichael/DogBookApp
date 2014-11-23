@@ -129,7 +129,6 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.g.cs
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.xbf
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\DogBookApp.WindowsPhone.csprojResolveAssemblyReference.cache
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\GalaSoft.MvvmLight.dll
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\GalaSoft.MvvmLight.Platform.dll
@@ -164,6 +163,11 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\StatusDetailsPage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\MessageDetailsPage.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\MessageDetailsPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\bin\x86\Debug\Pages\FriendDetailsPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\FriendDetailsPage.g.i.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\FriendDetailsPage.g.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\FriendDetailsPage.xaml
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\FriendDetailsPage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles

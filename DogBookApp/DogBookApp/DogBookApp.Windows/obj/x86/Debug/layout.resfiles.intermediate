@@ -14,6 +14,7 @@ Assets\StoreLogo.scale-100.png
 App.xbf
 DogBookApp.Windows.xr.xml
 Pages\CaptureImagePage.xbf
+Pages\FriendDetailsPage.xbf
 Pages\FriendsPage.xbf
 Pages\LoginPage.xbf
 Pages\MainPage.xbf

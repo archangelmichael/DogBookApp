@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,8 +24,14 @@ namespace DogBookApp.Pages
     public sealed partial class FriendsPage : Page
     {
         public FriendsPage()
+            : this(new FriendsPageViewModel())
+        {
+        }
+
+        public FriendsPage(FriendsPageViewModel viewModel)
         {
             this.InitializeComponent();
+            this.DataContext = viewModel;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -32,14 +39,16 @@ namespace DogBookApp.Pages
             this.Frame.GoBack();
         }
 
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            // TODO: Implement going to messages screen
-        }
-
         private void AddFriendAppBarButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO: Implement adding new friend
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = sender as ListBox;
+            var selectedFriend = list.SelectedItem;
+            this.Frame.Navigate(typeof(Pages.FriendDetailsPage), selectedFriend);
         }
     }
 }

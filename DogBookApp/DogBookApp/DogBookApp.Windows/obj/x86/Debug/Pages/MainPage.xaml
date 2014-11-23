@@ -48,8 +48,7 @@
         <CommandBar Background="#FF36C53C"
                     IsSticky="True"
                     Height="100" 
-                    Foreground="White"
-                    HorizontalAlignment="Center">
+                    Foreground="White">
             <AppBarButton x:ConnectionId='1' Icon="Important" 
                           Label="Notifications"
                                                                  />

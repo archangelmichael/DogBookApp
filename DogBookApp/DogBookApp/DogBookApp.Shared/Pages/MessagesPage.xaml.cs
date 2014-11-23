@@ -1,4 +1,5 @@
 ﻿using DogBookApp.ViewModels;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,6 +32,9 @@ namespace DogBookApp.Pages
         public MessagesPage(MessagesPageViewModel viewModel)
         {
             this.InitializeComponent();
+            var currentUser = ParseUser.CurrentUser;
+            currentUser["friends"] = new string[] {"KimsDog","BestDog", "Kalin" };
+            currentUser.SaveAsync();
             this.DataContext = viewModel;
         }
 

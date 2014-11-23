@@ -9,6 +9,13 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
+    <Style TargetType="TextBlock" x:Key="FriendDusplayFieldsStyle">
+        <Setter Property="Foreground" Value="GreenYellow" />
+        <Setter Property="FontWeight" Value="Black" />
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
     <Style TargetType="TextBlock" x:Key="CommonTextField">
         <Setter Property="Foreground" Value="GreenYellow" />
         <Setter Property="FontWeight" Value="Black" />

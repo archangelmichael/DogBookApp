@@ -58,10 +58,10 @@ namespace DogBookApp.Models
         }
 
         [ParseFieldName("friends")]
-        public IEnumerable<ParseUser> Friends
+        public IEnumerable<string> Friends
         {
-            get { return GetProperty<IEnumerable<ParseUser>>(); }
-            set { SetProperty<IEnumerable<ParseUser>>(value); }
+            get { return GetProperty<IEnumerable<string>>(); }
+            set { SetProperty<IEnumerable<string>>(value); }
         }
     }
 }
