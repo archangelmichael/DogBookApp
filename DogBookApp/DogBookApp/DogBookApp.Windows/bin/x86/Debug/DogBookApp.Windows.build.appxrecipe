@@ -95,8 +95,14 @@
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MessageDetailsPage.xbf">
+      <PackagePath>Pages\MessageDetailsPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MessagesPage.xbf">
       <PackagePath>Pages\MessagesPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\NewMessagePage.xbf">
+      <PackagePath>Pages\NewMessagePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\NotificationsPage.xbf">
       <PackagePath>Pages\NotificationsPage.xbf</PackagePath>

@@ -18,7 +18,7 @@
             <RowDefinition Height="7*"/>
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
-        <Button x:ConnectionId='1' x:Name="backButton"
+        <Button x:ConnectionId='1' x:Name="BackButton"
                 Grid.Row="0"
                 Grid.Column="0"
                                         

@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Media.Imaging;
 namespace DogBookApp.Models
 {
     [ParseClassName("User")]
-    public class UserModel : ParseObject
+    public class UserModel : ParseUser
     {
         [ParseFieldName("username")]
         public string Username

@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-23T07:09:50.041</Modified>
+      <Modified>2014-11-23T10:12:38.380</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\DogBookApp.Windows.exe">
       <PackagePath>DogBookApp.Windows.exe</PackagePath>
-      <Modified>2014-11-23T07:42:27.003</Modified>
+      <Modified>2014-11-23T10:12:36.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
@@ -114,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\CaptureImagePage.xbf">
       <PackagePath>Pages\CaptureImagePage.xbf</PackagePath>
-      <Modified>2014-11-22T08:06:54.022</Modified>
+      <Modified>2014-11-23T10:12:35.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\FriendsPage.xbf">
       <PackagePath>Pages\FriendsPage.xbf</PackagePath>
-      <Modified>2014-11-22T08:27:19.050</Modified>
+      <Modified>2014-11-23T10:12:35.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\LoginPage.xbf">
       <PackagePath>Pages\LoginPage.xbf</PackagePath>
@@ -128,29 +128,37 @@
       <PackagePath>Pages\MainPage.xbf</PackagePath>
       <Modified>2014-11-23T07:34:09.961</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MessageDetailsPage.xbf">
+      <PackagePath>Pages\MessageDetailsPage.xbf</PackagePath>
+      <Modified>2014-11-23T10:12:35.516</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\MessagesPage.xbf">
       <PackagePath>Pages\MessagesPage.xbf</PackagePath>
-      <Modified>2014-11-23T07:42:26.492</Modified>
+      <Modified>2014-11-23T10:12:35.517</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\NewMessagePage.xbf">
+      <PackagePath>Pages\NewMessagePage.xbf</PackagePath>
+      <Modified>2014-11-23T10:12:35.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\NotificationsPage.xbf">
       <PackagePath>Pages\NotificationsPage.xbf</PackagePath>
-      <Modified>2014-11-22T08:27:19.051</Modified>
+      <Modified>2014-11-23T10:12:35.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\ProfilePage.xbf">
       <PackagePath>Pages\ProfilePage.xbf</PackagePath>
-      <Modified>2014-11-23T06:01:20.729</Modified>
+      <Modified>2014-11-23T10:12:35.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\ButtonStyles.xbf">
       <PackagePath>Styles\ButtonStyles.xbf</PackagePath>
-      <Modified>2014-11-22T09:30:43.024</Modified>
+      <Modified>2014-11-23T10:12:35.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\CommonStyles.xbf">
       <PackagePath>Styles\CommonStyles.xbf</PackagePath>
-      <Modified>2014-11-22T08:30:01.791</Modified>
+      <Modified>2014-11-23T10:12:35.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\TextBlocksStyles.xbf">
       <PackagePath>Styles\TextBlocksStyles.xbf</PackagePath>
-      <Modified>2014-11-23T07:34:09.962</Modified>
+      <Modified>2014-11-23T10:12:35.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Styles\TextBoxesStyles.xbf">
       <PackagePath>Styles\TextBoxesStyles.xbf</PackagePath>
@@ -158,7 +166,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Views\ListStatusMessagesView.xbf">
       <PackagePath>Views\ListStatusMessagesView.xbf</PackagePath>
-      <Modified>2014-11-23T07:42:26.492</Modified>
+      <Modified>2014-11-23T09:35:52.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Views\NewStatusMessageView.xbf">
       <PackagePath>Views\NewStatusMessageView.xbf</PackagePath>
@@ -170,11 +178,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\DogBookApp.Windows.xr.xml">
       <PackagePath>DogBookApp.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-23T07:41:30.691</Modified>
+      <Modified>2014-11-23T10:12:35.419</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-23T07:41:31.557</Modified>
+      <Modified>2014-11-23T10:12:36.769</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

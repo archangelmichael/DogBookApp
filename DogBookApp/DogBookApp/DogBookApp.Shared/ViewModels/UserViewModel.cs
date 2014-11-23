@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Media.Imaging;
 namespace DogBookApp.ViewModels
 {
     [ParseClassName("User")]
-    public class UserViewModel : ParseObject
+    public class UserViewModel : ParseUser
     {
         [ParseFieldName("objectId")]
         public string UserId { get; set; }

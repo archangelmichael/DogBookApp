@@ -5,12 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Linq;
 
 namespace DogBookApp.ViewModels
 {
     public class MessagesPageViewModel : ViewModelBase
     {
-        private ObservableCollection<MessageModel> messages;
+        private ObservableCollection<MessageViewModel> messages;
         private bool initializing;
 
         public MessagesPageViewModel()
@@ -20,13 +21,13 @@ namespace DogBookApp.ViewModels
             this.FetchAllMessagees();
         }
 
-        public IEnumerable<MessageModel> Messages
+        public IEnumerable<MessageViewModel> Messages
         {
             get
             {
                 if (this.messages == null)
                 {
-                    this.messages = new ObservableCollection<MessageModel>();
+                    this.messages = new ObservableCollection<MessageViewModel>();
                 }
 
                 return this.messages;
@@ -35,7 +36,7 @@ namespace DogBookApp.ViewModels
             {
                 if (this.messages == null)
                 {
-                    this.messages = new ObservableCollection<MessageModel>();
+                    this.messages = new ObservableCollection<MessageViewModel>();
                 }
 
                 this.messages.Clear();
@@ -65,10 +66,14 @@ namespace DogBookApp.ViewModels
         {
             this.Initializing = true;
 
-            this.Messages = await new ParseQuery<MessageModel>()
+            var fetchedMessages = await new ParseQuery<MessageModel>()
                 .Where(mess => mess.Receiver == ParseUser.CurrentUser)
-                .OrderBy(mess => mess.CreatedAt)
+                .OrderByDescending(mess => mess.CreatedAt)
                 .FindAsync();
+
+            this.Messages = fetchedMessages
+                .AsQueryable()
+                .Select(MessageViewModel.FromModel);
 
             this.Initializing = false;
         }

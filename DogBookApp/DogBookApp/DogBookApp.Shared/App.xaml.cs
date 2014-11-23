@@ -41,7 +41,7 @@ namespace DogBookApp
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
-            //ParseObject.RegisterSubclass<UserModel>();
+            ParseObject.RegisterSubclass<UserModel>();
             ParseObject.RegisterSubclass<NotificationModel>();
             ParseObject.RegisterSubclass<MessageModel>();
             ParseObject.RegisterSubclass<StatusModel>();
@@ -52,6 +52,8 @@ namespace DogBookApp
 
         private async void InitializeParseObjects()
         {
+            ParseUser user = await new ParseQuery<ParseUser>()
+                .Where(usr => usr.ObjectId != ParseUser.CurrentUser.ObjectId).FirstAsync();
             for (int i = 0; i < 5; i++)
             {
                 string alertTitle = string.Format("Alert {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
@@ -74,7 +76,7 @@ namespace DogBookApp
                 var message = new MessageModel()
                 {
                     Sender = ParseUser.CurrentUser,
-                    Receiver = ParseUser.CurrentUser,
+                    Receiver = user,
                     Content = messageTitle,
                     IsRead = false
                 };

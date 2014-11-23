@@ -16,7 +16,9 @@ Pages\CaptureImagePage.xbf
 Pages\FriendsPage.xbf
 Pages\LoginPage.xbf
 Pages\MainPage.xbf
+Pages\MessageDetailsPage.xbf
 Pages\MessagesPage.xbf
+Pages\NewMessagePage.xbf
 Pages\NotificationsPage.xbf
 Pages\ProfilePage.xbf
 Styles\ButtonStyles.xbf

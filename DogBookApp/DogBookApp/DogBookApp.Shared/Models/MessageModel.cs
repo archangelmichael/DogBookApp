@@ -22,6 +22,13 @@ namespace DogBookApp.Models
             set { SetProperty<ParseUser>(value); }
         }
 
+        [ParseFieldName("senderNickname")]
+        public string SenderNickname
+        {
+            get { return GetProperty<string>(); }
+            set { SetProperty<string>(value); }
+        }
+
         [ParseFieldName("receiver")]
         public ParseUser Receiver
         {

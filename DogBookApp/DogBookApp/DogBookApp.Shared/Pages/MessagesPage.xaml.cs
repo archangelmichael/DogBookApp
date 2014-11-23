@@ -41,7 +41,18 @@ namespace DogBookApp.Pages
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            var message = sender as MessageViewModel;
+            if (message != null)
+            {
+                string name = message.SenderName;
+            }
+        }
 
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = sender as ListBox;
+            var selectedMessage = list.SelectedItem;
+            this.Frame.Navigate(typeof(Pages.MessageDetailsPage), selectedMessage);
         }
     }
 }
