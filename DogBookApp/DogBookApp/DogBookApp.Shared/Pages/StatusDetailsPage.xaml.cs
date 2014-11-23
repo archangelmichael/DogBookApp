@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,22 +21,29 @@ namespace DogBookApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewMessagePage : Page
+    public sealed partial class StatusDetailsPage : Page
     {
-        public NewMessagePage()
+        public StatusMessage CurrentStatusMessage { get; set; }
+
+        public StatusDetailsPage()
         {
             this.InitializeComponent();
+            this.DataContext = CurrentStatusMessage;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var data = e.Parameter as StatusMessage;
+            if (data != null)
+            {
+                this.CurrentStatusMessage = data;
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
-        }
-
-        private void SendMessageButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: SendMessage
-            this.Frame.Navigate(typeof(Pages.MainPage));
         }
     }
 }

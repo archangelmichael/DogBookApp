@@ -10,7 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="5*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="0.8*" />
@@ -47,10 +47,13 @@
                        Margin="10" />
             <ComboBox 
                 HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch" >
+                VerticalAlignment="Stretch"
+                Background="DarkTurquoise">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" Height="50"/>
+                        <TextBlock Text="{Binding}"
+                                   FontSize="34"
+                                   HorizontalAlignment="Center"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
                 <ComboBox.Items>

@@ -155,7 +155,12 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\NewMessagePage.g.i.cs
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\NewMessagePage.g.cs
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\ButtonStyles.xbf
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\CommonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\NewMessagePage.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\NewMessagePage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\bin\x86\Debug\Pages\StatusDetailsPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusDetailsPage.g.i.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusDetailsPage.g.cs
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusDetailsPage.xaml
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\StatusDetailsPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\CommonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\TextBlocksStyles.xbf
