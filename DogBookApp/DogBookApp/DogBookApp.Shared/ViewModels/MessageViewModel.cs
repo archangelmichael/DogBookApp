@@ -12,6 +12,7 @@ namespace DogBookApp.ViewModels
         private string content;
         private string createdAt;
         private string senderName;
+        private string senderUsername;
         public static Expression<Func<MessageModel, MessageViewModel>> FromModel
         {
             get
@@ -20,15 +21,10 @@ namespace DogBookApp.ViewModels
                 {
                     Content = model.Content,
                     CreatedAt = ((DateTime)model.CreatedAt).ToString("dd MM yyyy hh:mm:ss"),
-                    SenderName = GetModel(model)
+                    SenderName = model.SenderNickname,
+                    SenderUsername = model.Sender.Username
                 };
             }
-        }
-
-        private static string GetModel(MessageModel model)
-        {
-            string nick = model.SenderNickname;
-            return nick;
         }
 
         public string Content
@@ -67,6 +63,19 @@ namespace DogBookApp.ViewModels
             {
                 this.senderName = value;
                 this.RaisePropertyChanged(() => this.SenderName);
+            }
+        }
+
+        public string SenderUsername
+        {
+            get
+            {
+                return this.senderUsername;
+            }
+            set
+            {
+                this.senderUsername = value;
+                this.RaisePropertyChanged(() => this.SenderUsername);
             }
         }
     }

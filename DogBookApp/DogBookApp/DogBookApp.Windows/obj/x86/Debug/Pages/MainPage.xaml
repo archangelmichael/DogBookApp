@@ -25,7 +25,8 @@
             <ColumnDefinition Width="22*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Style="{StaticResource LoginPageGreeting}" 
+        <TextBlock Name="CommonTextBox" 
+                   Style="{StaticResource LoginPageGreeting}" 
                    Text="{StaticResource MainPageTitle}" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" 
@@ -37,18 +38,18 @@
                                        Grid.Column="1"
                                        HorizontalAlignment="Stretch" 
                                        VerticalAlignment="Stretch" />
-        <statusVM:ListStatusMessagesView Name="StatusMessagesList" 
-                                         Grid.Row="2" 
+        <statusVM:ListStatusMessagesView Grid.Row="2" 
                                          Grid.Column="1"
                                          HorizontalAlignment="Stretch"
-                                         VerticalAlignment="Stretch"/>
+                                         VerticalAlignment="Stretch" />
     </Grid>
 
     <Page.BottomAppBar>
         <CommandBar Background="#FF36C53C"
                     IsSticky="True"
                     Height="100" 
-                    Foreground="White">
+                    Foreground="White"
+                    HorizontalAlignment="Center">
             <AppBarButton x:ConnectionId='1' Icon="Important" 
                           Label="Notifications"
                                                                  />

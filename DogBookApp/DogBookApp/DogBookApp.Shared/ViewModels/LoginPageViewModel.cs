@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight;
 using Parse;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
@@ -33,7 +34,7 @@ namespace DogBookApp.ViewModels
 
             try
             {
-                await ParseUser.LogInAsync(this.User.Username, this.User.Password);
+                await UserModel.LogInAsync(this.User.Username, this.User.Password);
                 // Login was successful.
                 return true;
             }
@@ -51,11 +52,26 @@ namespace DogBookApp.ViewModels
                 return false;
             }
 
-            var user = new ParseUser()
+            Stream data = new MemoryStream();
+            var user = new UserModel()
             {
                 Username = this.User.Username,
-                Password = this.User.Password
+                Password = this.User.Password,
+                Nickname = this.User.Username,
+                Gender = "Not Specified",
+                Age = "Not Specified",
+                Breed = "Not Specified",
+                Address = "No Address",
+                Friends = new List<UserModel>(),
+                Location = new ParseGeoPoint(0, 0),
+                Picture = new ParseFile("blank-avatar.png", data)
             };
+
+            //var user = new UserModel()
+            //{
+            //    Username = this.User.Username,
+            //    Password = this.User.Password
+            //};
 
             // other fields can be set just like with ParseObject
             try

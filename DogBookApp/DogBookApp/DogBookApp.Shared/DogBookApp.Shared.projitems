@@ -33,7 +33,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SQLiteUserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\UserProfile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CaptureImagePage.xaml.cs">
       <DependentUpon>CaptureImagePage.xaml</DependentUpon>
     </Compile>
@@ -61,10 +60,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\StatusDetailsPage.xaml.cs">
+      <DependentUpon>StatusDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessageDetailsPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessagesPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfilePageViewModel.cs" />
@@ -113,6 +116,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\StatusDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +150,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Images\app-icon.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\blank-avatar.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\fartdog.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\location-sample.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\login-background-1.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\login-background.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\newhair.jpg" />

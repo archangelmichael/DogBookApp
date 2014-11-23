@@ -14,10 +14,11 @@
     </UserControl.Resources>
 
     <ListBox Name="StatusMessagesCustomList" 
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  ItemsSource="{Binding StatusMessages}"
-                    Background="DarkTurquoise">
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             ItemsSource="{Binding StatusMessages}"
+             Background="DarkTurquoise"
+             SelectionChanged="StatusMessagesCustomList_SelectionChanged">
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <Grid>

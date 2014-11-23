@@ -6,23 +6,8 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace DogBookApp.Models
 {
-    [ParseClassName("User")]
     public class UserModel : ParseUser
     {
-        [ParseFieldName("username")]
-        public string Username
-        {
-            get { return GetProperty<string>(); }
-            set { SetProperty<string>(value); }
-        }
-
-        [ParseFieldName("password")]
-        public string Password
-        {
-            get { return GetProperty<string>(); }
-            set { SetProperty<string>(value); }
-        }
-
         [ParseFieldName("nickname")]
         public string Nickname
         {

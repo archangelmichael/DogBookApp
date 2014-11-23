@@ -2,6 +2,7 @@ Images\app-icon.jpg
 Images\blank-avatar.png
 Images\doglove.jpg
 Images\fartdog.jpg
+Images\location-sample.png
 Images\login-background.png
 Images\login-background-1.jpg
 Images\newhair.jpg
@@ -21,6 +22,7 @@ Pages\MessagesPage.xbf
 Pages\NewMessagePage.xbf
 Pages\NotificationsPage.xbf
 Pages\ProfilePage.xbf
+Pages\StatusDetailsPage.xbf
 Styles\ButtonStyles.xbf
 Styles\CommonStyles.xbf
 Styles\TextBlocksStyles.xbf

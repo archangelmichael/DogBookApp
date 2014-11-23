@@ -15,6 +15,7 @@
     <x:String x:Key="ProfilePageTitle"> Doggy Profile</x:String>
     
     <x:String x:Key="StatusesPageTitle">News Feed</x:String>
+    <x:String x:Key="StatusDetailsPageTitle">Inspect Post</x:String>
     
     <x:String x:Key="MainPageTitle">Welcome to DogBook</x:String>
 

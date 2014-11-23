@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,25 @@ namespace DogBookApp.Pages
     /// </summary>
     public sealed partial class MessageDetailsPage : Page
     {
-        public MessageDetailsPage()
+        public MessageDetailsPage() : this(new MessageDetailsPageViewModel()) { }
+
+        public MessageDetailsPage(MessageDetailsPageViewModel viewModel)
         {
             this.InitializeComponent();
+
+            this.ViewModel = viewModel;
+        }
+
+        public MessageDetailsPageViewModel ViewModel
+        {
+            get
+            {
+                return (MessageDetailsPageViewModel)this.DataContext; 
+            }
+            set
+            {
+                this.DataContext = value;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -37,5 +54,13 @@ namespace DogBookApp.Pages
             // TODO: send data for receiver
             this.Frame.Navigate(typeof(Pages.NewMessagePage));
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.ViewModel.Message = e.Parameter as MessageViewModel;
+            base.OnNavigatedTo(e);
+        }
+
+        
     }
 }

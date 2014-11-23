@@ -13,11 +13,12 @@
         <converters:DateToStringConverter x:Key="DateConverter" />
     </UserControl.Resources>
 
-    <ListBox Name="StatusMessagesCustomList" 
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  ItemsSource="{Binding StatusMessages}"
-                    Background="DarkTurquoise">
+    <ListBox x:ConnectionId='1' Name="StatusMessagesCustomList" 
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             ItemsSource="{Binding StatusMessages}"
+             Background="DarkTurquoise"
+                                                                         >
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <Grid>

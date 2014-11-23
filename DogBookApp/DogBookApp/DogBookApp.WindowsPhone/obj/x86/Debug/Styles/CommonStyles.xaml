@@ -15,12 +15,15 @@
     <x:String x:Key="ProfilePageTitle"> Doggy Profile</x:String>
     
     <x:String x:Key="StatusesPageTitle">News Feed</x:String>
+    <x:String x:Key="StatusDetailsPageTitle">Inspect Post</x:String>
     
     <x:String x:Key="MainPageTitle">Welcome to DogBook</x:String>
 
     <x:String x:Key="FriendsPageTitle">My Dog Friends</x:String>
 
     <x:String x:Key="MessagesPageTitle">Doggy Messages</x:String>
+    <x:String x:Key="MessageDetailsPageTitle">Message Preview</x:String>
+    <x:String x:Key="NewMessagePageTitle">Send Message</x:String>
 
     <x:String x:Key="NotificationsPageTitle"> Keep In Touch Alerts </x:String>
 </ResourceDictionary>

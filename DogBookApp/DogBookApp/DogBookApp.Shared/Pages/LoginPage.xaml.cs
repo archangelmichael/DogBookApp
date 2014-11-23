@@ -82,20 +82,17 @@ namespace DogBookApp.Pages
 
             if (canRegister)
             {
-                var currentUser = ParseUser.CurrentUser;
-                currentUser["nickname"] = this.ViewModel.User.Username;
-                currentUser["gender"] = "Not Specified";
-                currentUser["age"] = "Not Specified";
-                currentUser["breed"] = "Not Specified";
-                currentUser["address"] = "No Address";
-                currentUser["friends"] = new List<ParseUser>();
-                ParseGeoPoint position = new ParseGeoPoint();
-                position.Latitude = 0;
-                position.Longitude = 0;
-                currentUser["location"] = position;
-                Stream data = new MemoryStream();
-                currentUser["avatar"] = new ParseFile("blank-avatar.png", data);
-                await currentUser.SaveAsync();
+                //var currentUser = UserModel.CurrentUser;
+                //currentUser["nickname"] = this.ViewModel.User.Username;
+                //currentUser["gender"] = "Not Specified";
+                //currentUser["age"] = "Not Specified";
+                //currentUser["breed"] = "Not Specified";
+                //currentUser["address"] = "No Address";
+                //currentUser["friends"] = new List<ParseUser>();
+                //currentUser["location"] = new ParseGeoPoint(0, 0);
+                //Stream data = new MemoryStream();
+                //currentUser["avatar"] = new ParseFile("blank-avatar.png", data);
+                //await currentUser.SaveAsync();
                 this.Frame.Navigate(typeof(MainPage));
             }
         }

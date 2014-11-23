@@ -31,5 +31,14 @@ namespace DogBookApp.Views
             this.StatusMessages = StatsManager.StatusMessages;
             this.DataContext = this;
         }
+
+        private void StatusMessagesCustomList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = sender as ListBox;
+
+            var item = list.SelectedItem;
+            // TODO: Implement imformation sending
+            ((Frame)Window.Current.Content).Navigate(typeof(Pages.StatusDetailsPage), item);
+        }
     }
 }

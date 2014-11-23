@@ -32,7 +32,8 @@ namespace DogBookApp.Pages
         {
             this.InitializeComponent();
             this.NavigationHelper = new Common.NavigationHelper(this);
-
+            
+            // ControlViewName.GoToStatusDetailsPage += new EventHandler(ControlGoToStatusDetailsPage);
             //var currentUser = ParseUser.CurrentUser;
             //currentUser["nickname"] = "The Charmer";
             //currentUser["age"] = 0;
