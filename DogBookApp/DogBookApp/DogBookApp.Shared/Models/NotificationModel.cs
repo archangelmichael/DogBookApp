@@ -8,25 +8,11 @@ namespace DogBookApp.Models
     [ParseClassName("Notification")]
     public class NotificationModel : ParseObject
     {
-        [ParseFieldName("objectId")]
-        public string ObjectId
-        {
-            get { return GetProperty<string>(); }
-            set { SetProperty<string>(value); }
-        }
-
         [ParseFieldName("content")]
         public string Content
         {
             get { return GetProperty<string>(); }
             set { SetProperty<string>(value); }
-        }
-
-        [ParseFieldName("createdAt")]
-        public DateTime CreatedAt
-        {
-            get { return GetProperty<DateTime>(); }
-            set { SetProperty<DateTime>(value); }
         }
 
         [ParseFieldName("sender")]

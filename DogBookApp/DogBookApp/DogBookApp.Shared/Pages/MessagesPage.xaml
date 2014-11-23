@@ -36,7 +36,8 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <ListView Grid.Row="1" 
+        <StackPanel Orientation="Horizontal"/>
+        <ListView Grid.Row="2" 
                   Grid.Column="1"
                   HorizontalAlignment="Stretch" 
                   VerticalAlignment="Stretch" />

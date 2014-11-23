@@ -8,25 +8,11 @@ namespace DogBookApp.Models
     [ParseClassName("Message")]
     public class MessageModel : ParseObject
     {
-        [ParseFieldName("objectId")]
-        public string Id
-        {
-            get { return GetProperty<string>(); }
-            set { SetProperty<string>(value); }
-        }
-
         [ParseFieldName("content")]
         public string Content
         {
             get { return GetProperty<string>(); }
             set { SetProperty<string>(value); }
-        }
-
-        [ParseFieldName("createdAt")]
-        public DateTime CreatedAt
-        {
-            get { return GetProperty<DateTime>(); }
-            set { SetProperty<DateTime>(value); }
         }
 
         [ParseFieldName("sender")]
@@ -41,6 +27,13 @@ namespace DogBookApp.Models
         {
             get { return GetProperty<ParseUser>(); }
             set { SetProperty<ParseUser>(value); }
+        }
+
+        [ParseFieldName("isRead")]
+        public bool IsRead
+        {
+            get { return GetProperty<bool>(); }
+            set { SetProperty<bool>(value); }
         }
     }
 }

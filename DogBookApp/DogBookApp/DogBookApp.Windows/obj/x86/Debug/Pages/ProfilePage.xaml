@@ -50,92 +50,96 @@
                HorizontalAlignment="Stretch" 
                VerticalAlignment="Stretch" 
                Source="{Binding User.Avatar}"/>
-        <StackPanel Orientation="Vertical" 
-                    Grid.Row="1"
+        <ScrollViewer Grid.Row="1"
                     Grid.Column="2"
                     Grid.RowSpan="2"
+                    ZoomMode="Enabled">
+            <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Stretch" >
 
-            <TextBlock Text="Nickname:" 
+                <TextBlock Text="Nickname:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox Name="ProfileNicknameInput"
+                <TextBox Name="ProfileNicknameInput"
                      Text="{Binding User.Nickname}"
                      PlaceholderText="Nickname" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
-            <TextBlock Text="Gender:" 
+                <TextBlock Text="Gender:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <ListView Name="ProfileGenderSelector"
+                <ListView Name="ProfileGenderSelector"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Center"
                       Visibility="Collapsed">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding}" 
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
                                    FontSize="30" 
                                    Foreground="LightBlue" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.Items>
-                    <x:String>Male</x:String>
-                    <x:String>Female</x:String>
-                </ListView.Items>
-            </ListView>
-            <TextBox Name="ProfileGenderInput"
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </ListView.Items>
+                </ListView>
+                <TextBox Name="ProfileGenderInput"
                      Text="{Binding User.Gender}"
                      PlaceholderText="Gender" 
                      Style="{StaticResource ProfileEditBoxField}"   />
 
-            <TextBlock Text="Age:" 
+                <TextBlock Text="Age:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox Name="ProfileAgeInput"
+                <TextBox Name="ProfileAgeInput"
                      Text="{Binding User.Age}"
                      PlaceholderText="No Age" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
-            <TextBlock Text="Breed:" 
+                <TextBlock Text="Breed:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox Name="ProfileBreedInput"
+                <TextBox Name="ProfileBreedInput"
                      Text="{Binding User.Breed, Mode=TwoWay}"
                      PlaceholderText="No Breed" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
-            <TextBlock Text="Address:" 
+                <TextBlock Text="Address:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
-            <TextBox Name="ProfileAddressInput"
+                <TextBox Name="ProfileAddressInput"
                      Text="{Binding User.Address, Mode=TwoWay}"
                      TextWrapping="Wrap"
                      PlaceholderText="No Address" 
                      Style="{StaticResource ProfileEditBoxField}"/>
-        </StackPanel>
-        <StackPanel Grid.Row="2" 
-                    Orientation="Vertical"
-                    Grid.Column="1"
-                    HorizontalAlignment="Center" >
-            <Button x:ConnectionId='2' Content="Change Picture"
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2"
+                      Grid.Column="1"
+                    ZoomMode="Enabled">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center" >
+                <Button x:ConnectionId='2' Content="Change Picture"
                     Style="{StaticResource MainButton}"
                     VerticalAlignment="Top"
                                                     />
-            <Button x:ConnectionId='3' x:Name="EditProfileButton"
+                <Button x:ConnectionId='3' x:Name="EditProfileButton"
                     Style="{StaticResource MainButton}"
                     Content="Edit Profile"
                     VerticalAlignment="Top"
                                                    
                     Visibility="Visible"/>
-            <Button x:ConnectionId='4' x:Name="SaveProfileChangesButton"
+                <Button x:ConnectionId='4' x:Name="SaveProfileChangesButton"
                     Style="{StaticResource MainButton}"
                     Content="Save Profile"
                     VerticalAlignment="Top"
                                                           
                     Visibility="Collapsed"/>
-            <Button x:ConnectionId='5' x:Name="GetLocationButton"
+                <Button x:ConnectionId='5' x:Name="GetLocationButton"
                     Style="{StaticResource MainButton}"
                     Content="Get Location"
                     VerticalAlignment="Top"
                                                    
                     Visibility="Visible"/>
-        </StackPanel>
-
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
 

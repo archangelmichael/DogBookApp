@@ -46,6 +46,43 @@ namespace DogBookApp
             ParseObject.RegisterSubclass<MessageModel>();
             ParseObject.RegisterSubclass<StatusModel>();
             ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
+
+            //this.InitializeParseObjects();
+        }
+
+        private async void InitializeParseObjects()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                string alertTitle = string.Format("Alert {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
+                string statusTitle = string.Format("Status {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
+                string messageTitle = string.Format("Message {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
+
+                var notification = new NotificationModel()
+                {
+                    Content = alertTitle,
+                    Receiver = ParseUser.CurrentUser,
+                    HasOptions = false
+                };
+
+                var status = new StatusModel()
+                {
+                    Sender = ParseUser.CurrentUser,
+                    Content = alertTitle
+                };
+
+                var message = new MessageModel()
+                {
+                    Sender = ParseUser.CurrentUser,
+                    Receiver = ParseUser.CurrentUser,
+                    Content = messageTitle,
+                    IsRead = false
+                };
+
+                await notification.SaveAsync();
+                await status.SaveAsync();
+                await message.SaveAsync();
+            }
         }
 
         /// <summary>

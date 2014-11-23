@@ -187,6 +187,10 @@
     <RootType FullName="DogBookApp.Pages.MainPage" />
     <RootType FullName="DogBookApp.Pages.MessagesPage" />
     <RootType FullName="DogBookApp.Pages.NotificationsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="ZoomMode" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="System.String" />
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
