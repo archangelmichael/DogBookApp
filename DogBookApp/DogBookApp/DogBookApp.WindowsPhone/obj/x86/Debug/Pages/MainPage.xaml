@@ -55,13 +55,16 @@
             <AppBarButton x:ConnectionId='2' Icon="People" 
                           Label="Friends"
                                                            />
-            <AppBarButton x:ConnectionId='3' Icon="ContactInfo" 
+            <AppBarButton x:ConnectionId='3' Icon="Mail" 
+                          Label="Messages"
+                                                            />
+            <AppBarButton x:ConnectionId='4' Icon="ContactInfo" 
                           Label="Profile"
                                                            />
-            <AppBarButton x:ConnectionId='4' Icon="AttachCamera" 
+            <AppBarButton x:ConnectionId='5' Icon="AttachCamera" 
                           Label="Take Picture" 
                                                                />
-            <AppBarButton x:ConnectionId='5' Icon="LeaveChat" 
+            <AppBarButton x:ConnectionId='6' Icon="LeaveChat" 
                           Label="Sign Out" 
                                                      />
         </CommandBar>

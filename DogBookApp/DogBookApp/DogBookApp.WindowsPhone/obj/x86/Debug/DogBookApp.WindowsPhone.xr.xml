@@ -7,6 +7,10 @@
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Messages" />
+    <RootPropertyPathName Name="CreatedAt" />
+    <RootPropertyPathName Name="Sender" />
+    <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="Breed" />
     <RootPropertyPathName Name="Age" />
@@ -15,9 +19,7 @@
     <RootPropertyPathName Name="Avatar" />
     <RootPropertyPathName Name="StatusMessages" />
     <RootPropertyPathName Name="Image" />
-    <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="SenderNickName" />
-    <RootPropertyPathName Name="CreatedAt" />
     <RootPropertyPathName Name="DateConverter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -163,6 +165,7 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="MaxLength" />
       <RootProperty Name="AcceptsReturn" />
+      <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -185,8 +188,19 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="DogBookApp.Pages.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Name" />
+    </RootType>
     <RootType FullName="DogBookApp.Pages.MessagesPage" />
     <RootType FullName="DogBookApp.Pages.NotificationsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="ZoomMode" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="System.String" />
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -253,13 +267,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
     </RootType>
   </Roots.RootTypes>
 </Roots>

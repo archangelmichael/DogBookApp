@@ -41,7 +41,7 @@
                                          Grid.Row="2" 
                                          Grid.Column="1"
                                          HorizontalAlignment="Stretch"
-                                         VerticalAlignment="Stretch" />
+                                         VerticalAlignment="Stretch"/>
     </Grid>
 
     <Page.BottomAppBar>
@@ -55,6 +55,9 @@
             <AppBarButton Icon="People" 
                           Label="Friends"
                           Click="FriendsAppBarButton_Click"/>
+            <AppBarButton Icon="Mail" 
+                          Label="Messages"
+                          Click="MessagesAppBarButton_Click"/>
             <AppBarButton Icon="ContactInfo" 
                           Label="Profile"
                           Click="ProfileAppBarButton_Click"/>

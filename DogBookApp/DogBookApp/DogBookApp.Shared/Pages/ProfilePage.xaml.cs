@@ -36,6 +36,19 @@ namespace DogBookApp.Pages
         private const string LocationMessageTitle = "Location Info";
         private const string LocationErrorText = "Location Services Error";
 
+        public ProfilePage()
+            : this(new ProfilePageViewModel())
+        {
+        }
+
+        public ProfilePage(ProfilePageViewModel viewModel)
+        {
+            this.InitializeComponent();
+            
+            this.ViewModel = viewModel;
+            this.Messanger = MessageManager.Instance;
+        }
+
         private MessageManager Messanger { get; set; }
 
         public ProfilePageViewModel ViewModel
@@ -50,19 +63,6 @@ namespace DogBookApp.Pages
             }
         }
 
-        public ProfilePage()
-            : this(new ProfilePageViewModel())
-        {
-        }
-
-        public ProfilePage(ProfilePageViewModel viewModel)
-        {
-            this.InitializeComponent();
-            
-            this.ViewModel = viewModel;
-            this.Messanger = MessageManager.Instance;
-        }
-        
         // AVATAR CHANGING
         private void ChangeAvatarButton_Click(object sender, RoutedEventArgs e)
         {

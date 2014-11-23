@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="7*" />
             <RowDefinition Height="1*" />
@@ -28,7 +28,7 @@
             HorizontalAlignment="Left"
             Margin="10"/>
         <TextBlock
-            Style="{StaticResource LoginPageGreeting}"
+            Style="{StaticResource PageHeaderStyle}"
             Text="{StaticResource NotificationsPageTitle}" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
@@ -36,10 +36,32 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <ListView Grid.Row="1" 
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Grid.Row="1" 
+                    Grid.Column="1" >
+            <TextBlock Text="Filter Messages By Name" Style="{StaticResource CommonTextField}" />
+            <TextBox x:ConnectionId='2' Style="{StaticResource FilterInputTextBox}"                                     />
+        </StackPanel>
+        <ListBox Grid.Row="2" 
                   Grid.Column="1"
                   HorizontalAlignment="Stretch" 
-                  VerticalAlignment="Stretch" />
+                  VerticalAlignment="Stretch"
+                  ItemsSource="{Binding Messages}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="{Binding Content}"  
+                                   Style="{StaticResource ContentTextFieldStyle}" />
+                        <TextBlock Text="{Binding Sender.Username}" 
+                                   Style="{StaticResource ContentTextFieldStyle}" />
+                        <TextBlock Text="{Binding CreatedAt}" 
+                                   Style="{StaticResource ContentTextFieldStyle}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>
 

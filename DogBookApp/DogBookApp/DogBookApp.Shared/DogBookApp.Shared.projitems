@@ -28,12 +28,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MessageManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MessageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MessagesContainer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\NotificationMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\NotificationModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\PrivateMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SQLiteUserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserProfile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CaptureImagePage.xaml.cs">
@@ -61,6 +59,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessagesPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ListStatusMessagesView.xaml.cs">

@@ -1,4 +1,5 @@
-﻿using DogBookApp.Models;
+﻿using DogBookApp.Common;
+using DogBookApp.Models;
 using DogBookApp.ViewModels;
 using Parse;
 using System;
@@ -27,8 +28,6 @@ namespace DogBookApp.Pages
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Common.NavigationHelper NavigationHelper { get; set; }
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -41,6 +40,8 @@ namespace DogBookApp.Pages
             //currentUser["gender"] = 0;
             //currentUser.SaveAsync();
         }
+
+        public NavigationHelper NavigationHelper { get; set; }
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
         {
@@ -71,6 +72,11 @@ namespace DogBookApp.Pages
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
+        }
+
+        private void MessagesAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.MessagesPage));
         }
     }
 }

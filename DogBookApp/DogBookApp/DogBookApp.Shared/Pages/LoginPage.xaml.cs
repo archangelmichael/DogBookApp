@@ -31,8 +31,18 @@ namespace DogBookApp.Pages
     {
         private const string dbName = "SQLiteUsers";
 
-        public List<User> Users { get; set; }
-        public User currentUser { get; set; }
+        public LoginPage(): this(new LoginPageViewModel())
+        {
+        }
+
+        public LoginPage(LoginPageViewModel viewModel)
+        {
+            this.InitializeComponent();
+            this.ViewModel = viewModel;
+        }
+
+        public List<SQLiteUserModel> Users { get; set; }
+        public SQLiteUserModel currentUser { get; set; }
 
         public LoginPageViewModel ViewModel
         {
@@ -44,16 +54,6 @@ namespace DogBookApp.Pages
             {
                 this.DataContext = value;
             }
-        }
-
-        public LoginPage(): this(new LoginPageViewModel())
-        {
-        }
-
-        public LoginPage(LoginPageViewModel viewModel)
-        {
-            this.InitializeComponent();
-            this.ViewModel = viewModel;
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -114,7 +114,7 @@ namespace DogBookApp.Pages
 
             // Get Users
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
-            var query = conn.Table<User>();
+            var query = conn.Table<SQLiteUserModel>();
             // UNCOMMENT IF YOU RUN FOR FIRST TIME
             //await conn.CreateTableAsync<User>();
             //await AddUserAsync();
@@ -149,20 +149,20 @@ namespace DogBookApp.Pages
         private async Task CreateDatabaseAsync()
         {
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
-            await conn.CreateTableAsync<User>();
+            await conn.CreateTableAsync<SQLiteUserModel>();
         }
 
         private async Task AddUsersAsync()
         {
             // Create a Users list
-            var list = new List<User>()
+            var list = new List<SQLiteUserModel>()
             {
-                new User()
+                new SQLiteUserModel()
                 {
                     Username = "User1",
                     Password = "Security1"
                 },
-                new User()
+                new SQLiteUserModel()
                 {
                     Username = "User2",
                     Password = "Security2",
@@ -178,7 +178,7 @@ namespace DogBookApp.Pages
         private async Task AddUserAsync()
         {
             // Create a Users list
-            var user = new User()
+            var user = new SQLiteUserModel()
             {
                 Username = "User3",
                 Password = "Security3",
@@ -194,20 +194,20 @@ namespace DogBookApp.Pages
         {
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
 
-            AsyncTableQuery<User> query = conn.Table<User>().Where(x => x.Username.Contains(username));
-            List<User> result = await query.ToListAsync();
+            AsyncTableQuery<SQLiteUserModel> query = conn.Table<SQLiteUserModel>().Where(x => x.Username.Contains(username));
+            List<SQLiteUserModel> result = await query.ToListAsync();
             foreach (var User in result)
             {
                 // ...
             }
 
-            var allUsers = await conn.QueryAsync<User>("SELECT * FROM Users");
+            var allUsers = await conn.QueryAsync<SQLiteUserModel>("SELECT * FROM Users");
             foreach (var User in allUsers)
             {
                 // ...
             }
 
-            var otherUsers = await conn.QueryAsync<User>(
+            var otherUsers = await conn.QueryAsync<SQLiteUserModel>(
                 "SELECT Password FROM Users WHERE Username = ?", new object[] { "User2" });
             foreach (var User in otherUsers)
             {
@@ -220,7 +220,7 @@ namespace DogBookApp.Pages
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
 
             // Retrieve User
-            var User = await conn.Table<User>()
+            var User = await conn.Table<SQLiteUserModel>()
                 .Where(x => x.Username == oldUsername).FirstOrDefaultAsync();
             if (User != null)
             {
@@ -237,7 +237,7 @@ namespace DogBookApp.Pages
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
 
             // Retrieve User
-            var User = await conn.Table<User>().Where(x => x.Username == name).FirstOrDefaultAsync();
+            var User = await conn.Table<SQLiteUserModel>().Where(x => x.Username == name).FirstOrDefaultAsync();
             if (User != null)
             {
                 // Delete record
@@ -248,7 +248,7 @@ namespace DogBookApp.Pages
         private async Task DropTableAsync(string name)
         {
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
-            await conn.DropTableAsync<User>();
+            await conn.DropTableAsync<SQLiteUserModel>();
         }
         #endregion
     }

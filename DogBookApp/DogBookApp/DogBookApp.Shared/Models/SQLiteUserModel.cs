@@ -6,11 +6,11 @@ using System.Text;
 namespace DogBookApp.Models
 {
     [Table("Users")]
-    public class User
+    public class SQLiteUserModel
     {
-        public User() : this("Unknown", "free") { }
+        public SQLiteUserModel() : this("Unknown", "free") { }
 
-        public User(string name, string pass, bool logged = false)
+        public SQLiteUserModel(string name, string pass, bool logged = false)
         {
             this.Username = name;
             this.Password = pass;

@@ -16,7 +16,8 @@
     <ListBox Name="StatusMessagesCustomList" 
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
-                  ItemsSource="{Binding StatusMessages}">
+                  ItemsSource="{Binding StatusMessages}"
+                    Background="DarkTurquoise">
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <Grid>

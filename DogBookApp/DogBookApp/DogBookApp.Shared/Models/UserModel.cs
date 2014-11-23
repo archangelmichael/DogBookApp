@@ -9,13 +9,6 @@ namespace DogBookApp.Models
     [ParseClassName("User")]
     public class UserModel : ParseObject
     {
-        [ParseFieldName("objectId")]
-        public string ObjectId
-        {
-            get { return GetProperty<string>(); }
-            set { SetProperty<string>(value); }
-        }
-
         [ParseFieldName("username")]
         public string Username
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,13 +24,24 @@ namespace DogBookApp.Pages
     public sealed partial class MessagesPage : Page
     {
         public MessagesPage()
+            : this(new MessagesPageViewModel())
+        {
+        }
+
+        public MessagesPage(MessagesPageViewModel viewModel)
         {
             this.InitializeComponent();
+            this.DataContext = viewModel;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
