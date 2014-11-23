@@ -7,7 +7,7 @@ namespace DogBookApp.Models
 {
     public class UserProfile
     {
-        public UserProfile(string username, string nickname, string password, GenderType gender, string breed = "DOG")
+        public UserProfile(string username, string nickname, string password, GenderType gender, string breed = "Terrier")
         {
             
         }
@@ -28,6 +28,6 @@ namespace DogBookApp.Models
 
         public string Avatar { get; set; }
 
-        public Geoposition location { get; set; }
+        public Geoposition Location { get; set; }
     }
 }

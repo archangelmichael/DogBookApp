@@ -124,7 +124,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[32];
+            _typeNameTable = new string[33];
             _typeNameTable[0] = "DogBookApp.Pages.CaptureImagePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -157,8 +157,9 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             _typeNameTable[29] = "DogBookApp.Pages.MessagesPage";
             _typeNameTable[30] = "DogBookApp.Pages.NotificationsPage";
             _typeNameTable[31] = "DogBookApp.Pages.ProfilePage";
+            _typeNameTable[32] = "DogBookApp.ViewModels.ProfilePageViewModel";
 
-            _typeTable = new global::System.Type[32];
+            _typeTable = new global::System.Type[33];
             _typeTable[0] = typeof(global::DogBookApp.Pages.CaptureImagePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -191,6 +192,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             _typeTable[29] = typeof(global::DogBookApp.Pages.MessagesPage);
             _typeTable[30] = typeof(global::DogBookApp.Pages.NotificationsPage);
             _typeTable[31] = typeof(global::DogBookApp.Pages.ProfilePage);
+            _typeTable[32] = typeof(global::DogBookApp.ViewModels.ProfilePageViewModel);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -243,6 +245,7 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
         private object Activate_29_MessagesPage() { return new global::DogBookApp.Pages.MessagesPage(); }
         private object Activate_30_NotificationsPage() { return new global::DogBookApp.Pages.NotificationsPage(); }
         private object Activate_31_ProfilePage() { return new global::DogBookApp.Pages.ProfilePage(); }
+        private object Activate_32_ProfilePageViewModel() { return new global::DogBookApp.ViewModels.ProfilePageViewModel(); }
         private void VectorAdd_7_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DogBookApp.Models.User>)instance;
@@ -477,6 +480,14 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             case 31:   //  DogBookApp.Pages.ProfilePage
                 userType = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_31_ProfilePage;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 32:   //  DogBookApp.ViewModels.ProfilePageViewModel
+                userType = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -705,6 +716,16 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
             var that = (global::DogBookApp.Pages.MainPage)instance;
             that.NavigationHelper = (global::DogBookApp.Common.NavigationHelper)Value;
         }
+        private object get_22_ProfilePage_ViewModel(object instance)
+        {
+            var that = (global::DogBookApp.Pages.ProfilePage)instance;
+            return that.ViewModel;
+        }
+        private void set_22_ProfilePage_ViewModel(object instance, object Value)
+        {
+            var that = (global::DogBookApp.Pages.ProfilePage)instance;
+            that.ViewModel = (global::DogBookApp.ViewModels.ProfilePageViewModel)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -844,6 +865,12 @@ namespace DogBookApp.DogBookApp_Windows_XamlTypeInfo
                 xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "DogBookApp.Common.NavigationHelper");
                 xamlMember.Getter = get_21_MainPage_NavigationHelper;
                 xamlMember.Setter = set_21_MainPage_NavigationHelper;
+                break;
+            case "DogBookApp.Pages.ProfilePage.ViewModel":
+                userType = (global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DogBookApp.Pages.ProfilePage");
+                xamlMember = new global::DogBookApp.DogBookApp_Windows_XamlTypeInfo.XamlMember(this, "ViewModel", "DogBookApp.ViewModels.ProfilePageViewModel");
+                xamlMember.Getter = get_22_ProfilePage_ViewModel;
+                xamlMember.Setter = set_22_ProfilePage_ViewModel;
                 break;
             }
             return xamlMember;

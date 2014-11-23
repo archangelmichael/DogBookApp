@@ -33,6 +33,13 @@ namespace DogBookApp.Pages
         {
             this.InitializeComponent();
             this.NavigationHelper = new Common.NavigationHelper(this);
+
+            //var currentUser = ParseUser.CurrentUser;
+            //currentUser["nickname"] = "The Charmer";
+            //currentUser["age"] = 0;
+            //currentUser["breed"] = "Airedale Terrier"; 
+            //currentUser["gender"] = 0;
+            //currentUser.SaveAsync();
         }
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)

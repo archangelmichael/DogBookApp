@@ -1,6 +1,7 @@
 ﻿using DogBookApp.Common;
 using DogBookApp.Models;
 using DogBookApp.ViewModels;
+using Parse;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -77,10 +78,23 @@ namespace DogBookApp.Pages
                 return;
             }
 
-            bool canLogin = await this.ViewModel.Register();
+            bool canRegister = await this.ViewModel.Register();
 
-            if (canLogin)
+            if (canRegister)
             {
+                var currentUser = ParseUser.CurrentUser;
+                currentUser["nickname"] = this.ViewModel.User.Username;
+                currentUser["gender"] = "Not Specified";
+                currentUser["age"] = "Not Specified";
+                currentUser["breed"] = "Not Specified";
+                currentUser["address"] = "No Address";
+                ParseGeoPoint position = new ParseGeoPoint();
+                position.Latitude = 0;
+                position.Longitude = 0;
+                currentUser["location"] = position;
+                Stream data = new MemoryStream();
+                currentUser["avatar"] = new ParseFile("blank-avatar.png", data);
+                await currentUser.SaveAsync();
                 this.Frame.Navigate(typeof(MainPage));
             }
         }

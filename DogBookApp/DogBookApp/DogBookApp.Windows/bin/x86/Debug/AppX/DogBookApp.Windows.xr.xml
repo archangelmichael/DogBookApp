@@ -7,6 +7,12 @@
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="Breed" />
+    <RootPropertyPathName Name="Age" />
+    <RootPropertyPathName Name="Gender" />
+    <RootPropertyPathName Name="Nickname" />
+    <RootPropertyPathName Name="Avatar" />
     <RootPropertyPathName Name="StatusMessages" />
     <RootPropertyPathName Name="Image" />
     <RootPropertyPathName Name="Content" />

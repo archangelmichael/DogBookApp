@@ -1,5 +1,6 @@
 ﻿using DogBookApp.Models;
 using DogBookApp.Pages;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -145,8 +146,8 @@ namespace DogBookApp.Views
             }
 
             this.StatusMessage.CreatedAt = DateTime.Now;
-            this.StatusMessage.SenderId = "CurrentId";
-            this.StatusMessage.SenderNickName = "CurrentUser";
+            this.StatusMessage.SenderId = ParseUser.CurrentUser.ObjectId;
+            this.StatusMessage.SenderNickName = ParseUser.CurrentUser["nickname"].ToString();
             this.StatusMessage.Content = statusContent;
             this.StatsManager.StatusMessages.Insert(0, this.StatusMessage);
             this.StatusMessage = new StatusMessage();

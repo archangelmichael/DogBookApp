@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace DogBookApp.ViewModels
 {
@@ -13,7 +16,8 @@ namespace DogBookApp.ViewModels
 
         public LoginPageViewModel()
         {
-            this.User = new UserViewModel() { Username = "mydog", Password = "mypass" };
+            this.User = new UserViewModel();
+            //this.User = new UserViewModel() { Username = "mydog", Password = "mypass" };
         }
 
         public async Task<bool> Login()
