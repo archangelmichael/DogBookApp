@@ -79,7 +79,6 @@ namespace DogBookApp.Views
                        LocationMessageTitle,
                        LocationErrorText);
             }
-            
         }
 
         private async void AddPictureButton_Click(object sender, RoutedEventArgs e)

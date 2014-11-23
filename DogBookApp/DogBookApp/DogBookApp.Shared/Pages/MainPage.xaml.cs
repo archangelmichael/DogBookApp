@@ -67,5 +67,10 @@ namespace DogBookApp.Pages
         {
             this.Frame.Navigate(typeof(Pages.ProfilePage));
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

@@ -49,7 +49,7 @@
                Grid.Column="1" 
                HorizontalAlignment="Stretch" 
                VerticalAlignment="Stretch" 
-               Source="/Images/blank-avatar.png"/>
+               Source="{Binding User.Avatar}"/>
         <StackPanel Orientation="Vertical" 
                     Grid.Row="1"
                     Grid.Column="2"
@@ -59,6 +59,7 @@
             <TextBlock Text="Nickname:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
             <TextBox Name="ProfileNicknameInput"
+                     Text="{Binding User.Nickname}"
                      PlaceholderText="Nickname" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
@@ -81,24 +82,28 @@
                 </ListView.Items>
             </ListView>
             <TextBox Name="ProfileGenderInput"
+                     Text="{Binding User.Gender}"
                      PlaceholderText="Gender" 
                      Style="{StaticResource ProfileEditBoxField}"   />
 
             <TextBlock Text="Age:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
             <TextBox Name="ProfileAgeInput"
+                     Text="{Binding User.Age}"
                      PlaceholderText="No Age" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
             <TextBlock Text="Breed:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
             <TextBox Name="ProfileBreedInput"
+                     Text="{Binding User.Breed, Mode=TwoWay}"
                      PlaceholderText="No Breed" 
                      Style="{StaticResource ProfileEditBoxField}"/>
 
             <TextBlock Text="Address:" 
                        Style="{StaticResource ProfileTextBlockField}"/>
             <TextBox Name="ProfileAddressInput"
+                     Text="{Binding User.Address, Mode=TwoWay}"
                      TextWrapping="Wrap"
                      PlaceholderText="No Address" 
                      Style="{StaticResource ProfileEditBoxField}"/>

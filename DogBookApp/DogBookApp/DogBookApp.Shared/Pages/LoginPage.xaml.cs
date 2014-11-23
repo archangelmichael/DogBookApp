@@ -88,6 +88,7 @@ namespace DogBookApp.Pages
                 currentUser["age"] = "Not Specified";
                 currentUser["breed"] = "Not Specified";
                 currentUser["address"] = "No Address";
+                currentUser["friends"] = new List<ParseUser>();
                 ParseGeoPoint position = new ParseGeoPoint();
                 position.Latitude = 0;
                 position.Longitude = 0;

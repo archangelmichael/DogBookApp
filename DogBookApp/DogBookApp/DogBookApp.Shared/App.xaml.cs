@@ -1,4 +1,5 @@
-﻿using DogBookApp.ViewModels;
+﻿using DogBookApp.Models;
+using DogBookApp.ViewModels;
 using Parse;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,10 @@ namespace DogBookApp
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
+            //ParseObject.RegisterSubclass<UserModel>();
+            ParseObject.RegisterSubclass<NotificationModel>();
+            ParseObject.RegisterSubclass<MessageModel>();
+            ParseObject.RegisterSubclass<StatusModel>();
             ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
         }
 

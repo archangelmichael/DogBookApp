@@ -25,15 +25,8 @@
             <ColumnDefinition Width="22*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Button x:ConnectionId='1' x:Name="backButton"
-                Grid.Row="0"
-                Grid.Column="1"
-                                        
-                Style="{StaticResource NavigationBackButtonNormalStyle}"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-                Margin="10"/>
-        <TextBlock Text="{StaticResource MainPageTitle}" 
+        <TextBlock Style="{StaticResource LoginPageGreeting}" 
+                   Text="{StaticResource MainPageTitle}" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" 
                    FontSize="34"
@@ -56,18 +49,21 @@
                     IsSticky="True"
                     Height="100" 
                     Foreground="White">
-            <AppBarButton x:ConnectionId='2' Icon="Important" 
+            <AppBarButton x:ConnectionId='1' Icon="Important" 
                           Label="Notifications"
                                                                  />
-            <AppBarButton x:ConnectionId='3' Icon="People" 
+            <AppBarButton x:ConnectionId='2' Icon="People" 
                           Label="Friends"
                                                            />
-            <AppBarButton x:ConnectionId='4' Icon="ContactInfo" 
+            <AppBarButton x:ConnectionId='3' Icon="ContactInfo" 
                           Label="Profile"
                                                            />
-            <AppBarButton x:ConnectionId='5' Icon="AttachCamera" 
+            <AppBarButton x:ConnectionId='4' Icon="AttachCamera" 
                           Label="Take Picture" 
                                                                />
+            <AppBarButton x:ConnectionId='5' Icon="LeaveChat" 
+                          Label="Sign Out" 
+                                                     />
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
