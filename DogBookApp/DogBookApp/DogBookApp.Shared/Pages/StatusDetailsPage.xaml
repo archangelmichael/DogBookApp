@@ -45,11 +45,11 @@
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="5*" />
-                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Date:" 
                            Grid.Row="0"
@@ -71,7 +71,7 @@
                            VerticalAlignment="Center" 
                            Grid.Row="1"
                            Grid.Column="1"
-                           Text="{Binding SenderNickname}"
+                           Text="{Binding SenderName}"
                            Style="{StaticResource StatusFieldStyle}" />
                 <TextBlock Text="Status:" 
                            HorizontalAlignment="Right" 
@@ -85,19 +85,27 @@
                            Grid.Column="1"
                            Text="{Binding Content}"
                            Style="{StaticResource StatusFieldStyle}" />
-                <Grid HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        Grid.Row="3" 
+                
+                <TextBlock Text="Posted Image:" 
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Center" 
+                        Grid.Row="3"
                         Grid.Column="0"
-                            Grid.RowSpan="2"
-                            Grid.ColumnSpan="2" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <Image Source="{Binding Avatar}" Grid.Column="0" Width="350" />
-                    <Image Source="/Images/location-sample.png" Grid.Column="1" Width="360"/>
-                </Grid>
+                        Style="{StaticResource StatusLabelStyle}" />
+                <Image Source="{Binding Image}" 
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Width="350" />
+                <TextBlock Text="Map Location:" 
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Center" 
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Style="{StaticResource StatusLabelStyle}" />
+                <Image Source="/Images/location-sample.png" 
+                       Grid.Row="4"
+                       Grid.Column="1" 
+                       VerticalAlignment="Center" />
             </Grid>
         </ScrollViewer>
     </Grid>

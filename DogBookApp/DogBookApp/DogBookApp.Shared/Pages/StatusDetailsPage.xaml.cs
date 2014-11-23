@@ -1,4 +1,5 @@
 ﻿using DogBookApp.Models;
+using DogBookApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +24,7 @@ namespace DogBookApp.Pages
     /// </summary>
     public sealed partial class StatusDetailsPage : Page
     {
-        public StatusMessage CurrentStatusMessage { get; set; }
+        public StatusViewModel CurrentStatusMessage { get; set; }
 
         public StatusDetailsPage()
         {
@@ -33,11 +34,12 @@ namespace DogBookApp.Pages
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var data = e.Parameter as StatusMessage;
+            var data = e.Parameter as StatusViewModel;
             if (data != null)
             {
                 this.CurrentStatusMessage = data;
             }
+            this.DataContext = CurrentStatusMessage;
             base.OnNavigatedTo(e);
         }
 

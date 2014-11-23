@@ -8,6 +8,7 @@
         <Setter Property="FontSize" Value="40" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="FriendDusplayFieldsStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -15,6 +16,7 @@
         <Setter Property="FontSize" Value="25" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="CommonTextField">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -23,6 +25,7 @@
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Margin" Value="10" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="ContentTextFieldStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -31,6 +34,7 @@
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Margin" Value="10 10 10 0" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="SubTitleHeaderStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -38,6 +42,7 @@
         <Setter Property="FontSize" Value="35" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="PageHeaderStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -45,6 +50,7 @@
         <Setter Property="FontSize" Value="40" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     <Style TargetType="TextBlock" x:Key="StatusLabelStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -52,6 +58,8 @@
         <Setter Property="FontSize" Value="35" />
         <Setter Property="HorizontalAlignment" Value="Right" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Margin" Value="5, 5, 10, 5" />
     </Style>
     <Style TargetType="TextBlock" x:Key="StatusFieldStyle">
         <Setter Property="Foreground" Value="GreenYellow" />
@@ -59,5 +67,6 @@
         <Setter Property="FontSize" Value="35" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
 </ResourceDictionary>

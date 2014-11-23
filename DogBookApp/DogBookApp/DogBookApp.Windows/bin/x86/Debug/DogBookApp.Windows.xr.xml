@@ -21,9 +21,9 @@
     <RootPropertyPathName Name="Messages" />
     <RootPropertyPathName Name="Initializing" />
     <RootPropertyPathName Name="Nickname" />
-    <RootPropertyPathName Name="SenderNickname" />
-    <RootPropertyPathName Name="Posts" />
     <RootPropertyPathName Name="Image" />
+    <RootPropertyPathName Name="Posts" />
+    <RootPropertyPathName Name="SenderNickname" />
     <RootPropertyPathName Name="DateConverter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -60,8 +60,6 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="DataContext" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootMethod Name="GetRow" />
