@@ -35,7 +35,7 @@ namespace DogBookApp.Models
             this.Content = content;
             this.CreatedAt = date;
             this.SenderId = senderId;
-            this.SenderNickName = senderNick;
+            this.SenderNickname = senderNick;
             this.ReceiverId = receiverId;
             this.IsRead = isRead;
         }
@@ -48,7 +48,7 @@ namespace DogBookApp.Models
 
         public string SenderId { get; set; }
 
-        public string SenderNickName { get; set; }
+        public string SenderNickname { get; set; }
 
         public string ReceiverId { get; set; }
 

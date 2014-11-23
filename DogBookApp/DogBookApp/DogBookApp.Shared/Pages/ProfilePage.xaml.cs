@@ -89,8 +89,7 @@ namespace DogBookApp.Pages
             if (file != null)
             {
                 // Open a stream for the selected file.
-                Windows.Storage.Streams.IRandomAccessStream fileStream =
-                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+                IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
 
                 // Set the image source to the selected bitmap.
                 BitmapImage bitmapImage = new BitmapImage();

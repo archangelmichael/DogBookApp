@@ -15,8 +15,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace DogBookApp.Pages
 {
     /// <summary>
@@ -32,9 +30,6 @@ namespace DogBookApp.Pages
         public MessagesPage(MessagesPageViewModel viewModel)
         {
             this.InitializeComponent();
-            var currentUser = ParseUser.CurrentUser;
-            currentUser["friends"] = new string[] {"KimsDog","BestDog", "Kalin" };
-            currentUser.SaveAsync();
             this.DataContext = viewModel;
         }
 

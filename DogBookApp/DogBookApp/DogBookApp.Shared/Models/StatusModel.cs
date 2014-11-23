@@ -22,15 +22,8 @@ namespace DogBookApp.Models
             set { SetProperty<ParseUser>(value); }
         }
 
-        [ParseFieldName("location")]
-        public ParseGeoPoint Location
-        {
-            get { return GetProperty<ParseGeoPoint>(); }
-            set { SetProperty<ParseGeoPoint>(value); }
-        }
-
-        [ParseFieldName("address")]
-        public string Address
+        [ParseFieldName("senderNickname")]
+        public string SenderNickname
         {
             get { return GetProperty<string>(); }
             set { SetProperty<string>(value); }

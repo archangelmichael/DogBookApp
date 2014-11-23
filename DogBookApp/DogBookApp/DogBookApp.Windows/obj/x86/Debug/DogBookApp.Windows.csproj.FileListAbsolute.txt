@@ -167,7 +167,7 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Pages\FriendDetailsPage.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\ButtonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\CommonStyles.xbf
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Styles\TextBlocksStyles.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\DogBookApp.Windows.csprojResolveAssemblyReference.cache
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles

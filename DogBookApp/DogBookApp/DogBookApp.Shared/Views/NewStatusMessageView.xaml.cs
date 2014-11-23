@@ -10,6 +10,7 @@ using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -35,12 +36,15 @@ namespace DogBookApp.Views
         private MessageManager Messanger { get; set; }
         private StatusMessage StatusMessage { get; set; }
 
+        private StatusModel NewStatus { get; set; }
+
         public NewStatusMessageView()
         {
             this.InitializeComponent();
             this.Messanger = MessageManager.Instance;
             this.StatsManager = MessagesContainer.Instance;
             this.StatusMessage = new StatusMessage();
+            this.NewStatus = new StatusModel();
         }
 
         private async void AddLocationButton_Click(object sender, RoutedEventArgs e)
@@ -111,6 +115,25 @@ namespace DogBookApp.Views
                 this.StatusMessage.Image = bitmapImage;
                 this.Messanger.ShowMessage("Image Upload", "Image added Successfully!");
                 this.DataContext = file;
+
+                RandomAccessStreamReference rasr = RandomAccessStreamReference.CreateFromFile(file);
+                //RandomAccessStreamReference rasr = RandomAccessStreamReference.CreateFromUri(bitmapImage.UriSource);
+                var streamWithContent = await rasr.OpenReadAsync();
+                byte[] buffer = new byte[streamWithContent.Size];
+                try
+                {
+                    await streamWithContent.ReadAsync(buffer.AsBuffer(), (uint)streamWithContent.Size, InputStreamOptions.None);
+                    var data = buffer;
+                    if (data != null)
+                    {
+                        ParseFile img = new ParseFile("picture.png", data);
+                        this.NewStatus.Image = img;
+                    }
+                }
+                catch (Exception)
+                {
+                    // TODO: Catch exception here
+                }
             }
         }
 
@@ -144,9 +167,15 @@ namespace DogBookApp.Views
                 this.AddLocationImage();
             }
 
+            var currentUser = (UserModel)UserModel.CurrentUser;
+            this.NewStatus.SenderNickname = currentUser.Nickname;
+            this.NewStatus.Sender = currentUser;
+            this.NewStatus.Content = statusContent;
+            this.NewStatus.SaveAsync();
+
             this.StatusMessage.CreatedAt = DateTime.Now;
             this.StatusMessage.SenderId = ParseUser.CurrentUser.ObjectId;
-            this.StatusMessage.SenderNickName = ParseUser.CurrentUser["nickname"].ToString();
+            this.StatusMessage.SenderNickname = ParseUser.CurrentUser["nickname"].ToString();
             this.StatusMessage.Content = statusContent;
             this.StatsManager.StatusMessages.Insert(0, this.StatusMessage);
             this.StatusMessage = new StatusMessage();

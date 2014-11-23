@@ -22,9 +22,8 @@
     <RootPropertyPathName Name="Initializing" />
     <RootPropertyPathName Name="Nickname" />
     <RootPropertyPathName Name="SenderNickname" />
-    <RootPropertyPathName Name="StatusMessages" />
+    <RootPropertyPathName Name="Posts" />
     <RootPropertyPathName Name="Image" />
-    <RootPropertyPathName Name="SenderNickName" />
     <RootPropertyPathName Name="DateConverter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

@@ -1,4 +1,5 @@
 ﻿using DogBookApp.Models;
+using DogBookApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,30 +15,28 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
-
 namespace DogBookApp.Views
 {
     public sealed partial class ListStatusMessagesView : UserControl
     {
-        public List<StatusMessage> StatusMessages { get; set; }
-
-        public MessagesContainer StatsManager { get; set; }
+        //public List<StatusMessage> StatusMessages { get; set; }
+        //public MessagesContainer StatsManager { get; set; }
 
         public ListStatusMessagesView()
+            : this(new ListStatusMessagesViewModel()) { }
+
+        public ListStatusMessagesView(ListStatusMessagesViewModel viewModel)
         {
             this.InitializeComponent();
-            this.StatsManager = MessagesContainer.Instance;
-            this.StatusMessages = StatsManager.StatusMessages;
-            this.DataContext = this;
+            //this.StatsManager = MessagesContainer.Instance;
+            //this.StatusMessages = StatsManager.StatusMessages;
+            this.DataContext = viewModel;
         }
 
         private void StatusMessagesCustomList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var list = sender as ListBox;
-
             var item = list.SelectedItem;
-            // TODO: Implement imformation sending
             ((Frame)Window.Current.Content).Navigate(typeof(Pages.StatusDetailsPage), item);
         }
     }
