@@ -129,3 +129,4 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.g.cs
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.xaml
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Pages\NotificationsPage.xbf
+C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\DogBookApp.WindowsPhone.csprojResolveAssemblyReference.cache

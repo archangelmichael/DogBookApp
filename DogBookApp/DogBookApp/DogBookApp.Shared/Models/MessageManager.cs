@@ -42,5 +42,45 @@ namespace DogBookApp.Models
 
             await msgDialog.ShowAsync();
         }
+
+        public void ShowInvalidUsernameMessage()
+        {
+            ShowMessage("Invalid Username!", "Username must be more than 3 symbols!");
+        }
+
+        public void ShowInvalidPasswordMessage()
+        {
+            ShowMessage("Invalid Password!", "Password must be more than 3 symbols!");
+        }
+
+        public void ShowObjectNotFoundMessage()
+        {
+            ShowMessage("User Not Registered!", "No Such User!");
+        }
+
+        public void ShowDuplicateUsernameMessage()
+        {
+            ShowMessage("Invalid Username!", "Username taken!");
+        }
+
+        public void ShowDuplicateValueMessage()
+        {
+            ShowMessage("Invalid Input!", "Already taken!");
+        }
+
+        public void ShowServerErrorMessage()
+        {
+            ShowMessage("Server Error!", "Cannot connect to server!");
+        }
+
+        public void ShowConnectionErrorMessage()
+        {
+            ShowMessage("Connection Error!", "Check internet connection!");
+        }
+
+        public void ShowErrorMessage()
+        {
+            ShowMessage("Error!", "Undefined Error Occured! Please Try Again!");
+        }
     }
 }

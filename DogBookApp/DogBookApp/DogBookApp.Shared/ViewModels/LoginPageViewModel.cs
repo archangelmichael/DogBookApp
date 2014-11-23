@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight;
+﻿using DogBookApp.Models;
+using GalaSoft.MvvmLight;
 using Parse;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,24 @@ namespace DogBookApp.ViewModels
 {
     public class LoginPageViewModel : ViewModelBase
     {
+        private MessageManager Messanger { get; set; }
+
         public UserViewModel User { get; set; }
 
         public LoginPageViewModel()
         {
+            this.Messanger = MessageManager.Instance;
             this.User = new UserViewModel();
             //this.User = new UserViewModel() { Username = "mydog", Password = "mypass" };
         }
 
         public async Task<bool> Login()
         {
+            if (this.IsInvalidInput(this.User.Username, this.User.Password))
+            {
+                return false;
+            }
+
             try
             {
                 await ParseUser.LogInAsync(this.User.Username, this.User.Password);
@@ -30,32 +39,18 @@ namespace DogBookApp.ViewModels
             }
             catch (ParseException exc)
             {
-                switch (exc.Code)
-                {
-                    case ParseException.ErrorCode.ObjectNotFound:
-                    //Error code indicating the specified object doesn't exist.
-                    case ParseException.ErrorCode.UsernameMissing:
-                    //Error code indicating that the username is missing or empty.
-                    case ParseException.ErrorCode.DuplicateValue:
-                    //Error code indicating that a unique field was given a value that is already taken.
-                    case ParseException.ErrorCode.PasswordMissing:
-                    //Error code indicating that the password is missing or empty.
-                    case ParseException.ErrorCode.UsernameTaken:
-                    //Error code indicating that the username has already been taken.
-                    case ParseException.ErrorCode.InternalServerError:
-                    //Error code indicating that something has gone wrong with the server. If you get this error code, it is Parse's fault. Please report the bug to https://parse.com/help.
-                    case ParseException.ErrorCode.ConnectionFailed:
-                    // Error code indicating the connection to the Parse servers failed
-                    default:
-                        break;
-                }
-
+                this.ShowError(exc.Code);
                 return false;
             }
         }
 
         public async Task<bool> Register()
         {
+            if (this.IsInvalidInput(this.User.Username, this.User.Password))
+            {
+                return false;
+            }
+
             var user = new ParseUser()
             {
                 Username = this.User.Username,
@@ -70,29 +65,57 @@ namespace DogBookApp.ViewModels
             }
             catch (ParseException exc)
             {
-                switch (exc.Code)
-                {
-                    case ParseException.ErrorCode.ObjectNotFound:
-                    //Error code indicating the specified object doesn't exist.
-                    case ParseException.ErrorCode.UsernameMissing:
-                    //Error code indicating that the username is missing or empty.
-                    case ParseException.ErrorCode.DuplicateValue:
-                    //Error code indicating that a unique field was given a value that is already taken.
-                    case ParseException.ErrorCode.PasswordMissing:
-                    //Error code indicating that the password is missing or empty.
-                    case ParseException.ErrorCode.UsernameTaken:
-                    //Error code indicating that the username has already been taken.
-                    case ParseException.ErrorCode.InternalServerError:
-                        //Error code indicating that something has gone wrong with the server. If you get this error code, it is Parse's fault. Please report the bug to https://parse.com/help.
-                    case ParseException.ErrorCode.ConnectionFailed: 
-                    // Error code indicating the connection to the Parse servers failed
-                    default:
-                        break;
-                }
-                
+                this.ShowError(exc.Code);
                 return false;
             }
-            
+        }
+
+        private bool IsInvalidInput(string name, string pass)
+        {
+            if (name == null || name.Length < 3)
+            {
+                this.Messanger.ShowInvalidUsernameMessage();
+                return true;
+            }
+
+            if (pass == null || pass.Length < 3)
+            {
+                this.Messanger.ShowInvalidPasswordMessage();
+                return true;
+            }
+
+            return false;
+        }
+
+        private void ShowError(ParseException.ErrorCode errorCode)
+        {
+            switch (errorCode)
+            {
+                case ParseException.ErrorCode.ObjectNotFound:
+                    this.Messanger.ShowObjectNotFoundMessage();
+                    break;
+                case ParseException.ErrorCode.UsernameMissing:
+                    this.Messanger.ShowInvalidUsernameMessage();
+                    break;
+                case ParseException.ErrorCode.DuplicateValue:
+                    this.Messanger.ShowDuplicateValueMessage();
+                    break;
+                case ParseException.ErrorCode.PasswordMissing:
+                    this.Messanger.ShowInvalidPasswordMessage();
+                    break;
+                case ParseException.ErrorCode.UsernameTaken:
+                    this.Messanger.ShowDuplicateUsernameMessage();
+                    break;
+                case ParseException.ErrorCode.InternalServerError:
+                    this.Messanger.ShowServerErrorMessage();
+                    break;
+                case ParseException.ErrorCode.ConnectionFailed:
+                    this.Messanger.ShowConnectionErrorMessage();
+                    break;
+                default:
+                    this.Messanger.ShowErrorMessage();
+                    break;
+            }
         }
     }
 }
