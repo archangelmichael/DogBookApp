@@ -33,6 +33,8 @@ namespace DogBookApp.Pages
             this.InitializeComponent();
             this.NavigationHelper = new Common.NavigationHelper(this);
             
+            
+            //this.CreateDataForCurrentUser();
             // ControlViewName.GoToStatusDetailsPage += new EventHandler(ControlGoToStatusDetailsPage);
             //var currentUser = ParseUser.CurrentUser;
             //currentUser["nickname"] = "The Charmer";
@@ -78,6 +80,66 @@ namespace DogBookApp.Pages
         private void MessagesAppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.MessagesPage));
+        }
+
+        private async void CreateDataForCurrentUser()
+        {
+            UserModel user = await new ParseQuery<UserModel>()
+                .Where(usr => usr.ObjectId != UserModel.CurrentUser.ObjectId).FirstAsync();
+            UserModel currentUser = (UserModel)UserModel.CurrentUser;
+
+            string[] titles = new string[]{"Alert", "Notification", "Friend Request"};
+            string[] contents = new string [] {"You Have A New Message", "Your Profile Picture Has Been Changed", "{0} send you a friend request"};
+            for (int i = 0; i < 3; i++)
+            {
+                var message = new MessageModel()
+                {
+                    SenderNickname = user.Nickname,
+                    Sender = user,
+                    Receiver = currentUser,
+                    Content = "Common Dog Message With Smile! DJAF",
+                    IsRead = false
+                    
+                };
+
+                await message.SaveAsync();
+
+                var alert = new NotificationModel()
+                {
+                    Title = titles[0],
+                    Content = contents[0],
+                    Receiver = currentUser,
+                    Sender = currentUser,
+                    HasOptions = false,
+                    IsRead = false
+                };
+
+                await alert.SaveAsync();
+
+                var note = new NotificationModel()
+                {
+                    Title = titles[1],
+                    Content = contents[1],
+                    Receiver = currentUser,
+                    Sender = currentUser,
+                    HasOptions = false,
+                    IsRead = false
+                };
+
+                await note.SaveAsync();
+
+                var request = new NotificationModel()
+                {
+                    Title = titles[2],
+                    Content = string.Format(contents[2], currentUser.Username),
+                    Sender = user,
+                    Receiver = currentUser,
+                    HasOptions = false,
+                    IsRead = false
+                };
+
+                await request.SaveAsync();
+            }
         }
     }
 }

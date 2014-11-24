@@ -47,11 +47,10 @@ namespace DogBookApp
             ParseObject.RegisterSubclass<StatusModel>();
             ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
 
-            //this.InitializeParseObjects();
-           // this.CreateNotifications();
+            //this.CreateDataForCurrentUser();
         }
 
-        private async void CreateNotifications()
+        private async void CreateDataForCurrentUser()
         {
             ParseUser user = await new ParseQuery<ParseUser>()
                 .Where(usr => usr.ObjectId != ParseUser.CurrentUser.ObjectId).FirstAsync();
