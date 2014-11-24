@@ -73,8 +73,13 @@
                     Grid.Row="2" 
                     Grid.Column="1" >
             <TextBlock Text="Message Text" Style="{StaticResource SubTitleHeaderStyle}" Margin="10" />
-            <TextBox Text="{Binding Content}" Style="{StaticResource  StatusInputTextBox}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-             AcceptsReturn="True" Height="250"/>
+            <TextBox Name="MessageTextInputField"
+                     Text="{Binding Content}" 
+                     Style="{StaticResource  StatusInputTextBox}" 
+                     HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Stretch"
+                     AcceptsReturn="True" 
+                     Height="250"/>
         </StackPanel>
         <Button x:ConnectionId='2' Style="{StaticResource SendMessageButtonStyle}" 
                 Grid.Row="3" 

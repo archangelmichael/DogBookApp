@@ -4,7 +4,7 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Message" />
+    <RootPropertyPathName Name="Friend" />
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="Breed" />
     <RootPropertyPathName Name="Age" />
@@ -15,6 +15,7 @@
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="SenderName" />
     <RootPropertyPathName Name="CreatedAt" />
