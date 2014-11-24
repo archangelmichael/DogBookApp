@@ -16,7 +16,7 @@
     <ListBox x:ConnectionId='1' Name="StatusMessagesCustomList" 
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch"
-             ItemsSource="{Binding StatusMessages}"
+             ItemsSource="{Binding Posts}"
              Background="DarkTurquoise"
                                                                          >
         <ListBox.ItemTemplate>
@@ -32,9 +32,10 @@
                                 VerticalAlignment="Stretch">
                         <TextBlock Text="{Binding CreatedAt, Converter={Binding DateConverter}}"
                            FontSize="34" />
-                        <TextBlock Text="{Binding SenderNickName}"
+                        <TextBlock Text="{Binding SenderNickname}"
                            FontSize="34" />
                         <TextBlock Text="{Binding Content}"
+                                   TextWrapping="Wrap"
                            FontSize="34" />
                     </StackPanel>
                     <StackPanel Orientation="Vertical"

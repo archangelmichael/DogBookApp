@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogBookApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,8 +24,21 @@ namespace DogBookApp.Pages
     public sealed partial class NotificationsPage : Page
     {
         public NotificationsPage()
+            : this(new NotificationsPageViewModel())
+        {
+        }
+
+        public NotificationsPage(NotificationsPageViewModel viewModel)
         {
             this.InitializeComponent();
+            this.DataContext = viewModel;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = sender as ListBox;
+            var selectedMessage = list.SelectedItem;
+            this.Frame.Navigate(typeof(Pages.MessageDetailsPage), selectedMessage);
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

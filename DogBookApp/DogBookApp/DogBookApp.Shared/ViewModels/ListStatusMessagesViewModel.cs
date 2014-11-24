@@ -6,18 +6,39 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Linq;
+using Windows.UI.Xaml;
 
 namespace DogBookApp.ViewModels
 {
     public class ListStatusMessagesViewModel : ViewModelBase
     {
         private ObservableCollection<StatusViewModel> posts;
+        private DispatcherTimer Refresher { get; set; }
         private bool initializing;
 
         public ListStatusMessagesViewModel()
         {
             this.Initializing = true;
+
             this.FetchAllPosts();
+            this.Refresher = new DispatcherTimer();
+            Refresher.Interval = TimeSpan.FromSeconds(30);
+            Refresher.Tick += (obj, arg) =>
+            {
+                this.FetchAllPosts();
+            };
+
+            Refresher.Start();
+        }
+
+        public void Refresh()
+        {
+            this.FetchAllPosts();
+        }
+
+        public void StopRefresh()
+        {
+            this.Refresher.Stop();
         }
 
         public IEnumerable<StatusViewModel> Posts

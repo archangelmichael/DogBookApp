@@ -19,7 +19,7 @@
     
     <x:String x:Key="MainPageTitle">Welcome to DogBook</x:String>
 
-    <x:String x:Key="FriendsPageTitle">My Dog Friends</x:String>
+    <x:String x:Key="FriendsPageTitle">Who's Your Doggy</x:String>
     <x:String x:Key="FriendProfilePageTitle">Dog Profile</x:String>
 
     <x:String x:Key="MessagesPageTitle">Doggy Messages</x:String>

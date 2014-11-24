@@ -4,8 +4,10 @@ using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Networking.Connectivity;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
@@ -27,6 +29,11 @@ namespace DogBookApp.ViewModels
 
         public async Task<bool> Login()
         {
+            if (!IsNetworkConnectionAvailable())
+            {
+                return false;
+            }
+
             if (this.IsInvalidInput(this.User.Username, this.User.Password))
             {
                 return false;
@@ -47,6 +54,11 @@ namespace DogBookApp.ViewModels
 
         public async Task<bool> Register()
         {
+            if (!IsNetworkConnectionAvailable())
+            {
+                return false;
+            }
+
             if (this.IsInvalidInput(this.User.Username, this.User.Password))
             {
                 return false;
@@ -132,6 +144,33 @@ namespace DogBookApp.ViewModels
                     this.Messanger.ShowErrorMessage();
                     break;
             }
+        }
+
+        private bool IsNetworkConnectionAvailable()
+        {
+            bool isConnected = NetworkInterface.GetIsNetworkAvailable();
+            if (!isConnected)
+            {
+                isConnected = false;
+                this.Messanger.ShowMessage("Connection Problem", "No internet connection is avaliable. DogBook Needs Live Internet Connection");
+            }
+            else
+            {
+                ConnectionProfile InternetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
+                NetworkConnectivityLevel connection = InternetConnectionProfile.GetNetworkConnectivityLevel();
+                if (connection == NetworkConnectivityLevel.None || connection == NetworkConnectivityLevel.LocalAccess)
+                {
+                    isConnected = false;
+
+                    this.Messanger.ShowMessage("Connection Problem", "No internet connection is avaliable. DogBook Needs Live Internet Connection");
+                }
+                else
+                {
+                    isConnected = true;
+                }
+            }
+
+            return isConnected;
         }
     }
 }

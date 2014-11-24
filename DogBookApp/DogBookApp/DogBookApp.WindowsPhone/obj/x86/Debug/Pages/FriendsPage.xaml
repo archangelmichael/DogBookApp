@@ -39,8 +39,9 @@
                   Grid.Column="1"
                   HorizontalAlignment="Stretch" 
                   VerticalAlignment="Stretch"
+                                          
                   ItemsSource="{Binding Friends}"
-                                                             >
+                                                            >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -51,15 +52,30 @@
                         <Image Grid.Column="0" Source="{Binding Avatar}" />
                         <StackPanel Orientation="Vertical"
                                     Grid.Column="1">
+                            <TextBlock HorizontalAlignment="Left"
+                            Style="{StaticResource SubTitleHeaderStyle}"
+                            Text="User:" />
                             <TextBlock
                             Style="{StaticResource FriendDusplayFieldsStyle}"
                             Text="{Binding Name}" />
+
+                            <TextBlock HorizontalAlignment="Left"
+                            Style="{StaticResource SubTitleHeaderStyle}"
+                            Text="Age:" />
                             <TextBlock
                             Style="{StaticResource FriendDusplayFieldsStyle}"
                             Text="{Binding Age}" />
+
+                            <TextBlock HorizontalAlignment="Left"
+                            Style="{StaticResource SubTitleHeaderStyle}"
+                            Text="Gender:" />
                             <TextBlock
                             Style="{StaticResource FriendDusplayFieldsStyle}"
                             Text="{Binding Gender}" />
+
+                            <TextBlock HorizontalAlignment="Left"
+                            Style="{StaticResource SubTitleHeaderStyle}"
+                            Text="Breed:" />
                             <TextBlock
                             Style="{StaticResource FriendDusplayFieldsStyle}"
                             Text="{Binding Breed}" />

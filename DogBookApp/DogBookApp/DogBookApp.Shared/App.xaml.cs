@@ -48,44 +48,57 @@ namespace DogBookApp
             ParseClient.Initialize("66kWRtR5cqprAGUq2DFYDhGAc0yXRV3Sna5ULK3x", "36ziKi0wZrXuTel1cFzAyRB1GHhvZofE5uRPk3SH");
 
             //this.InitializeParseObjects();
+           // this.CreateNotifications();
         }
 
-        private async void InitializeParseObjects()
+        private async void CreateNotifications()
         {
             ParseUser user = await new ParseQuery<ParseUser>()
                 .Where(usr => usr.ObjectId != ParseUser.CurrentUser.ObjectId).FirstAsync();
-            for (int i = 0; i < 5; i++)
+            ParseUser currentUser = ParseUser.CurrentUser;
+
+            string[] titles = new string[]{"Alert", "Notification", "Friend Request"};
+            string[] contents = new string [] {"You Have A New Message", "Your Profile Picture Has Been Changed", "{0} send you a friend request"};
+            for (int i = 0; i < 3; i++)
             {
-                string alertTitle = string.Format("Alert {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
-                string statusTitle = string.Format("Status {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
-                string messageTitle = string.Format("Message {0} From {1}", i, DateTime.Now.ToString("dd MM yy"));
-
-                var notification = new NotificationModel()
+                var alert = new NotificationModel()
                 {
-                    Content = alertTitle,
-                    Receiver = ParseUser.CurrentUser,
-                    HasOptions = false
-                };
-
-                var status = new StatusModel()
-                {
-                    Sender = ParseUser.CurrentUser,
-                    Content = alertTitle
-                };
-
-                var message = new MessageModel()
-                {
-                    Sender = ParseUser.CurrentUser,
-                    Receiver = user,
-                    Content = messageTitle,
+                    Title = titles[0],
+                    Content = contents[0],
+                    Receiver = currentUser,
+                    Sender = currentUser,
+                    HasOptions = false,
                     IsRead = false
                 };
 
-                await notification.SaveAsync();
-                await status.SaveAsync();
-                await message.SaveAsync();
+                await alert.SaveAsync();
+
+                var note = new NotificationModel()
+                {
+                    Title = titles[1],
+                    Content = contents[1],
+                    Receiver = currentUser,
+                    Sender = currentUser,
+                    HasOptions = false,
+                    IsRead = false
+                };
+
+                await note.SaveAsync();
+
+                var request = new NotificationModel()
+                {
+                    Title = titles[2],
+                    Content = string.Format(contents[2], currentUser.Username),
+                    Sender = user,
+                    Receiver = currentUser,
+                    HasOptions = false,
+                    IsRead = false
+                };
+
+                await request.SaveAsync();
             }
         }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

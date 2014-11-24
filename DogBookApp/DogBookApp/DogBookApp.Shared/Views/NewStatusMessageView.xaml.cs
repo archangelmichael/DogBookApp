@@ -35,7 +35,6 @@ namespace DogBookApp.Views
         public MessagesContainer StatsManager { get; set; }
         private MessageManager Messanger { get; set; }
         private StatusMessage StatusMessage { get; set; }
-
         private StatusModel NewStatus { get; set; }
 
         public NewStatusMessageView()
@@ -150,6 +149,7 @@ namespace DogBookApp.Views
 
         private void AddVideoButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Messanger.ShowMessage("Warning", "Functionality not implemented");
         }
 
         private void SendStatusButton_Click(object sender, RoutedEventArgs e)
@@ -168,6 +168,15 @@ namespace DogBookApp.Views
             }
 
             var currentUser = (UserModel)UserModel.CurrentUser;
+
+            if (this.NewStatus.Image == null)
+            {
+                this.NewStatus.Image = currentUser.Picture;
+                //var data = new MemoryStream();
+                //ParseFile img = new ParseFile("picture.png", data);
+                //this.NewStatus.Image = img;
+            }
+
             this.NewStatus.SenderNickname = currentUser.Nickname;
             this.NewStatus.Sender = currentUser;
             this.NewStatus.Content = statusContent;

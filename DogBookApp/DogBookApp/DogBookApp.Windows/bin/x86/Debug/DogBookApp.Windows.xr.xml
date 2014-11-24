@@ -20,6 +20,7 @@
     <RootPropertyPathName Name="CreatedAt" />
     <RootPropertyPathName Name="Messages" />
     <RootPropertyPathName Name="Initializing" />
+    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Nickname" />
     <RootPropertyPathName Name="Image" />
     <RootPropertyPathName Name="Posts" />
@@ -114,9 +115,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Items" />
     </RootType>

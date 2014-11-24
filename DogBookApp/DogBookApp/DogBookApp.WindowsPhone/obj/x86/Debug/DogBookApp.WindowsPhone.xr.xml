@@ -20,11 +20,11 @@
     <RootPropertyPathName Name="CreatedAt" />
     <RootPropertyPathName Name="Messages" />
     <RootPropertyPathName Name="Initializing" />
+    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Nickname" />
-    <RootPropertyPathName Name="SenderNickname" />
-    <RootPropertyPathName Name="StatusMessages" />
     <RootPropertyPathName Name="Image" />
-    <RootPropertyPathName Name="SenderNickName" />
+    <RootPropertyPathName Name="Posts" />
+    <RootPropertyPathName Name="SenderNickname" />
     <RootPropertyPathName Name="DateConverter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -61,8 +61,6 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="DataContext" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootMethod Name="GetRow" />
@@ -117,9 +115,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Items" />
     </RootType>
@@ -158,6 +156,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Background" />
       <RootProperty Name="Name" />
+      <RootEvent Name="Holding" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
