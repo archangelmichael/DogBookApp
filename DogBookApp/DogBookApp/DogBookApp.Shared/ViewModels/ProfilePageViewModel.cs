@@ -63,6 +63,18 @@ namespace DogBookApp.ViewModels
 
             currentUser.SaveAsync();
 
+            NotificationModel notification = new NotificationModel()
+            {
+                Title = "Notification",
+                Content = "Your Profile Has Been Edited",
+                Sender = ParseUser.CurrentUser,
+                Receiver = ParseUser.CurrentUser,
+                HasOptions = false,
+                IsRead = false
+            };
+
+            notification.SaveAsync();
+
             this.User.Nickname = nickname;
             this.User.Age = age;
             this.User.Gender = gender;

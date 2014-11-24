@@ -57,7 +57,7 @@ namespace DogBookApp
             ParseUser currentUser = ParseUser.CurrentUser;
 
             string[] titles = new string[]{"Alert", "Notification", "Friend Request"};
-            string[] contents = new string [] {"You Have A New Message", "Your Profile Picture Has Been Changed", "{0} send you a friend request"};
+            string[] contents = new string [] {"You Have A New Message", "Your Profile Has Been Edited", "{0} send you a friend request"};
             for (int i = 0; i < 3; i++)
             {
                 var alert = new NotificationModel()
