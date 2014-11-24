@@ -56,8 +56,8 @@ namespace DogBookApp.Pages
 
         private void SendMessageButton_Click(object sender, RoutedEventArgs e)
         {
-            var receiver = this.ViewModel.Friend;
-            this.Frame.Navigate(typeof(Pages.NewMessagePage), receiver);
+            var receiverId = this.ViewModel.Friend.Id;
+            this.Frame.Navigate(typeof(Pages.NewMessagePage), receiverId);
         }
 
     }

@@ -56,12 +56,12 @@ namespace DogBookApp.Pages
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            var receiver = e.Parameter as FriendViewModel;
-            if (receiver != null)
+            var receiverId = e.Parameter.ToString();
+            if (receiverId != null)
             {
                 try
                 {
-                    var receivingUser = await ParseUser.Query.GetAsync(receiver.Id);
+                    var receivingUser = await ParseUser.Query.GetAsync(receiverId);
                     this.NewMessage.Receiver = receivingUser;
                     this.NewMessageNotification.Receiver = receivingUser;
                 }

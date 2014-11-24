@@ -51,8 +51,8 @@ namespace DogBookApp.Pages
 
         private void ReplyButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: send data for receiver
-            this.Frame.Navigate(typeof(Pages.NewMessagePage));
+            var receiverId = this.ViewModel.Message.SenderId;
+            this.Frame.Navigate(typeof(Pages.NewMessagePage), receiverId);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
