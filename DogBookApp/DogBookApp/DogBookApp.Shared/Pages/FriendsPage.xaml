@@ -39,8 +39,9 @@
                   Grid.Column="1"
                   HorizontalAlignment="Stretch" 
                   VerticalAlignment="Stretch"
+                 Holding="ListBox_Holding"
                   ItemsSource="{Binding Friends}"
-                  SelectionChanged="ListBox_SelectionChanged">
+                 SelectionChanged="ListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

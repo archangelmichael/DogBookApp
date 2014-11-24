@@ -39,8 +39,9 @@
                   Grid.Column="1"
                   HorizontalAlignment="Stretch" 
                   VerticalAlignment="Stretch"
+                                          
                   ItemsSource="{Binding Friends}"
-                                                             >
+                                                            >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

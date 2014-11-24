@@ -155,6 +155,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Background" />
       <RootProperty Name="Name" />
+      <RootEvent Name="Holding" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">

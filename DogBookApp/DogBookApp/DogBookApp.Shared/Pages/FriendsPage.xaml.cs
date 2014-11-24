@@ -1,4 +1,6 @@
-﻿using DogBookApp.ViewModels;
+﻿using DogBookApp.Models;
+using DogBookApp.ViewModels;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -49,6 +51,23 @@ namespace DogBookApp.Pages
             var list = sender as ListBox;
             var selectedFriend = list.SelectedItem;
             this.Frame.Navigate(typeof(Pages.FriendDetailsPage), selectedFriend);
+        }
+
+        private void ListBox_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            var list = (sender as ListBox);
+            var selectedUser = (FriendViewModel) list.SelectedItem;
+            string selectedUserName = selectedUser.Name;
+            var currentUser = (UserModel)ParseUser.CurrentUser;
+            IList<string> friends = currentUser.Friends.ToList();
+            if (!friends.Contains(selectedUserName))
+            {
+                friends.Add(selectedUser.Name);
+            }
+
+            currentUser.Friends = friends;
+            currentUser.SaveAsync();
+            
         }
     }
 }
