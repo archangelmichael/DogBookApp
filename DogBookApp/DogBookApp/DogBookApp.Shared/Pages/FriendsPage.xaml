@@ -35,12 +35,13 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <ListBox Grid.Row="1" 
-                  Grid.Column="1"
-                  HorizontalAlignment="Stretch" 
-                  VerticalAlignment="Stretch"
+        <ListBox Name="FriendsList"
+                 Grid.Row="1" 
+                 Grid.Column="1"
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Stretch"
                  Holding="ListBox_Holding"
-                  ItemsSource="{Binding Friends}"
+                 ItemsSource="{Binding Friends}"
                  SelectionChanged="ListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -92,12 +93,18 @@
                     IsSticky="True"
                     Height="100" 
                     Foreground="White">
+            <AppBarButton Icon="Account" 
+                          Label="See Profile"
+                          Click="SeeProfileAppBarButton_Click"/>
             <AppBarButton Icon="Comment" 
-                          Label="Change Status" />
-            <AppBarButton Icon="Important" 
-                          Label="Notifications" />
+                          Label="Change Status"
+                          Click="ChangeStatusAppBarButton_Click"/>
+            <AppBarButton Icon="MailForward" 
+                          Label="Send Message"
+                          Click="SendMessageAppBarButton_Click"/>
             <AppBarButton Icon="ContactInfo" 
-                          Label="Profile"/>
+                          Label="Profile"
+                          Click="ChangeProfileAppBarButton_Click"/>
             <AppBarButton Icon="AddFriend" 
                           Label="Add Friend"
                           Click="AddFriendAppBarButton_Click"/>

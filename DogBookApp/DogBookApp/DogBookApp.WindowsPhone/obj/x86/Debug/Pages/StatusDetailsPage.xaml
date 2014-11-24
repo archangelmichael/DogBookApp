@@ -97,11 +97,13 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
                     <Image x:ConnectionId='2' Name="StatusImage" 
+                                                                                
+                                                                                    
+                                                                            
                            Source="{Binding Image}" 
                                                 
                                                             
-                                                            
-                                                           
+                                                   
                            />
                 </Canvas>
                 

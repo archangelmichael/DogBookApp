@@ -35,12 +35,13 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <ListBox x:ConnectionId='2' Grid.Row="1" 
-                  Grid.Column="1"
-                  HorizontalAlignment="Stretch" 
-                  VerticalAlignment="Stretch"
+        <ListBox x:ConnectionId='2' Name="FriendsList"
+                 Grid.Row="1" 
+                 Grid.Column="1"
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Stretch"
                                           
-                  ItemsSource="{Binding Friends}"
+                 ItemsSource="{Binding Friends}"
                                                             >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -92,13 +93,19 @@
                     IsSticky="True"
                     Height="100" 
                     Foreground="White">
-            <AppBarButton Icon="Comment" 
-                          Label="Change Status" />
-            <AppBarButton Icon="Important" 
-                          Label="Notifications" />
-            <AppBarButton Icon="ContactInfo" 
-                          Label="Profile"/>
-            <AppBarButton x:ConnectionId='3' Icon="AddFriend" 
+            <AppBarButton x:ConnectionId='3' Icon="Account" 
+                          Label="See Profile"
+                                                              />
+            <AppBarButton x:ConnectionId='4' Icon="Comment" 
+                          Label="Change Status"
+                                                                />
+            <AppBarButton x:ConnectionId='5' Icon="MailForward" 
+                          Label="Send Message"
+                                                               />
+            <AppBarButton x:ConnectionId='6' Icon="ContactInfo" 
+                          Label="Profile"
+                                                                 />
+            <AppBarButton x:ConnectionId='7' Icon="AddFriend" 
                           Label="Add Friend"
                                                              />
         </CommandBar>

@@ -20,6 +20,8 @@ namespace DogBookApp.Pages
 {
     public sealed partial class FriendsPage : Page
     {
+        private MessageManager Messanger { get; set; }
+
         public FriendsPage()
             : this(new FriendsPageViewModel())
         {
@@ -28,7 +30,9 @@ namespace DogBookApp.Pages
         public FriendsPage(FriendsPageViewModel viewModel)
         {
             this.InitializeComponent();
+            this.Messanger = MessageManager.Instance;
             this.DataContext = viewModel;
+            this.SelectedFriend = new FriendViewModel();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -38,14 +42,32 @@ namespace DogBookApp.Pages
 
         private void AddFriendAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Implement adding new friend
-        }
+            //var currentUser = (UserModel)UserModel.CurrentUser;
+            //if (this.isUserSelected())
+            //{
+            //    currentUser.AddUniqueToList("friends", this.SelectedFriend.Name);
+            //    var selectedUser = await ParseUser.Query.GetAsync(this.SelectedFriend.Id);
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var list = sender as ListBox;
-            var selectedFriend = list.SelectedItem;
-            this.Frame.Navigate(typeof(Pages.FriendDetailsPage), selectedFriend);
+            //    var friendRequest = new NotificationModel()
+            //    {
+            //        Title = "Friend Request",
+            //        Content = string.Format("{0} sent you friend invitation. Do you accept it?", currentUser.Nickname),
+            //        Sender = currentUser,
+            //        Receiver = selectedUser,
+            //        HasOptions = false,
+            //        IsRead = false
+            //    };
+
+            //    this.Messanger.ShowMessage("Friend Added", string.Format("{0} added successfully to your friends", this.SelectedFriend.Name));
+                
+            //}
+
+            //this.Messanger.ShowMessage("Invalid Selection", "Select User To Add");
+
+            if(this.isUserSelected())
+            {
+                this.Messanger.ShowMessage("Friend Added", string.Format("{0} added successfully to your friends", this.SelectedFriend.Name));
+            }
         }
 
         private void ListBox_Holding(object sender, HoldingRoutedEventArgs e)
@@ -65,7 +87,53 @@ namespace DogBookApp.Pages
 
             //currentUser.Friends = friends;
             //currentUser.SaveAsync();
-            
+        }
+
+        private bool isUserSelected()
+        {
+            if (this.SelectedFriend.Id == null)
+            {
+                this.Messanger.ShowMessage("Invalid Selection", "Select User");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void SendMessageAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.isUserSelected())
+            {
+                this.Frame.Navigate(typeof(Pages.MessagesPage), this.SelectedFriend);
+            }
+        }
+
+        private FriendViewModel SelectedFriend { get; set; }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = sender as ListBox;
+            var selectedFriend = list.SelectedItem;
+            this.SelectedFriend = selectedFriend as FriendViewModel;
+            //this.Frame.Navigate(typeof(Pages.FriendDetailsPage), selectedFriend);
+        }
+
+        private void ChangeStatusAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.MainPage));
+        }
+
+        private void ChangeProfileAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.ProfilePage));
+        }
+
+        private void SeeProfileAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.isUserSelected())
+            {
+                this.Frame.Navigate(typeof(Pages.FriendDetailsPage), this.SelectedFriend);
+            }
         }
     }
 }

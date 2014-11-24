@@ -131,10 +131,12 @@
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="ManipulationStarted" />
+      <RootEvent Name="ManipulationCompleted" />
+      <RootEvent Name="ManipulationDelta" />
       <RootEvent Name="Tapped" />
       <RootEvent Name="DoubleTapped" />
-      <RootEvent Name="DragEnter" />
-      <RootEvent Name="DragOver" />
+      <RootEvent Name="Drop" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />

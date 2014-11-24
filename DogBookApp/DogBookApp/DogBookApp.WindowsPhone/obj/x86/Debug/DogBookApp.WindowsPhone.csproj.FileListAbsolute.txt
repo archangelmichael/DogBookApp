@@ -169,11 +169,3 @@ C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.Windo
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\DogBookApp.WindowsPhone.csprojResolveAssemblyReference.cache
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Styles\CommonStyles.xbf
 C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Styles\TextBlocksStyles.xbf
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
-C:\Users\Radi\Documents\GitHub\DogBookApp\DogBookApp\DogBookApp\DogBookApp.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate

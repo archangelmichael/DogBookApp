@@ -19,7 +19,7 @@ namespace DogBookApp.ViewModels
         {
             this.Initializing = true;
             this.Messanger = MessageManager.Instance;
-            //this.FetchAllAlerts();
+            this.FetchAllAlerts();
 
             //this.Refresh = new DispatcherTimer();
             //Refresh.Interval = TimeSpan.FromSeconds(10);
@@ -77,15 +77,18 @@ namespace DogBookApp.ViewModels
         private async void FetchAllAlerts()
         {
             this.Initializing = true;
-
-            var fetchedAlerts = await new ParseQuery<NotificationModel>()
-                .Where(mess => mess.Receiver == ParseUser.CurrentUser && !mess.IsRead)
-                .OrderByDescending(mess => mess.CreatedAt)
+            var allNotifications = await NotificationModel.GetQuery("NotificationModel")
+                .OrderByDescending("CreatedAt")
                 .FindAsync();
 
-            this.Alerts = fetchedAlerts
-                .AsQueryable()
-                .Select(NotificationViewModel.FromModel);
+            //var fetchedAlerts = await new ParseQuery<NotificationModel>()
+            //    .Where(mess => mess.Receiver == ParseUser.CurrentUser && !mess.IsRead)
+            //    .OrderByDescending(mess => mess.CreatedAt)
+            //    .FindAsync();
+
+            //this.Alerts = allNotifications
+            //    .AsQueryable()
+            //    .Select(NotificationViewModel.FromModel);
 
             this.Initializing = false;
         }

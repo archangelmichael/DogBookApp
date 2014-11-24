@@ -155,13 +155,13 @@
     <RootType FullName="DogBookApp.Pages.CaptureImagePage" />
     <RootType FullName="DogBookApp.Pages.FriendDetailsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Name" />
       <RootEvent Name="Holding" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
