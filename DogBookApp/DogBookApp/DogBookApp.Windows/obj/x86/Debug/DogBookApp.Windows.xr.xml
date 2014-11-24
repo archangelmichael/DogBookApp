@@ -131,7 +131,12 @@
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
+      <RootEvent Name="ManipulationStarted" />
+      <RootEvent Name="ManipulationCompleted" />
+      <RootEvent Name="ManipulationDelta" />
+      <RootEvent Name="Tapped" />
+      <RootEvent Name="DoubleTapped" />
+      <RootEvent Name="Drop" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -229,6 +234,11 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="DogBookApp.Pages.StatusDetailsPage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
       <RootProperty Name="Margin" />

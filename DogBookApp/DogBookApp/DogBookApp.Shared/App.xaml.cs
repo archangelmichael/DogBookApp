@@ -50,53 +50,53 @@ namespace DogBookApp
             //this.CreateDataForCurrentUser();
         }
 
-        private async void CreateDataForCurrentUser()
-        {
-            ParseUser user = await new ParseQuery<ParseUser>()
-                .Where(usr => usr.ObjectId != ParseUser.CurrentUser.ObjectId).FirstAsync();
-            ParseUser currentUser = ParseUser.CurrentUser;
+        //private async void CreateDataForCurrentUser()
+        //{
+        //    ParseUser user = await new ParseQuery<ParseUser>()
+        //        .Where(usr => usr.ObjectId != ParseUser.CurrentUser.ObjectId).FirstAsync();
+        //    ParseUser currentUser = ParseUser.CurrentUser;
 
-            string[] titles = new string[]{"Alert", "Notification", "Friend Request"};
-            string[] contents = new string [] {"You Have A New Message", "Your Profile Has Been Edited", "{0} send you a friend request"};
-            for (int i = 0; i < 3; i++)
-            {
-                var alert = new NotificationModel()
-                {
-                    Title = titles[0],
-                    Content = contents[0],
-                    Receiver = currentUser,
-                    Sender = currentUser,
-                    HasOptions = false,
-                    IsRead = false
-                };
+        //    string[] titles = new string[]{"Alert", "Notification", "Friend Request"};
+        //    string[] contents = new string [] {"You Have A New Message", "Your Profile Has Been Edited", "{0} send you a friend request"};
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        var alert = new NotificationModel()
+        //        {
+        //            Title = titles[0],
+        //            Content = contents[0],
+        //            Receiver = currentUser,
+        //            Sender = currentUser,
+        //            HasOptions = false,
+        //            IsRead = false
+        //        };
 
-                await alert.SaveAsync();
+        //        await alert.SaveAsync();
 
-                var note = new NotificationModel()
-                {
-                    Title = titles[1],
-                    Content = contents[1],
-                    Receiver = currentUser,
-                    Sender = currentUser,
-                    HasOptions = false,
-                    IsRead = false
-                };
+        //        var note = new NotificationModel()
+        //        {
+        //            Title = titles[1],
+        //            Content = contents[1],
+        //            Receiver = currentUser,
+        //            Sender = currentUser,
+        //            HasOptions = false,
+        //            IsRead = false
+        //        };
 
-                await note.SaveAsync();
+        //        await note.SaveAsync();
 
-                var request = new NotificationModel()
-                {
-                    Title = titles[2],
-                    Content = string.Format(contents[2], currentUser.Username),
-                    Sender = user,
-                    Receiver = currentUser,
-                    HasOptions = false,
-                    IsRead = false
-                };
+        //        var request = new NotificationModel()
+        //        {
+        //            Title = titles[2],
+        //            Content = string.Format(contents[2], currentUser.Username),
+        //            Sender = user,
+        //            Receiver = currentUser,
+        //            HasOptions = false,
+        //            IsRead = false
+        //        };
 
-                await request.SaveAsync();
-            }
-        }
+        //        await request.SaveAsync();
+        //    }
+        //}
 
 
         /// <summary>

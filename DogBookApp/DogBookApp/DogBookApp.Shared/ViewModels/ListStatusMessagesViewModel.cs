@@ -21,14 +21,14 @@ namespace DogBookApp.ViewModels
             this.Initializing = true;
 
             this.FetchAllPosts();
-            this.Refresher = new DispatcherTimer();
-            Refresher.Interval = TimeSpan.FromSeconds(30);
-            Refresher.Tick += (obj, arg) =>
-            {
-                this.FetchAllPosts();
-            };
+            //this.Refresher = new DispatcherTimer();
+            //Refresher.Interval = TimeSpan.FromSeconds(30);
+            //Refresher.Tick += (obj, arg) =>
+            //{
+            //    this.FetchAllPosts();
+            //};
 
-            Refresher.Start();
+            //Refresher.Start();
         }
 
         public void Refresh()

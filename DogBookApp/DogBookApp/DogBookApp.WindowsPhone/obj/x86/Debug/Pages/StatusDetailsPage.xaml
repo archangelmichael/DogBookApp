@@ -92,11 +92,20 @@
                         Grid.Row="3"
                         Grid.Column="0"
                         Style="{StaticResource StatusLabelStyle}" />
-                <Image Source="{Binding Image}" 
-                        Grid.Row="3"
+                <Canvas Grid.Row="3"
                         Grid.Column="1"
-                        Width="350" />
-                <TextBlock Text="Map Location:" 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Image x:ConnectionId='2' Name="StatusImage" 
+                           Source="{Binding Image}" 
+                                                
+                                                            
+                                                            
+                                                           
+                           />
+                </Canvas>
+                
+                <!--<TextBlock Text="Map Location:" 
                         HorizontalAlignment="Right" 
                         VerticalAlignment="Center" 
                         Grid.Row="4"
@@ -105,7 +114,7 @@
                 <Image Source="/Images/location-sample.png" 
                        Grid.Row="4"
                        Grid.Column="1" 
-                       VerticalAlignment="Center" />
+                       VerticalAlignment="Center" />-->
             </Grid>
         </ScrollViewer>
     </Grid>

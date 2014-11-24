@@ -92,10 +92,21 @@
                         Grid.Row="3"
                         Grid.Column="0"
                         Style="{StaticResource StatusLabelStyle}" />
-                <Image Source="{Binding Image}" 
-                        Grid.Row="3"
+                <Canvas Grid.Row="3"
                         Grid.Column="1"
-                        Width="350" />
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Image x:ConnectionId='2' Name="StatusImage" 
+                                                                                
+                                                                                    
+                                                                            
+                           Source="{Binding Image}" 
+                                                
+                                                            
+                                                   
+                           />
+                </Canvas>
+                
                 <!--<TextBlock Text="Map Location:" 
                         HorizontalAlignment="Right" 
                         VerticalAlignment="Center" 

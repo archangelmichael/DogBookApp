@@ -4,7 +4,7 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Message" />
+    <RootPropertyPathName Name="Friend" />
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="Breed" />
     <RootPropertyPathName Name="Age" />
@@ -15,6 +15,7 @@
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="SenderName" />
     <RootPropertyPathName Name="CreatedAt" />
@@ -130,7 +131,10 @@
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
+      <RootEvent Name="Tapped" />
+      <RootEvent Name="DoubleTapped" />
+      <RootEvent Name="DragEnter" />
+      <RootEvent Name="DragOver" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -228,6 +232,11 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="DogBookApp.Pages.ProfilePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="DogBookApp.Pages.StatusDetailsPage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
       <RootProperty Name="Margin" />
